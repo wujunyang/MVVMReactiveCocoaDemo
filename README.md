@@ -1,14 +1,12 @@
 # MobileProject
 
-一个通用的IOS项目基础，整理的一些项目常用的内容；
-
-![image](https://github.com/wujunyang/MobileProject/blob/master/MobileProject/%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95.png)
+一个使用ReactiveCocoa的MVVM实例；
 
 主项目中的分层主要包含四个模块，Main(主要)、Expand(扩展)、Resource(资源)、Vender(第三方)，还有本项目是有多个Tag,用于区分不同的版本，比如本地环境测试版、产品版，主要是通过Tag来区分，不同的标识对应不同的连接地址；当然也可以设置其它不同的内容；
 
 2.1 Main(主要)模块的内容
 
-此模块主要目的是为了存放项目的页面内容，比如MVC的内容，Base(基类)用于存放一些公共的内容，其它功能模块的提取，方便继承调用；在本实例中已经在BaseController整理的一个公用的ViewController
+此模块主要目的是为了存放项目的页面内容，比如MVVM的内容，Base(基类)用于存放一些公共的内容，其它功能模块的提取，方便继承调用；在本实例中已经在BaseController整理的一个公用的ViewController
 
 2.2 Expand(扩展)模块的内容
 
