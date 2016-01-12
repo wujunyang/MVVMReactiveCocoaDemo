@@ -14,6 +14,8 @@
 #import "Macros.h"
 #import "ThirdMacros.h"
 #import <AFNetworking/AFNetworking.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "RACEXTScope.h"
 #import <Masonry/Masonry.h>
 #import <JSONModel/JSONModel.h>
 #import "UIImageView+WebCache.h"

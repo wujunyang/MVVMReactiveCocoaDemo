@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LogInApi.h"
-#import "LoginModel.h"
+
+#import "LoginViewModel.h"
 
 @interface LogInViewController : UIViewController
 

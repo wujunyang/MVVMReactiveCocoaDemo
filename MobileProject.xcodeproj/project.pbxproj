@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3DD1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3DE1C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D61C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3DF1C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D61C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3E01C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D91C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m */; settings = {ASSET_TAGS = (); }; };
+		34BFB3E11C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D91C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m */; settings = {ASSET_TAGS = (); }; };
 		34E08A551C3BE80F005C6CA3 /* GVUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E08A541C3BE80F005C6CA3 /* GVUserDefaults.m */; settings = {ASSET_TAGS = (); }; };
 		34E08A591C3BEA89005C6CA3 /* GVUserDefaults+BBProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E08A581C3BEA89005C6CA3 /* GVUserDefaults+BBProperties.m */; settings = {ASSET_TAGS = (); }; };
 		34E08A5D1C3BEEF2005C6CA3 /* MyFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E08A5C1C3BEEF2005C6CA3 /* MyFileLogger.m */; settings = {ASSET_TAGS = (); }; };
@@ -655,6 +663,8 @@
 		34E894CD1C3BBF79001327C8 /* LogInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894CC1C3BBF79001327C8 /* LogInApi.m */; settings = {ASSET_TAGS = (); }; };
 		34E894D31C3BC153001327C8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D21C3BC153001327C8 /* LogInViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34E894D61C3BCD2F001327C8 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D51C3BCD2F001327C8 /* LoginModel.m */; settings = {ASSET_TAGS = (); }; };
+		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		9014C40DD45909D3FC1F2EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533C667C4AE7D52B4A1E63C2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -677,6 +687,15 @@
 
 /* Begin PBXFileReference section */
 		141989AA73B56A56D9B2BD49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
+		34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
+		34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
+		34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+RACSupport.m"; sourceTree = "<group>"; };
+		34BFB3D51C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLConnectionOperation+RACSupport.h"; sourceTree = "<group>"; };
+		34BFB3D61C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFURLConnectionOperation+RACSupport.m"; sourceTree = "<group>"; };
+		34BFB3D71C44AE7C00384B34 /* RACAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACAFNetworking.h; sourceTree = "<group>"; };
+		34BFB3D81C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSubscriber+AFProgressCallbacks.h"; sourceTree = "<group>"; };
+		34BFB3D91C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSubscriber+AFProgressCallbacks.m"; sourceTree = "<group>"; };
 		34E08A531C3BE80F005C6CA3 /* GVUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVUserDefaults.h; sourceTree = "<group>"; };
 		34E08A541C3BE80F005C6CA3 /* GVUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserDefaults.m; sourceTree = "<group>"; };
 		34E08A571C3BEA89005C6CA3 /* GVUserDefaults+BBProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+BBProperties.h"; sourceTree = "<group>"; };
@@ -1324,6 +1343,8 @@
 		34E894D21C3BC153001327C8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		34E894D41C3BCD2F001327C8 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		34E894D51C3BCD2F001327C8 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		533C667C4AE7D52B4A1E63C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A48D3EEAEFFB901D36D8E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1383,6 +1404,22 @@
 				533C667C4AE7D52B4A1E63C2 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34BFB3B51C44857000384B34 /* RacNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */,
+				34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */,
+				34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */,
+				34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */,
+				34BFB3D51C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.h */,
+				34BFB3D61C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m */,
+				34BFB3D71C44AE7C00384B34 /* RACAFNetworking.h */,
+				34BFB3D81C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.h */,
+				34BFB3D91C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m */,
+			);
+			path = RacNetwork;
 			sourceTree = "<group>";
 		};
 		34E08A521C3BE80F005C6CA3 /* GVUserDefaults */ = {
@@ -1555,6 +1592,7 @@
 		34E890BE1C3B8B17001327C8 /* Network(网络) */ = {
 			isa = PBXGroup;
 			children = (
+				34BFB3B51C44857000384B34 /* RacNetwork */,
 				34E894C41C3BAF38001327C8 /* NetworkUnit.h */,
 				34E894C51C3BAF38001327C8 /* NetworkUnit.m */,
 				34E8912D1C3B9739001327C8 /* YTKBaseRequest.h */,
@@ -3019,6 +3057,8 @@
 		34F391C21C3E2EAE00598D51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				34FD92D41C43B430009B0C0E /* LoginViewModel.h */,
+				34FD92D51C43B430009B0C0E /* LoginViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3280,6 +3320,7 @@
 			files = (
 				34E08A611C3BFB90005C6CA3 /* iCarousel.m in Sources */,
 				34E08A621C3BFB90005C6CA3 /* UIView+Toast.m in Sources */,
+				34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */,
 				34E08A631C3BFB90005C6CA3 /* NSInvocation+Block.m in Sources */,
 				34E08A641C3BFB90005C6CA3 /* NSData+Gzip.m in Sources */,
 				34E08A651C3BFB90005C6CA3 /* UIView+FDCollapsibleConstraints.m in Sources */,
@@ -3372,6 +3413,7 @@
 				34E08ABC1C3BFB90005C6CA3 /* NSData+Encrypt.m in Sources */,
 				34E08ABD1C3BFB90005C6CA3 /* UIScrollView+APParallaxHeader.m in Sources */,
 				34E08ABE1C3BFB90005C6CA3 /* NSString+Pinyin.m in Sources */,
+				34BFB3DD1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				34E08ABF1C3BFB90005C6CA3 /* UIViewController+ScrollingStatusBar.m in Sources */,
 				34E08AC01C3BFB90005C6CA3 /* MKMapView+MoveLogo.m in Sources */,
 				34E08AC11C3BFB90005C6CA3 /* NSString+UrlEncode.m in Sources */,
@@ -3461,6 +3503,7 @@
 				34E08B151C3BFB90005C6CA3 /* NSDate+TimeAgo.m in Sources */,
 				34E08B161C3BFB90005C6CA3 /* UIWebVIew+SwipeGesture.m in Sources */,
 				34E08B171C3BFB90005C6CA3 /* UIImageView+Reflect.m in Sources */,
+				34BFB3DF1C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				34E08B181C3BFB90005C6CA3 /* UIView+GestureCallback.m in Sources */,
 				34E08B191C3BFB90005C6CA3 /* NSURL+Param.m in Sources */,
 				34E08B1A1C3BFB90005C6CA3 /* UIImageView+GeometryConversion.m in Sources */,
@@ -3500,6 +3543,7 @@
 				34E08B3C1C3BFB90005C6CA3 /* NSNumber+CGFloat.m in Sources */,
 				34E08B3D1C3BFB90005C6CA3 /* AppDelegate.m in Sources */,
 				34E08B3E1C3BFB90005C6CA3 /* ActionSheetDatePicker.m in Sources */,
+				34BFB3E11C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				34E08B3F1C3BFB90005C6CA3 /* NSString+Ruby.m in Sources */,
 				34E08B401C3BFB90005C6CA3 /* UISplitViewController+QuickAccess.m in Sources */,
 				34E08B411C3BFB90005C6CA3 /* SVProgressHUD.m in Sources */,
@@ -3546,6 +3590,7 @@
 				34E08B6A1C3BFB90005C6CA3 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				34E08B6B1C3BFB90005C6CA3 /* UIResponder+UIAdapt.m in Sources */,
 				34E08B6C1C3BFB90005C6CA3 /* NSDate+InternetDateTime.m in Sources */,
+				34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				34E08B6D1C3BFB90005C6CA3 /* NSManagedObject+DictionaryExport.m in Sources */,
 				34E08B6E1C3BFB90005C6CA3 /* UIBezierPath+Length.m in Sources */,
 				34E08B6F1C3BFB90005C6CA3 /* MJRefreshHeader.m in Sources */,
@@ -3595,6 +3640,7 @@
 			files = (
 				34E8945E1C3B9D6A001327C8 /* iCarousel.m in Sources */,
 				34E8942E1C3B9A03001327C8 /* UIView+Toast.m in Sources */,
+				34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */,
 				34E8938B1C3B9A03001327C8 /* NSInvocation+Block.m in Sources */,
 				34E893721C3B9A03001327C8 /* NSData+Gzip.m in Sources */,
 				34E894251C3B9A03001327C8 /* UIView+FDCollapsibleConstraints.m in Sources */,
@@ -3687,6 +3733,7 @@
 				34E893711C3B9A03001327C8 /* NSData+Encrypt.m in Sources */,
 				34E8940C1C3B9A03001327C8 /* UIScrollView+APParallaxHeader.m in Sources */,
 				34E893A81C3B9A03001327C8 /* NSString+Pinyin.m in Sources */,
+				34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				34E894381C3B9A03001327C8 /* UIViewController+ScrollingStatusBar.m in Sources */,
 				34E893BC1C3B9A03001327C8 /* MKMapView+MoveLogo.m in Sources */,
 				34E893AF1C3B9A03001327C8 /* NSString+UrlEncode.m in Sources */,
@@ -3776,6 +3823,7 @@
 				34E8937B1C3B9A03001327C8 /* NSDate+TimeAgo.m in Sources */,
 				34E894431C3B9A03001327C8 /* UIWebVIew+SwipeGesture.m in Sources */,
 				34E893F71C3B9A03001327C8 /* UIImageView+Reflect.m in Sources */,
+				34BFB3DE1C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				34E894281C3B9A03001327C8 /* UIView+GestureCallback.m in Sources */,
 				34E893B41C3B9A03001327C8 /* NSURL+Param.m in Sources */,
 				34E893F51C3B9A03001327C8 /* UIImageView+GeometryConversion.m in Sources */,
@@ -3815,6 +3863,7 @@
 				34E8938F1C3B9A03001327C8 /* NSNumber+CGFloat.m in Sources */,
 				34E8908A1C3B89B2001327C8 /* AppDelegate.m in Sources */,
 				34E891111C3B92AA001327C8 /* ActionSheetDatePicker.m in Sources */,
+				34BFB3E01C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				34E893AB1C3B9A03001327C8 /* NSString+Ruby.m in Sources */,
 				34E894101C3B9A03001327C8 /* UISplitViewController+QuickAccess.m in Sources */,
 				34E894BE1C3BA300001327C8 /* SVProgressHUD.m in Sources */,
@@ -3861,6 +3910,7 @@
 				34E894121C3B9A03001327C8 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				34E894091C3B9A03001327C8 /* UIResponder+UIAdapt.m in Sources */,
 				34E893791C3B9A03001327C8 /* NSDate+InternetDateTime.m in Sources */,
+				34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				34E893631C3B9A03001327C8 /* NSManagedObject+DictionaryExport.m in Sources */,
 				34E893CB1C3B9A03001327C8 /* UIBezierPath+Length.m in Sources */,
 				34E8911B1C3B92AA001327C8 /* MJRefreshHeader.m in Sources */,
