@@ -26,6 +26,15 @@
                                       return @([self validUserName:username] && [self validPassWord:password]);
                                   }]
                                  distinctUntilChanged];
+        
+        self.loginCommand=[[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+            return [self netWorkRacSignal];
+        }];
+        
+        RAC(self,access_token)=[[[self.loginCommand executionSignals] switchToLatest]deliverOn:[RACScheduler mainThreadScheduler]];
+        
+        RAC(self, loading) =
+        [self.loginCommand executing];
     }
     return self;
 }
@@ -72,6 +81,15 @@
     return result;
 }
 
+/**
+ *  @author wujunyang, 16-01-12 23:01:11
+ *
+ *  @brief  网络请求
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#version number#>
+ */
 -(RACSignal *)netWorkRacSignal
 {
     NSDictionary *userDic=@{
@@ -85,13 +103,20 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    return [manager rac_POST:@"user/login" parameters:userDic];
-//    return [[manager rac_POST:@"user/login" parameters:userDic] subscribeNext:^(RACTuple *JSONAndHeaders) {
-//        @strongify(self)
-//        LoginModel *model=[[LoginModel alloc]initWithDictionary:JSONAndHeaders.first error:nil];
-//        self.access_token=model.access_token;
-//        DDLogError(@"%@",model.access_token);
-//    }];
+    
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        return [[manager rac_POST:@"user/login" parameters:userDic] subscribeNext:^(RACTuple *x) {
+            NSDictionary *result=x.first;
+            if ([result[@"code"] intValue]==200) {
+                NSDictionary *data=result[@"data"];
+                [subscriber sendNext:data];
+            }
+        } error:^(NSError *error) {
+            [subscriber sendNext:error];
+        } completed:^{
+            [subscriber sendCompleted];
+        }];
+    }];
 }
 
 @end

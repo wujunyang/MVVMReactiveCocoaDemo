@@ -22,6 +22,9 @@
 //返回token
 @property(nonatomic,copy)NSString *access_token;
 
+//是否加载完成
+@property (nonatomic, readonly, getter=isLoading) BOOL loading;
+
 // 登录验证
 @property (nonatomic, strong, readonly) RACSignal *validLoginSignal;
 

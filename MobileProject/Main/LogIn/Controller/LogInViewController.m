@@ -31,13 +31,29 @@
     RAC(self.myLoginViewModel,password) = self.passWordTest.rac_textSignal;
     RAC(self.loginButton,enabled) = [self.myLoginViewModel validLoginSignal];
     
+    [RACObserve(self.myLoginViewModel, loading) subscribeNext:^(NSNumber *loading) {
+        @strongify(self);
+        if ([loading boolValue]) {
+            DDLogError(@"正在请求中...");
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        }
+        else
+        {
+            DDLogError(@"请求完成");
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        }
+    }];
+    
+    [RACObserve(self.myLoginViewModel, access_token) subscribeNext:^(NSString *accessToken) {
+        @strongify(self);
+        self.myTokenLabel.text=accessToken;
+    }];
+    
     [[self.loginButton
       rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          @strongify(self)
-         self.myTokenLabel.text=self.myLoginViewModel.access_token;
-         //DDLogError(@"成功登录了");
-         //[self.myLoginViewModel.loginCommand execute:nil];
+         [self.myLoginViewModel.loginCommand execute:nil];
      }];
 }
 
