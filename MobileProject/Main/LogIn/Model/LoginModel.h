@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface LoginModel : JSONModel
+@interface LoginModel : BaseModel
 @property(nonatomic,copy)NSString<Optional> *access_token;
 @end

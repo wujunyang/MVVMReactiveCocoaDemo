@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 #import "RACAFNetworking.h"
 #import "LogInApi.h"
 #import "LoginModel.h"
 
-@interface LoginViewModel : NSObject
+@interface LoginViewModel : BaseViewModel
 
 // 账号
 @property (nonatomic, copy) NSString *username;
@@ -21,9 +22,6 @@
 
 //返回token
 @property(nonatomic,copy)NSString *access_token;
-
-//是否加载完成
-@property (nonatomic, readonly, getter=isLoading) BOOL loading;
 
 //登录验证
 @property (nonatomic, strong, readonly) RACSignal *validLoginSignal;

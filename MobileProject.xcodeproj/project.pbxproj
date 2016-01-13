@@ -667,6 +667,20 @@
 		34EBE2F61C45F67E00887A63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F41C45F67E00887A63 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34EBE2F91C45F6BA00887A63 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34EBE2FA1C45F6BA00887A63 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2FD1C46138300887A63 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2FC1C46138300887A63 /* BaseModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2FE1C46138400887A63 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2FC1C46138300887A63 /* BaseModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3011C46178000887A63 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3001C46178000887A63 /* BaseViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3021C46178000887A63 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3001C46178000887A63 /* BaseViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3081C461BF000887A63 /* pageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3071C461BF000887A63 /* pageModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3091C461BF000887A63 /* pageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3071C461BF000887A63 /* pageModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE30E1C46467700887A63 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE30D1C46467700887A63 /* HomeModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE30F1C46467700887A63 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE30D1C46467700887A63 /* HomeModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3121C46496600887A63 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3111C46496600887A63 /* OrderModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3131C46496600887A63 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3111C46496600887A63 /* OrderModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3161C464D7100887A63 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3151C464D7100887A63 /* HomeCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE3171C464D7100887A63 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3151C464D7100887A63 /* HomeCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE31B1C46583900887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		9014C40DD45909D3FC1F2EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533C667C4AE7D52B4A1E63C2 /* libPods.a */; };
@@ -1351,6 +1365,20 @@
 		34EBE2F41C45F67E00887A63 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		34EBE2F71C45F6BA00887A63 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
 		34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		34EBE2FB1C46138300887A63 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		34EBE2FC1C46138300887A63 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		34EBE2FF1C46178000887A63 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		34EBE3001C46178000887A63 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
+		34EBE3061C461BF000887A63 /* pageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pageModel.h; sourceTree = "<group>"; };
+		34EBE3071C461BF000887A63 /* pageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pageModel.m; sourceTree = "<group>"; };
+		34EBE30C1C46467700887A63 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		34EBE30D1C46467700887A63 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		34EBE3101C46496600887A63 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		34EBE3111C46496600887A63 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		34EBE3141C464D7100887A63 /* HomeCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellViewModel.h; sourceTree = "<group>"; };
+		34EBE3151C464D7100887A63 /* HomeCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellViewModel.m; sourceTree = "<group>"; };
+		34EBE3191C46583900887A63 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		34EBE31A1C46583900887A63 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		533C667C4AE7D52B4A1E63C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1523,6 +1551,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE3031C461B6B00887A63 /* Public(公用) */,
 				34EBE2ED1C45F5CE00887A63 /* Home(首页) */,
 				34E890C91C3B8D70001327C8 /* Base(基类) */,
 				34E890C41C3B8C68001327C8 /* LogIn(登录) */,
@@ -1754,6 +1783,8 @@
 		34E890CC1C3B8E76001327C8 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE2FB1C46138300887A63 /* BaseModel.h */,
+				34EBE2FC1C46138300887A63 /* BaseModel.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -3081,6 +3112,8 @@
 			children = (
 				34EBE2F71C45F6BA00887A63 /* HomeViewModel.h */,
 				34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */,
+				34EBE3141C464D7100887A63 /* HomeCellViewModel.h */,
+				34EBE3151C464D7100887A63 /* HomeCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3088,6 +3121,10 @@
 		34EBE2EF1C45F60600887A63 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE30C1C46467700887A63 /* HomeModel.h */,
+				34EBE30D1C46467700887A63 /* HomeModel.m */,
+				34EBE3101C46496600887A63 /* OrderModel.h */,
+				34EBE3111C46496600887A63 /* OrderModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3095,6 +3132,7 @@
 		34EBE2F01C45F60D00887A63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE3181C46581300887A63 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3115,6 +3153,57 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		34EBE3031C461B6B00887A63 /* Public(公用) */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE3051C461BA500887A63 /* Model */,
+				34EBE3041C461B8600887A63 /* View */,
+			);
+			name = "Public(公用)";
+			path = Public;
+			sourceTree = "<group>";
+		};
+		34EBE3041C461B8600887A63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE30B1C461C8200887A63 /* Cell */,
+				34EBE30A1C461C6900887A63 /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34EBE3051C461BA500887A63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE3061C461BF000887A63 /* pageModel.h */,
+				34EBE3071C461BF000887A63 /* pageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34EBE30A1C461C6900887A63 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		34EBE30B1C461C8200887A63 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		34EBE3181C46581300887A63 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE3191C46583900887A63 /* HomeTableViewCell.h */,
+				34EBE31A1C46583900887A63 /* HomeTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		34F391C21C3E2EAE00598D51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3127,6 +3216,8 @@
 		34F391C31C3E2EE300598D51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE2FF1C46178000887A63 /* BaseViewModel.h */,
+				34EBE3001C46178000887A63 /* BaseViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3497,6 +3588,7 @@
 				34E08AD21C3BFB90005C6CA3 /* UIViewController+TopBarMessage.m in Sources */,
 				34E08AD31C3BFB90005C6CA3 /* NSObject+Blocks.m in Sources */,
 				34E08AD41C3BFB90005C6CA3 /* UISearchBar+Blocks.m in Sources */,
+				34EBE3091C461BF000887A63 /* pageModel.m in Sources */,
 				34E08AD51C3BFB90005C6CA3 /* UITextField+Blocks.m in Sources */,
 				34E08AD61C3BFB90005C6CA3 /* NSFileHandle+readLine.m in Sources */,
 				34E08AD71C3BFB90005C6CA3 /* MJRefreshGifHeader.m in Sources */,
@@ -3530,11 +3622,13 @@
 				34E08AF21C3BFB90005C6CA3 /* UIImageView+FaceAwareFill.m in Sources */,
 				34E08AF31C3BFB90005C6CA3 /* NSDictionary+URL.m in Sources */,
 				34E08AF41C3BFB90005C6CA3 /* NSManagedObjectContext+Extensions.m in Sources */,
+				34EBE3021C46178000887A63 /* BaseViewModel.m in Sources */,
 				34E08AF51C3BFB90005C6CA3 /* UIAlertView+Block.m in Sources */,
 				34E08AF61C3BFB90005C6CA3 /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
 				34E08AF71C3BFB90005C6CA3 /* DistancePickerView.m in Sources */,
 				34E08AF81C3BFB90005C6CA3 /* UIButton+Submitting.m in Sources */,
 				34E08AF91C3BFB90005C6CA3 /* YTKNetworkAgent.m in Sources */,
+				34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */,
 				34E08AFA1C3BFB90005C6CA3 /* NSIndexPath+Offset.m in Sources */,
 				34E08AFB1C3BFB90005C6CA3 /* NSDecimalNumber+CalculatingByString.m in Sources */,
 				34E08AFC1C3BFB90005C6CA3 /* UIImage+Alpha.m in Sources */,
@@ -3589,6 +3683,7 @@
 				34E08B2C1C3BFB90005C6CA3 /* LogInViewController.m in Sources */,
 				34E08B2D1C3BFB90005C6CA3 /* QBImagePickerController.m in Sources */,
 				34E08B2E1C3BFB90005C6CA3 /* QBAssetsCollectionVideoIndicatorView.m in Sources */,
+				34EBE3131C46496600887A63 /* OrderModel.m in Sources */,
 				34E08B2F1C3BFB90005C6CA3 /* CAAnimation+Blocks.m in Sources */,
 				34E08B301C3BFB90005C6CA3 /* UIView+Recursion.m in Sources */,
 				34E08B311C3BFB90005C6CA3 /* ActionSheetCustomPicker.m in Sources */,
@@ -3633,11 +3728,13 @@
 				34E08B571C3BFB90005C6CA3 /* NSException+Trace.m in Sources */,
 				34E08B581C3BFB90005C6CA3 /* UILabel+SuggestSize.m in Sources */,
 				34E08B591C3BFB90005C6CA3 /* NSDictionary+Block.m in Sources */,
+				34EBE3171C464D7100887A63 /* HomeCellViewModel.m in Sources */,
 				34E08B5A1C3BFB90005C6CA3 /* NSDate+Reporting.m in Sources */,
 				34E08B5B1C3BFB90005C6CA3 /* GVUserDefaults+BBProperties.m in Sources */,
 				34E08B5C1C3BFB90005C6CA3 /* NSNotificationCenter+MainThread.m in Sources */,
 				34E08B5D1C3BFB90005C6CA3 /* UIImage+GIF.m in Sources */,
 				34E08B5E1C3BFB90005C6CA3 /* ActionSheetDistancePicker.m in Sources */,
+				34EBE30F1C46467700887A63 /* HomeModel.m in Sources */,
 				34E08B5F1C3BFB90005C6CA3 /* NSArray+SafeAccess.m in Sources */,
 				34E08B601C3BFB90005C6CA3 /* ActionSheetStringPicker.m in Sources */,
 				34E08B611C3BFB90005C6CA3 /* UIResponder+Chain.m in Sources */,
@@ -3645,6 +3742,7 @@
 				34E08B631C3BFB90005C6CA3 /* NSObject+KVOBlocks.m in Sources */,
 				34E08B641C3BFB90005C6CA3 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				34E08B651C3BFB90005C6CA3 /* UIBarButtonItem+Action.m in Sources */,
+				34EBE2FE1C46138400887A63 /* BaseModel.m in Sources */,
 				34E08B661C3BFB90005C6CA3 /* UIImage+Resize.m in Sources */,
 				34E08B671C3BFB90005C6CA3 /* NSString+RemoveEmoji.m in Sources */,
 				34E08B681C3BFB90005C6CA3 /* QBAssetsCollectionViewLayout.m in Sources */,
@@ -3819,6 +3917,7 @@
 				34E8943A1C3B9A03001327C8 /* UIViewController+TopBarMessage.m in Sources */,
 				34E893961C3B9A03001327C8 /* NSObject+Blocks.m in Sources */,
 				34E8940F1C3B9A03001327C8 /* UISearchBar+Blocks.m in Sources */,
+				34EBE3081C461BF000887A63 /* pageModel.m in Sources */,
 				34E894181C3B9A03001327C8 /* UITextField+Blocks.m in Sources */,
 				34E893861C3B9A03001327C8 /* NSFileHandle+readLine.m in Sources */,
 				34E891221C3B92AA001327C8 /* MJRefreshGifHeader.m in Sources */,
@@ -3852,11 +3951,13 @@
 				34E893F41C3B9A03001327C8 /* UIImageView+FaceAwareFill.m in Sources */,
 				34E893831C3B9A03001327C8 /* NSDictionary+URL.m in Sources */,
 				34E893651C3B9A03001327C8 /* NSManagedObjectContext+Extensions.m in Sources */,
+				34EBE3011C46178000887A63 /* BaseViewModel.m in Sources */,
 				34E893C41C3B9A03001327C8 /* UIAlertView+Block.m in Sources */,
 				34E893671C3B9A03001327C8 /* NSManagedObjectContext+FetchRequestsConstructors.m in Sources */,
 				34E891151C3B92AA001327C8 /* DistancePickerView.m in Sources */,
 				34E893D41C3B9A03001327C8 /* UIButton+Submitting.m in Sources */,
 				34E891441C3B9739001327C8 /* YTKNetworkAgent.m in Sources */,
+				34EBE31B1C46583900887A63 /* HomeTableViewCell.m in Sources */,
 				34E893891C3B9A03001327C8 /* NSIndexPath+Offset.m in Sources */,
 				34E8938D1C3B9A03001327C8 /* NSDecimalNumber+CalculatingByString.m in Sources */,
 				34E893E21C3B9A03001327C8 /* UIImage+Alpha.m in Sources */,
@@ -3911,6 +4012,7 @@
 				34E894D31C3BC153001327C8 /* LogInViewController.m in Sources */,
 				34E8949D1C3B9FC1001327C8 /* QBImagePickerController.m in Sources */,
 				34E894991C3B9FC1001327C8 /* QBAssetsCollectionVideoIndicatorView.m in Sources */,
+				34EBE3121C46496600887A63 /* OrderModel.m in Sources */,
 				34E893BE1C3B9A03001327C8 /* CAAnimation+Blocks.m in Sources */,
 				34E8942A1C3B9A03001327C8 /* UIView+Recursion.m in Sources */,
 				34E891101C3B92AA001327C8 /* ActionSheetCustomPicker.m in Sources */,
@@ -3955,11 +4057,13 @@
 				34E893851C3B9A03001327C8 /* NSException+Trace.m in Sources */,
 				34E893FB1C3B9A03001327C8 /* UILabel+SuggestSize.m in Sources */,
 				34E8937F1C3B9A03001327C8 /* NSDictionary+Block.m in Sources */,
+				34EBE3161C464D7100887A63 /* HomeCellViewModel.m in Sources */,
 				34E8937A1C3B9A03001327C8 /* NSDate+Reporting.m in Sources */,
 				34E08A591C3BEA89005C6CA3 /* GVUserDefaults+BBProperties.m in Sources */,
 				34E8938C1C3B9A03001327C8 /* NSNotificationCenter+MainThread.m in Sources */,
 				34E893EA1C3B9A03001327C8 /* UIImage+GIF.m in Sources */,
 				34E891121C3B92AA001327C8 /* ActionSheetDistancePicker.m in Sources */,
+				34EBE30E1C46467700887A63 /* HomeModel.m in Sources */,
 				34E8936D1C3B9A03001327C8 /* NSArray+SafeAccess.m in Sources */,
 				34E891141C3B92AA001327C8 /* ActionSheetStringPicker.m in Sources */,
 				34E894071C3B9A03001327C8 /* UIResponder+Chain.m in Sources */,
@@ -3967,6 +4071,7 @@
 				34E893991C3B9A03001327C8 /* NSObject+KVOBlocks.m in Sources */,
 				34E894A21C3B9FC1001327C8 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				34E893C91C3B9A03001327C8 /* UIBarButtonItem+Action.m in Sources */,
+				34EBE2FD1C46138300887A63 /* BaseModel.m in Sources */,
 				34E893EF1C3B9A03001327C8 /* UIImage+Resize.m in Sources */,
 				34E893AA1C3B9A03001327C8 /* NSString+RemoveEmoji.m in Sources */,
 				34E8949C1C3B9FC1001327C8 /* QBAssetsCollectionViewLayout.m in Sources */,
