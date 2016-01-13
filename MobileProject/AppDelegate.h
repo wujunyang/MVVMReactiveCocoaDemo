@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "LogInViewController.h"
+#import "HomeViewController.h"
 #import "MyFileLogger.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void)setupLoginViewController;
 
+-(void)setupHomeViewController;
 @end
 

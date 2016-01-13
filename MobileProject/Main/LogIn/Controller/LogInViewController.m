@@ -59,7 +59,10 @@
       rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          @strongify(self)
-         [self.myLoginViewModel.loginCommand execute:nil];
+         [[self.myLoginViewModel.loginCommand execute:nil] subscribeNext:^(id x) {
+             //成功登录
+             [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
+         }];
      }];
     
     //处理错误

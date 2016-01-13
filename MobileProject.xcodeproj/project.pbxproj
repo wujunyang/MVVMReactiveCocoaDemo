@@ -663,6 +663,10 @@
 		34E894CD1C3BBF79001327C8 /* LogInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894CC1C3BBF79001327C8 /* LogInApi.m */; settings = {ASSET_TAGS = (); }; };
 		34E894D31C3BC153001327C8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D21C3BC153001327C8 /* LogInViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34E894D61C3BCD2F001327C8 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D51C3BCD2F001327C8 /* LoginModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2F51C45F67E00887A63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F41C45F67E00887A63 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2F61C45F67E00887A63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F41C45F67E00887A63 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2F91C45F6BA00887A63 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		34EBE2FA1C45F6BA00887A63 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		9014C40DD45909D3FC1F2EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533C667C4AE7D52B4A1E63C2 /* libPods.a */; };
@@ -1343,6 +1347,10 @@
 		34E894D21C3BC153001327C8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		34E894D41C3BCD2F001327C8 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		34E894D51C3BCD2F001327C8 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		34EBE2F31C45F67E00887A63 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		34EBE2F41C45F67E00887A63 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		34EBE2F71C45F6BA00887A63 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		533C667C4AE7D52B4A1E63C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1515,6 +1523,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				34EBE2ED1C45F5CE00887A63 /* Home(首页) */,
 				34E890C91C3B8D70001327C8 /* Base(基类) */,
 				34E890C41C3B8C68001327C8 /* LogIn(登录) */,
 			);
@@ -3054,6 +3063,58 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		34EBE2ED1C45F5CE00887A63 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE2F21C45F61B00887A63 /* Other */,
+				34EBE2F11C45F61300887A63 /* Controller */,
+				34EBE2F01C45F60D00887A63 /* View */,
+				34EBE2EF1C45F60600887A63 /* Model */,
+				34EBE2EE1C45F5FE00887A63 /* ViewModel */,
+			);
+			name = "Home(首页)";
+			path = Home;
+			sourceTree = "<group>";
+		};
+		34EBE2EE1C45F5FE00887A63 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE2F71C45F6BA00887A63 /* HomeViewModel.h */,
+				34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34EBE2EF1C45F60600887A63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34EBE2F01C45F60D00887A63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34EBE2F11C45F61300887A63 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34EBE2F31C45F67E00887A63 /* HomeViewController.h */,
+				34EBE2F41C45F67E00887A63 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34EBE2F21C45F61B00887A63 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		34F391C21C3E2EAE00598D51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3441,6 +3502,7 @@
 				34E08AD71C3BFB90005C6CA3 /* MJRefreshGifHeader.m in Sources */,
 				34E08AD81C3BFB90005C6CA3 /* UIButton+TouchAreaInsets.m in Sources */,
 				34E08AD91C3BFB90005C6CA3 /* UIWindow+Hierarchy.m in Sources */,
+				34EBE2F61C45F67E00887A63 /* HomeViewController.m in Sources */,
 				34E08ADA1C3BFB90005C6CA3 /* UIColor+Web.m in Sources */,
 				34E08ADB1C3BFB90005C6CA3 /* JDStatusBarStyle.m in Sources */,
 				34E08ADC1C3BFB90005C6CA3 /* UIFont-TTF.m in Sources */,
@@ -3620,6 +3682,7 @@
 				34E08B871C3BFB90005C6CA3 /* NSMutableString+Ruby.m in Sources */,
 				34E08B881C3BFB90005C6CA3 /* UIFont+DynamicFontControl.m in Sources */,
 				34E08B891C3BFB90005C6CA3 /* UIViewController+StoreKit.m in Sources */,
+				34EBE2FA1C45F6BA00887A63 /* HomeViewModel.m in Sources */,
 				34E08B8A1C3BFB90005C6CA3 /* UIFont+WDCustomLoader.m in Sources */,
 				34E08B8B1C3BFB90005C6CA3 /* MJRefreshFooter.m in Sources */,
 				34E08B8C1C3BFB90005C6CA3 /* UIButton+Block.m in Sources */,
@@ -3761,6 +3824,7 @@
 				34E891221C3B92AA001327C8 /* MJRefreshGifHeader.m in Sources */,
 				34E893D51C3B9A03001327C8 /* UIButton+TouchAreaInsets.m in Sources */,
 				34E894461C3B9A03001327C8 /* UIWindow+Hierarchy.m in Sources */,
+				34EBE2F51C45F67E00887A63 /* HomeViewController.m in Sources */,
 				34E893DA1C3B9A03001327C8 /* UIColor+Web.m in Sources */,
 				34E894B91C3BA300001327C8 /* JDStatusBarStyle.m in Sources */,
 				34E893E11C3B9A03001327C8 /* UIFont-TTF.m in Sources */,
@@ -3940,6 +4004,7 @@
 				34E8939F1C3B9A03001327C8 /* NSMutableString+Ruby.m in Sources */,
 				34E893DF1C3B9A03001327C8 /* UIFont+DynamicFontControl.m in Sources */,
 				34E894391C3B9A03001327C8 /* UIViewController+StoreKit.m in Sources */,
+				34EBE2F91C45F6BA00887A63 /* HomeViewModel.m in Sources */,
 				34E893E01C3B9A03001327C8 /* UIFont+WDCustomLoader.m in Sources */,
 				34E8911A1C3B92AA001327C8 /* MJRefreshFooter.m in Sources */,
 				34E893D01C3B9A03001327C8 /* UIButton+Block.m in Sources */,

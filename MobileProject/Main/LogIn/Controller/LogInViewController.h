@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 #import "LoginViewModel.h"
 
 @interface LogInViewController : UIViewController
