@@ -25,10 +25,13 @@
 //是否加载完成
 @property (nonatomic, readonly, getter=isLoading) BOOL loading;
 
-// 登录验证
+//登录验证
 @property (nonatomic, strong, readonly) RACSignal *validLoginSignal;
 
-/// 登录事件响应
+//处理错误
+@property(nonatomic,strong)RACSubject *errorSubject;
+
+//登录事件响应
 @property (nonatomic, strong, readonly) RACCommand *loginCommand;
 
 @end

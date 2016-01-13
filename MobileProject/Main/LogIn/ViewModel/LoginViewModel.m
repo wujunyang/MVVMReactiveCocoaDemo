@@ -19,6 +19,7 @@
 {
     if (self = [super init] )
     {
+        //验证信号
         self.validLoginSignal = [[RACSignal
                                   combineLatest:@[ RACObserve(self, username), RACObserve(self, password) ]
                                   reduce:^(NSString *username, NSString *password) {
@@ -26,14 +27,20 @@
                                   }]
                                  distinctUntilChanged];
         
+        //登录响应
         self.loginCommand=[[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             return [self netWorkRacSignal];
         }];
         
+        //绑定access_token
         RAC(self,access_token)=[[[self.loginCommand executionSignals] switchToLatest]deliverOn:[RACScheduler mainThreadScheduler]];
         
+        //绑定loading
         RAC(self, loading) =
         [self.loginCommand executing];
+        
+        //初始化错误处理
+        self.errorSubject=[RACSubject subject];
     }
     return self;
 }
@@ -108,7 +115,7 @@
             LoginModel *model = [[LoginModel alloc]initWithDictionary:x.first error:nil];
             [subscriber sendNext:model.access_token];
         } error:^(NSError *error) {
-            [subscriber sendNext:[error localizedDescription]];
+            [self.errorSubject sendNext:error];
         } completed:^{
             [subscriber sendCompleted];
         }];

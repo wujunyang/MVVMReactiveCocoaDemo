@@ -21,11 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor grayColor];
+    
+    //加载布局
     [self layoutPage];
     
     if (!self.myLoginViewModel) {
         self.myLoginViewModel=[[LoginViewModel alloc]init];
     }
+    
+    //绑定
     @weakify(self);
     RAC(self.myLoginViewModel,username) = self.userNameText.rac_textSignal;
     RAC(self.myLoginViewModel,password) = self.passWordTest.rac_textSignal;
@@ -50,14 +54,25 @@
         }
     }];
     
+    //处理响应事件
     [[self.loginButton
       rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          @strongify(self)
          [self.myLoginViewModel.loginCommand execute:nil];
      }];
+    
+    //处理错误
+    [[self.myLoginViewModel errorSubject] subscribeNext:^(NSError *error) {
+        @strongify(self)
+        NSDictionary *errDic=error.userInfo;
+        DDLogError(@"详细错误信息：%@",errDic);
+        DDLogError(@"出现错误了：%@",[error localizedDescription]);
+        self.myTokenLabel.text=[error localizedDescription];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    }];
 }
-
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
