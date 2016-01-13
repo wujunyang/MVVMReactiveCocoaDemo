@@ -32,7 +32,6 @@
     RAC(self.loginButton,enabled) = [self.myLoginViewModel validLoginSignal];
     
     [RACObserve(self.myLoginViewModel, loading) subscribeNext:^(NSNumber *loading) {
-        @strongify(self);
         if ([loading boolValue]) {
             DDLogError(@"正在请求中...");
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -46,7 +45,9 @@
     
     [RACObserve(self.myLoginViewModel, access_token) subscribeNext:^(NSString *accessToken) {
         @strongify(self);
-        self.myTokenLabel.text=accessToken;
+        if ([accessToken length]>0) {
+            self.myTokenLabel.text=accessToken;
+        }
     }];
     
     [[self.loginButton

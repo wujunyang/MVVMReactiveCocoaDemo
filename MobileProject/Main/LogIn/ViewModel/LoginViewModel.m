@@ -11,7 +11,6 @@
 @interface LoginViewModel()
 @property (nonatomic, strong, readwrite) RACSignal *validLoginSignal;
 @property (nonatomic, strong, readwrite) RACCommand *loginCommand;
-@property (nonatomic, strong) RACDisposable *currentDisposable;
 @end
 
 @implementation LoginViewModel
@@ -54,7 +53,7 @@
 {
     BOOL result=false;
 
-    if ([userName isEqualToString:@"wujunyang"]) {
+    if ([userName length]>0) {
          result=true;
     }
     return result;
@@ -106,13 +105,10 @@
     
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         return [[manager rac_POST:@"user/login" parameters:userDic] subscribeNext:^(RACTuple *x) {
-            NSDictionary *result=x.first;
-            if ([result[@"code"] intValue]==200) {
-                NSDictionary *data=result[@"data"];
-                [subscriber sendNext:data];
-            }
+            LoginModel *model = [[LoginModel alloc]initWithDictionary:x.first error:nil];
+            [subscriber sendNext:model.access_token];
         } error:^(NSError *error) {
-            [subscriber sendNext:error];
+            [subscriber sendNext:[error localizedDescription]];
         } completed:^{
             [subscriber sendCompleted];
         }];
