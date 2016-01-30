@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestRacViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self setupLoginViewController];
+    [self setuptestViewController];
     
     return YES;
 }
@@ -44,6 +45,18 @@
 -(void)setupHomeViewController
 {
     HomeViewController *logInVc = [[HomeViewController alloc]init];
+    UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
+    [navcLogin setNavigationBarHidden:YES];
+    self.window.rootViewController = navcLogin;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+
+//登录页面
+-(void)setuptestViewController
+{
+    TestRacViewController *logInVc = [[TestRacViewController alloc]init];
     UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
     [navcLogin setNavigationBarHidden:YES];
     self.window.rootViewController = navcLogin;

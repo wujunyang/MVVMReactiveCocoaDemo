@@ -11,6 +11,7 @@
 @interface HomeTableViewCell()
 @property(strong,nonatomic)UIView *leftColorView;
 @property(strong,nonatomic)UILabel *nameLabel;
+@property(strong,nonatomic)UIButton *goButton;
 @end
 
 //左边色彩条宽度
@@ -54,14 +55,34 @@ static const CGFloat textFontSize=14;
                 make.right.mas_equalTo(self.contentView.mas_right).with.offset(-15);
             }];
         }
+        
+        if(!self.goButton)
+        {
+            self.goButton=[[UIButton alloc]init];
+            [self.goButton setTitle:@"跳转" forState:UIControlStateNormal];
+            self.goButton.backgroundColor=[UIColor blueColor];
+            [self.contentView addSubview:self.goButton];
+            [self.goButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.mas_equalTo(self.contentView).with.offset(0);
+                make.right.mas_equalTo(self.contentView.mas_right).with.offset(-15);
+                make.size.mas_equalTo(CGSizeMake(80, 30));
+            }];
+        }
+        
+        //直接绑定  这边有个注意Racobserve 左边只有self  右边才有viewModel.building_name  这样就避CELL 重用的问题
+        RAC(self.nameLabel,text)=RACObserve(self, viewModel.building_name);
+        
+        //rac_prepareForReuseSignal很重要  如果不加takeUntil:cell.rac_prepareForReuseSignal，那么每次Cell被重用时，该button都会被addTarget:selector
+        [[[self.goButton
+           rac_signalForControlEvents:UIControlEventTouchUpInside]
+           takeUntil:self.rac_prepareForReuseSignal]
+           subscribeNext:^(id x) {
+             NSLog(@"cell 跳转");
+         }];
     }
     return self;
 }
 
--(void)setViewModel:(HomeCellViewModel *)viewModel
-{
-    self.nameLabel.text=viewModel.building_name;
-}
 
 - (void)awakeFromNib {
     // Initialization code

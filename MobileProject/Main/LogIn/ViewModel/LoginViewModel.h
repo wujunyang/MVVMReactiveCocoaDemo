@@ -21,10 +21,10 @@
 @property (nonatomic, copy) NSString *password;
 
 //返回token
-@property(nonatomic,copy)NSString *access_token;
+@property(nonatomic,copy,readonly)NSString *access_token;
 
 //登录验证
-@property (nonatomic, strong, readonly) RACSignal *validLoginSignal;
+@property (nonatomic, strong) RACSignal *validLoginSignal;
 
 //处理错误
 @property(nonatomic,strong)RACSubject *errorSubject;

@@ -19,10 +19,7 @@
     [super viewDidLoad];
     self.title=@"首页";
     self.view.backgroundColor=[UIColor redColor];
-    if (!self.myHomeViewModel) {
-        self.myHomeViewModel=[[HomeViewModel alloc]init];
-    }
-    
+
     [self initViewModel];
     [self bindViewModel];
     
@@ -47,7 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//初始化
 - (void)initViewModel {
+    
+    if (!self.myHomeViewModel) {
+        self.myHomeViewModel=[[HomeViewModel alloc]init];
+    }
     
     @weakify(self)
     [self.myHomeViewModel.fetchProductCommand.executing subscribeNext:^(NSNumber *executing) {
@@ -72,6 +74,7 @@
     
 }
 
+//绑定
 - (void)bindViewModel {
     @weakify(self);
     [RACObserve(self.myHomeViewModel, items) subscribeNext:^(id x) {

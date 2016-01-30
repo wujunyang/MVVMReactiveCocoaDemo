@@ -681,6 +681,8 @@
 		34EBE3171C464D7100887A63 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE3151C464D7100887A63 /* HomeCellViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34EBE31B1C46583900887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		34EEDB4F1C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		9014C40DD45909D3FC1F2EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533C667C4AE7D52B4A1E63C2 /* libPods.a */; };
@@ -1379,6 +1381,8 @@
 		34EBE3151C464D7100887A63 /* HomeCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellViewModel.m; sourceTree = "<group>"; };
 		34EBE3191C46583900887A63 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		34EBE31A1C46583900887A63 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		34EEDB4D1C5C87BC004728AC /* TestRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRacViewController.h; sourceTree = "<group>"; };
+		34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRacViewController.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		533C667C4AE7D52B4A1E63C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1722,6 +1726,8 @@
 			children = (
 				34E894D11C3BC153001327C8 /* LogInViewController.h */,
 				34E894D21C3BC153001327C8 /* LogInViewController.m */,
+				34EEDB4D1C5C87BC004728AC /* TestRacViewController.h */,
+				34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3721,6 +3727,7 @@
 				34E08B501C3BFB90005C6CA3 /* RDVTabBarController.m in Sources */,
 				34E08B511C3BFB90005C6CA3 /* NSURLConnection+SelfSigned.m in Sources */,
 				34E08B521C3BFB90005C6CA3 /* UIView+Shake.m in Sources */,
+				34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */,
 				34E08B531C3BFB90005C6CA3 /* UIApplication+KeyboardFrame.m in Sources */,
 				34E08B541C3BFB90005C6CA3 /* UIViewController+MJPopupViewController.m in Sources */,
 				34E08B551C3BFB90005C6CA3 /* MJPhotoBrowser.m in Sources */,
@@ -4050,6 +4057,7 @@
 				34E894591C3B9D05001327C8 /* RDVTabBarController.m in Sources */,
 				34E893B61C3B9A03001327C8 /* NSURLConnection+SelfSigned.m in Sources */,
 				34E8942D1C3B9A03001327C8 /* UIView+Shake.m in Sources */,
+				34EEDB4F1C5C87BC004728AC /* TestRacViewController.m in Sources */,
 				34E893C61C3B9A03001327C8 /* UIApplication+KeyboardFrame.m in Sources */,
 				34E894361C3B9A03001327C8 /* UIViewController+MJPopupViewController.m in Sources */,
 				34E894901C3B9FC1001327C8 /* MJPhotoBrowser.m in Sources */,

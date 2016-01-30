@@ -9,7 +9,7 @@
 #import "LoginViewModel.h"
 
 @interface LoginViewModel()
-@property (nonatomic, strong, readwrite) RACSignal *validLoginSignal;
+
 @property (nonatomic, strong, readwrite) RACCommand *loginCommand;
 @end
 
@@ -19,25 +19,8 @@
 {
     if (self = [super init] )
     {
-        //验证信号
-        self.validLoginSignal = [[RACSignal
-                                  combineLatest:@[ RACObserve(self, username), RACObserve(self, password) ]
-                                  reduce:^(NSString *username, NSString *password) {
-                                      return @([self validUserName:username] && [self validPassWord:password]);
-                                  }]
-                                 distinctUntilChanged];
-        
-        //登录响应
-        self.loginCommand=[[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-            return [self netWorkRacSignal];
-        }];
-        
         //绑定access_token
         RAC(self,access_token)=[[[self.loginCommand executionSignals] switchToLatest]deliverOn:[RACScheduler mainThreadScheduler]];
-        
-        //绑定loading
-        RAC(self, loading) =
-        [self.loginCommand executing];
         
         //初始化错误处理
         self.errorSubject=[RACSubject subject];
@@ -87,6 +70,16 @@
     return result;
 }
 
+-(RACSignal *)validLoginSignal
+{
+    return  [[RACSignal
+              combineLatest:@[ RACObserve(self, username), RACObserve(self, password) ]
+              reduce:^(NSString *username, NSString *password) {
+                  return @([self validUserName:username] && [self validPassWord:password]);
+              }]
+             distinctUntilChanged];
+}
+
 /**
  *  @author wujunyang, 16-01-12 23:01:11
  *
@@ -120,6 +113,38 @@
             [subscriber sendCompleted];
         }];
     }];
+}
+
+-(RACCommand *)loginCommand
+{
+    if (_loginCommand==nil) {
+        _loginCommand = [[RACCommand alloc] initWithEnabled:self.validLoginSignal signalBlock:
+                        ^RACSignal *(id input) {
+                            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                                NSDictionary *userDic=@{
+                                                        @"user_name": self.username,
+                                                        @"user_password": self.password
+                                                        };
+                                
+                                
+                                AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]
+                                                                          initWithBaseURL:[NSURL URLWithString:@"http://private-eda65-blossom.apiary-mock.com/"]];
+                                manager.requestSerializer = [AFJSONRequestSerializer serializer];
+                                manager.responseSerializer = [AFJSONResponseSerializer serializer];
+                                return [[manager rac_POST:@"user/login" parameters:userDic] subscribeNext:^(RACTuple *x) {
+                                    LoginModel *model = [[LoginModel alloc]initWithDictionary:x.first error:nil];
+                                    [subscriber sendNext:model.access_token];
+                                } error:^(NSError *error) {
+                                    [self.errorSubject sendNext:error];
+                                } completed:^{
+                                    [subscriber sendCompleted];
+                                }];
+                            }];
+                            return nil;
+                        }];
+    }
+    
+    return _loginCommand;
 }
 
 @end

@@ -33,10 +33,21 @@
     @weakify(self);
     RAC(self.myLoginViewModel,username) = self.userNameText.rac_textSignal;
     RAC(self.myLoginViewModel,password) = self.passWordTest.rac_textSignal;
-    RAC(self.loginButton,enabled) = [self.myLoginViewModel validLoginSignal];
+  //  RAC(self.loginButton,enabled) = [self.myLoginViewModel validLoginSignal];
+
     
-    [RACObserve(self.myLoginViewModel, loading) subscribeNext:^(NSNumber *loading) {
-        if ([loading boolValue]) {
+    [RACObserve(self.myLoginViewModel, access_token) subscribeNext:^(NSString *accessToken) {
+        @strongify(self);
+        if ([accessToken length]>0) {
+            self.myTokenLabel.text=accessToken;
+        }
+    }];
+    
+    //处理响应事件
+    
+    [[self.loginButton.rac_command executing] subscribeNext:^(id x) {
+        NSLog(@"loading 是：%d",[x intValue]);
+        if ([x boolValue]) {
             DDLogError(@"正在请求中...");
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         }
@@ -47,23 +58,13 @@
         }
     }];
     
-    [RACObserve(self.myLoginViewModel, access_token) subscribeNext:^(NSString *accessToken) {
-        @strongify(self);
-        if ([accessToken length]>0) {
-            self.myTokenLabel.text=accessToken;
-        }
-    }];
+    self.loginButton.rac_command=self.myLoginViewModel.loginCommand;
     
-    //处理响应事件
-    [[self.loginButton
-      rac_signalForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-         @strongify(self)
-         [[self.myLoginViewModel.loginCommand execute:nil] subscribeNext:^(id x) {
-             //成功登录
-             [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
-         }];
-     }];
+    [[self.loginButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
+        //成功登录
+        NSLog(@"成功登录");
+        [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
+    }];
     
     //处理错误
     [[self.myLoginViewModel errorSubject] subscribeNext:^(NSError *error) {
