@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewModel.h"
 
 @interface TestRacViewController : UIViewController
 

@@ -7,12 +7,14 @@
 //
 
 #import "TestRacViewController.h"
+#import "RACReturnSignal.h"
 
 @interface TestRacViewController ()
 @property(nonatomic,strong)UITextField *userNameText;
 @property(strong,nonatomic)NSString *username;
-@property(nonatomic,strong)UIButton *loginButton,*racCommendButton;
+@property(nonatomic,strong)UIButton *loginButton,*racCommendButton,*errCommendButton,*mainThreadButton,*netWorkButton;
 
+@property(nonatomic,strong)RACCommand *otherMyRaccomand,*mainThreadCommend,*netWorkCommend;
 @end
 
 @implementation TestRacViewController
@@ -79,6 +81,51 @@
              NSLog(@"racCommend出错了");
         }];
     }];
+    
+    
+    //关于otherMyRaccomand的方式
+    self.errCommendButton.rac_command=self.otherMyRaccomand;
+    
+    [self.otherMyRaccomand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        NSLog(@"完成了 %@",x);
+    }];
+    
+    //这边要注意是在errors 里面执行subscribeNext   不是执行subscribeError
+    [self.otherMyRaccomand.errors subscribeNext:^(NSError *error) {
+        NSLog(@"出错了 %@",error);
+    }];
+    
+    
+    //主线程上操作
+    self.mainThreadButton.rac_command=self.mainThreadCommend;
+    [[[self.mainThreadCommend.executionSignals.switchToLatest map:^id(id value) {
+        if ([value boolValue]) {
+            return @"跳浪帅";
+        }
+        else
+        {
+            return @"出太阳好么";
+        }
+    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSString *str) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"我是弹出窗" message:[NSString stringWithFormat:@"%@",str] delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+    }];
+    
+    //网络请求
+    //Button响应事件
+    [[self.netWorkButton
+      rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         [[[self netSignal] flattenMap:^RACStream *(id value) {
+              return [RACReturnSignal return:[NSString stringWithFormat:@"%@ 我已经被改变了成为另外一个信号",value]];
+         }]
+         subscribeNext:^(id x) {
+             NSLog(@"输出的内容:%@",x);
+         }];
+         
+     }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -128,6 +175,117 @@
     return myCommend;
 }
 
+//创建属性的RACCommand
+-(RACCommand *)otherMyRaccomand
+{
+    if (!_otherMyRaccomand) {
+        _otherMyRaccomand=[[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            NSLog(@"执行到新的RACCommand");
+            RACSignal *otherSignal=[RACSignal empty];
+            otherSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                if ([self.username isEqualToString:@"wjy"]) {
+                    [subscriber sendNext:@"我肯定可以运行的"];
+                    [subscriber sendCompleted];
+                }
+                else
+                {
+                    [subscriber sendError:[NSError errorWithDomain:@"报错了" code:401 userInfo:nil]];
+                }
+                return nil;
+            }];
+            return otherSignal;
+        }];
+    }
+    return _otherMyRaccomand;
+}
+
+
+//创建主线程上运行
+-(RACCommand *)mainThreadCommend
+{
+    @weakify(self);
+    if (!_mainThreadCommend) {
+    _mainThreadCommend=[[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        RACSignal *authSignal=[RACSignal empty];
+        @strongify(self);
+        
+        authSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            @strongify(self);
+            //可以根据要求加条件进行判断是否创建信号
+            if ([self.username isEqualToString:@"wjy"]) {
+                [subscriber sendNext:@(YES)];
+                [subscriber sendCompleted];
+            }
+            else
+            {
+                //错误
+                [subscriber sendError:[NSError errorWithDomain:@"报错了" code:1 userInfo:nil]];
+            }
+            return nil;
+        }];
+        return authSignal;
+    }];
+    }
+    return _mainThreadCommend;
+}
+
+//网络请求
+-(RACCommand *)netWorkCommend
+{
+    @weakify(self);
+    if (!_netWorkCommend) {
+        _netWorkCommend=[[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            RACSignal *authSignal=[RACSignal empty];
+            @strongify(self);
+            
+            authSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                @strongify(self);
+                LogInApi *reg = [[LogInApi alloc] initWithUsername:self.username password:@"123456"];
+                [reg startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+                    LoginModel *model=[[LoginModel alloc]initWithString:request.responseString error:nil];
+                    [subscriber sendNext:model];
+                    [subscriber sendCompleted];
+                } failure:^(YTKBaseRequest *request) {
+                    [subscriber sendError:[NSError errorWithDomain:@"报错了" code:1 userInfo:nil]];
+                }];
+                return nil;
+            }];
+            return authSignal;
+        }];
+    }
+    return _netWorkCommend;
+}
+
+-(RACSignal *)nettestSignal
+{
+    RACSignal *authSignal=[RACSignal empty];
+    
+    authSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        LogInApi *reg = [[LogInApi alloc] initWithUsername:self.username password:@"123456"];
+        [reg startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
+            LoginModel *model=[[LoginModel alloc]initWithString:request.responseString error:nil];
+            [subscriber sendNext:model];
+            [subscriber sendCompleted];
+        } failure:^(YTKBaseRequest *request) {
+            [subscriber sendError:[NSError errorWithDomain:@"报错了" code:1 userInfo:nil]];
+        }];
+        return nil;
+    }];
+    return authSignal;
+}
+
+-(RACSignal *)netSignal
+{
+    RACSignal *authSignal=[RACSignal empty];
+    authSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"测试"];
+        [subscriber sendCompleted];
+
+        return nil;
+    }];
+    return authSignal;
+}
+
 //RACSubject的运用
 -(RACSubject *)testSubject
 {
@@ -175,6 +333,48 @@
         [self.racCommendButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.view.mas_left).with.offset(15);
             make.top.mas_equalTo(self.loginButton.mas_bottom).with.offset(20);
+            make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
+            make.height.mas_equalTo(@40);
+        }];
+    }
+    
+    if(!self.errCommendButton)
+    {
+        self.errCommendButton=[[UIButton alloc]init];
+        [self.errCommendButton setTitle:@"ERROR测试" forState:UIControlStateNormal];
+        self.errCommendButton.backgroundColor=[UIColor blueColor];
+        [self.view addSubview:self.errCommendButton];
+        [self.errCommendButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.view.mas_left).with.offset(15);
+            make.top.mas_equalTo(self.racCommendButton.mas_bottom).with.offset(20);
+            make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
+            make.height.mas_equalTo(@40);
+        }];
+    }
+    
+    if(!self.mainThreadButton)
+    {
+        self.mainThreadButton=[[UIButton alloc]init];
+        [self.mainThreadButton setTitle:@"主线程上运行" forState:UIControlStateNormal];
+        self.mainThreadButton.backgroundColor=[UIColor blueColor];
+        [self.view addSubview:self.mainThreadButton];
+        [self.mainThreadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.view.mas_left).with.offset(15);
+            make.top.mas_equalTo(self.errCommendButton.mas_bottom).with.offset(20);
+            make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
+            make.height.mas_equalTo(@40);
+        }];
+    }
+    
+    if(!self.netWorkButton)
+    {
+        self.netWorkButton=[[UIButton alloc]init];
+        [self.netWorkButton setTitle:@"属性测试" forState:UIControlStateNormal];
+        self.netWorkButton.backgroundColor=[UIColor blueColor];
+        [self.view addSubview:self.netWorkButton];
+        [self.netWorkButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.view.mas_left).with.offset(15);
+            make.top.mas_equalTo(self.mainThreadButton.mas_bottom).with.offset(20);
             make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
             make.height.mas_equalTo(@40);
         }];

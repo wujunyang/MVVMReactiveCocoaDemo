@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LogInApi.h"
 #import "YTKBaseRequest.h"
 
 @interface LogInApi : YTKBaseRequest
