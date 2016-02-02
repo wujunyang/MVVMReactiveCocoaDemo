@@ -683,6 +683,8 @@
 		34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		34EEDB4F1C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F16B041C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F16B051C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		9014C40DD45909D3FC1F2EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 533C667C4AE7D52B4A1E63C2 /* libPods.a */; };
@@ -1383,6 +1385,8 @@
 		34EBE31A1C46583900887A63 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		34EEDB4D1C5C87BC004728AC /* TestRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRacViewController.h; sourceTree = "<group>"; };
 		34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRacViewController.m; sourceTree = "<group>"; };
+		34F16B021C5F72910079019B /* RACSignalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalTestViewController.h; sourceTree = "<group>"; };
+		34F16B031C5F72910079019B /* RACSignalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalTestViewController.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		533C667C4AE7D52B4A1E63C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1728,6 +1732,8 @@
 				34E894D21C3BC153001327C8 /* LogInViewController.m */,
 				34EEDB4D1C5C87BC004728AC /* TestRacViewController.h */,
 				34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */,
+				34F16B021C5F72910079019B /* RACSignalTestViewController.h */,
+				34F16B031C5F72910079019B /* RACSignalTestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3583,6 +3589,7 @@
 				34E08AC71C3BFB90005C6CA3 /* UIDevice+Hardware.m in Sources */,
 				34E08AC81C3BFB90005C6CA3 /* NSObject+GCD.m in Sources */,
 				34E08AC91C3BFB90005C6CA3 /* NSDictionary+Merge.m in Sources */,
+				34F16B051C5F72910079019B /* RACSignalTestViewController.m in Sources */,
 				34E08ACA1C3BFB90005C6CA3 /* NSString+UUID.m in Sources */,
 				34E08ACB1C3BFB90005C6CA3 /* CLLocation+CH1903.m in Sources */,
 				34E08ACC1C3BFB90005C6CA3 /* MKMapView+BetterMaps.m in Sources */,
@@ -3913,6 +3920,7 @@
 				34E893DD1C3B9A03001327C8 /* UIDevice+Hardware.m in Sources */,
 				34E893981C3B9A03001327C8 /* NSObject+GCD.m in Sources */,
 				34E893811C3B9A03001327C8 /* NSDictionary+Merge.m in Sources */,
+				34F16B041C5F72910079019B /* RACSignalTestViewController.m in Sources */,
 				34E893B01C3B9A03001327C8 /* NSString+UUID.m in Sources */,
 				34E8936A1C3B9A03001327C8 /* CLLocation+CH1903.m in Sources */,
 				34E893BB1C3B9A03001327C8 /* MKMapView+BetterMaps.m in Sources */,

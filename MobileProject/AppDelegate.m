@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestRacViewController.h"
+#import "RACSignalTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -56,7 +57,8 @@
 //登录页面
 -(void)setuptestViewController
 {
-    TestRacViewController *logInVc = [[TestRacViewController alloc]init];
+    //TestRacViewController *logInVc = [[TestRacViewController alloc]init];
+    RACSignalTestViewController *logInVc=[[RACSignalTestViewController alloc]init];
     UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
     [navcLogin setNavigationBarHidden:YES];
     self.window.rootViewController = navcLogin;

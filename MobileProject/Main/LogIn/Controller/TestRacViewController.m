@@ -12,9 +12,9 @@
 @interface TestRacViewController ()
 @property(nonatomic,strong)UITextField *userNameText;
 @property(strong,nonatomic)NSString *username;
-@property(nonatomic,strong)UIButton *loginButton,*racCommendButton,*errCommendButton,*mainThreadButton,*netWorkButton;
+@property(nonatomic,strong)UIButton *loginButton,*racCommendButton,*errCommendButton,*mainThreadButton,*netWorkButton,*testButton;
 
-@property(nonatomic,strong)RACCommand *otherMyRaccomand,*mainThreadCommend,*netWorkCommend;
+@property(nonatomic,strong)RACCommand *otherMyRaccomand,*mainThreadCommend,*netWorkCommend,*testPropertyCommend;
 @end
 
 @implementation TestRacViewController
@@ -256,6 +256,17 @@
     return _netWorkCommend;
 }
 
+
+//特性测试
+-(RACCommand *)testPropertyCommend
+{
+    if (!_testPropertyCommend) {
+        
+    }
+    
+    return _testPropertyCommend;
+}
+
 -(RACSignal *)nettestSignal
 {
     RACSignal *authSignal=[RACSignal empty];
@@ -375,6 +386,20 @@
         [self.netWorkButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.view.mas_left).with.offset(15);
             make.top.mas_equalTo(self.mainThreadButton.mas_bottom).with.offset(20);
+            make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
+            make.height.mas_equalTo(@40);
+        }];
+    }
+    
+    if(!self.testButton)
+    {
+        self.testButton=[[UIButton alloc]init];
+        [self.testButton setTitle:@"测试特性" forState:UIControlStateNormal];
+        self.testButton.backgroundColor=[UIColor blueColor];
+        [self.view addSubview:self.testButton];
+        [self.testButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.view.mas_left).with.offset(15);
+            make.top.mas_equalTo(self.netWorkButton.mas_bottom).with.offset(20);
             make.right.mas_equalTo(self.view.mas_right).with.offset(-15);
             make.height.mas_equalTo(@40);
         }];
