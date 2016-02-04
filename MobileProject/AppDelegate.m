@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TestRacViewController.h"
 #import "RACSignalTestViewController.h"
+#import "RACChannelViewController.h"
+#import "MulticastConnectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -58,7 +60,7 @@
 -(void)setuptestViewController
 {
     //TestRacViewController *logInVc = [[TestRacViewController alloc]init];
-    RACSignalTestViewController *logInVc=[[RACSignalTestViewController alloc]init];
+    MulticastConnectionViewController *logInVc=[[MulticastConnectionViewController alloc]init];
     UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
     [navcLogin setNavigationBarHidden:YES];
     self.window.rootViewController = navcLogin;

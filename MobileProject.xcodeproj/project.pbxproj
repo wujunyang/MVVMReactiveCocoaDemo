@@ -683,6 +683,10 @@
 		34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE31A1C46583900887A63 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		34EEDB4F1C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F146881C61E29A003A01C9 /* RACChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F146871C61E29A003A01C9 /* RACChannelViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F146891C61E29A003A01C9 /* RACChannelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F146871C61E29A003A01C9 /* RACChannelViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F1468C1C61F656003A01C9 /* MulticastConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		34F1468D1C61F656003A01C9 /* MulticastConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34F16B041C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34F16B051C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -1385,6 +1389,10 @@
 		34EBE31A1C46583900887A63 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		34EEDB4D1C5C87BC004728AC /* TestRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRacViewController.h; sourceTree = "<group>"; };
 		34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRacViewController.m; sourceTree = "<group>"; };
+		34F146861C61E29A003A01C9 /* RACChannelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACChannelViewController.h; sourceTree = "<group>"; };
+		34F146871C61E29A003A01C9 /* RACChannelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACChannelViewController.m; sourceTree = "<group>"; };
+		34F1468A1C61F656003A01C9 /* MulticastConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticastConnectionViewController.h; sourceTree = "<group>"; };
+		34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticastConnectionViewController.m; sourceTree = "<group>"; };
 		34F16B021C5F72910079019B /* RACSignalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalTestViewController.h; sourceTree = "<group>"; };
 		34F16B031C5F72910079019B /* RACSignalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalTestViewController.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
@@ -1734,6 +1742,10 @@
 				34EEDB4E1C5C87BC004728AC /* TestRacViewController.m */,
 				34F16B021C5F72910079019B /* RACSignalTestViewController.h */,
 				34F16B031C5F72910079019B /* RACSignalTestViewController.m */,
+				34F146861C61E29A003A01C9 /* RACChannelViewController.h */,
+				34F146871C61E29A003A01C9 /* RACChannelViewController.m */,
+				34F1468A1C61F656003A01C9 /* MulticastConnectionViewController.h */,
+				34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3595,6 +3607,7 @@
 				34E08ACC1C3BFB90005C6CA3 /* MKMapView+BetterMaps.m in Sources */,
 				34E08ACD1C3BFB90005C6CA3 /* UIView+Frame.m in Sources */,
 				34E08ACE1C3BFB90005C6CA3 /* NSDictionary+JSONString.m in Sources */,
+				34F1468D1C61F656003A01C9 /* MulticastConnectionViewController.m in Sources */,
 				34E08ACF1C3BFB90005C6CA3 /* JDStatusBarNotification.m in Sources */,
 				34E08AD01C3BFB90005C6CA3 /* UINavigationBar+Awesome.m in Sources */,
 				34E08AD11C3BFB90005C6CA3 /* NSManagedObject+Extensions.m in Sources */,
@@ -3736,6 +3749,7 @@
 				34E08B521C3BFB90005C6CA3 /* UIView+Shake.m in Sources */,
 				34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */,
 				34E08B531C3BFB90005C6CA3 /* UIApplication+KeyboardFrame.m in Sources */,
+				34F146891C61E29A003A01C9 /* RACChannelViewController.m in Sources */,
 				34E08B541C3BFB90005C6CA3 /* UIViewController+MJPopupViewController.m in Sources */,
 				34E08B551C3BFB90005C6CA3 /* MJPhotoBrowser.m in Sources */,
 				34E08B561C3BFB90005C6CA3 /* NetworkUnit.m in Sources */,
@@ -3926,6 +3940,7 @@
 				34E893BB1C3B9A03001327C8 /* MKMapView+BetterMaps.m in Sources */,
 				34E894271C3B9A03001327C8 /* UIView+Frame.m in Sources */,
 				34E893801C3B9A03001327C8 /* NSDictionary+JSONString.m in Sources */,
+				34F1468C1C61F656003A01C9 /* MulticastConnectionViewController.m in Sources */,
 				34E894B81C3BA300001327C8 /* JDStatusBarNotification.m in Sources */,
 				34E893FC1C3B9A03001327C8 /* UINavigationBar+Awesome.m in Sources */,
 				34E893641C3B9A03001327C8 /* NSManagedObject+Extensions.m in Sources */,
@@ -4067,6 +4082,7 @@
 				34E8942D1C3B9A03001327C8 /* UIView+Shake.m in Sources */,
 				34EEDB4F1C5C87BC004728AC /* TestRacViewController.m in Sources */,
 				34E893C61C3B9A03001327C8 /* UIApplication+KeyboardFrame.m in Sources */,
+				34F146881C61E29A003A01C9 /* RACChannelViewController.m in Sources */,
 				34E894361C3B9A03001327C8 /* UIViewController+MJPopupViewController.m in Sources */,
 				34E894901C3B9FC1001327C8 /* MJPhotoBrowser.m in Sources */,
 				34E894C61C3BAF38001327C8 /* NetworkUnit.m in Sources */,
