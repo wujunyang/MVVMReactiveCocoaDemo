@@ -19,6 +19,7 @@
     
     __block int aNumber = 0;
     
+    
     // Signal that will have the side effect of incrementing `aNumber` block
     // variable for each subscription before sending it.
     RACSignal *aSignal = [RACSignal createSignal:^ RACDisposable * (id<RACSubscriber> subscriber) {
