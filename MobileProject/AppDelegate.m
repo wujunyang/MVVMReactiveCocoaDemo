@@ -11,6 +11,7 @@
 #import "RACSignalTestViewController.h"
 #import "RACChannelViewController.h"
 #import "MulticastConnectionViewController.h"
+#import "MPTTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +29,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self setuptestViewController];
+    [self setupHomeViewController];
     
     return YES;
 }
@@ -47,7 +48,7 @@
 //首页
 -(void)setupHomeViewController
 {
-    HomeViewController *logInVc = [[HomeViewController alloc]init];
+    MPTTableViewController *logInVc = [[MPTTableViewController alloc]init];
     UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
     [navcLogin setNavigationBarHidden:YES];
     self.window.rootViewController = navcLogin;
