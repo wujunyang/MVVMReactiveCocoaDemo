@@ -135,11 +135,51 @@
     //输出：当前的位数为：1   当前的位数为：1   当前的位数为：2  执行清理
     
     
+    //flattenMap
+    [[signal flattenMap:^RACStream *(id value) {
+        return [RACSignal return:[NSString stringWithFormat:@"当前输出为：%@",value]];
+    }] subscribeNext:^(id x) {
+        NSLog(@"flattenMap中执行：%@",x);
+    }];
+//    输出：
+//    flattenMap中执行：当前输出为：1
+//    flattenMap中执行：当前输出为：3
+//    flattenMap中执行：当前输出为：15
+//    flattenMap中执行：当前输出为：wujy
+    
+//    FlatternMap和Map的区别
+//    1.FlatternMap中的Block返回信号。
+//    2.Map中的Block返回对象。
+//    3.开发中，如果信号发出的值不是信号，映射一般使用Map
+//    4.开发中，如果信号发出的值是信号，映射一般使用FlatternMap。
+    
+    
     //忽略某个值
     [[signal ignore:@"3"] subscribeNext:^(id x) {
         NSLog(@"当前的值为：%@",x);
     }];
     //输出：当前的值为：1  当前的值为：15  当前的值为：wujy   执行清理
+    
+    
+    //take:从开始一共取N次的信号
+    [[signal take:1] subscribeNext:^(id x) {
+        NSLog(@"take 获取的值：%@",x);
+    }];
+    //输出：take 获取的值：1
+    
+    
+    //takeLast 取最后N次的信号,前提条件，订阅者必须调用完成，因为只有完成，就知道总共有多少信号
+    [[signal takeLast:1] subscribeNext:^(id x) {
+        NSLog(@"takeLast 获取的值：%@",x);
+    }];
+    //输出：takeLast 获取的值：wujy
+    
+    
+    //skip 跳过几个信号,不接受
+    [[signal skip:2] subscribeNext:^(id x) {
+        NSLog(@"skip 获取的值：%@",x);
+    }];
+    //输出：skip 获取的值：15    skip 获取的值：wujy 
 }
 
 
@@ -257,6 +297,49 @@
 //    执行subscribeNext
 //    执行sendNext
 //    执行doCompleted
+    
+    
+    //replay 重放 当一个信号被多次订阅,反复播放内容
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    
+        [subscriber sendNext:@1];
+        [subscriber sendNext:@2];
+        
+        return nil;
+    }] replay];
+    
+    [signal subscribeNext:^(id x) {
+        
+        NSLog(@"replay 第一个订阅者%@",x);
+        
+    }];
+    
+    [signal subscribeNext:^(id x) {
+        
+        NSLog(@"replay 第二个订阅者%@",x);
+        
+    }];
+//    输出
+//    replay 第一个订阅者1
+//    replay 第一个订阅者2
+//    replay 第二个订阅者1
+//    replay 第二个订阅者2
+    
+    
+    //throttle节流:当某个信号发送比较频繁时，可以使用节流，在某一段时间不发送信号内容，过了一段时间获取信号的最新内容发出。
+    RACSubject *throttleSignal = [RACSubject subject];
+    [throttleSignal sendNext:@"throttle a"];
+    // 节流，在一定时间（4秒）内，不接收任何信号内容，过了这个时间（1秒）获取最后发送的信号内容发出。
+    [[throttleSignal throttle:4] subscribeNext:^(id x) {
+        NSLog(@"throttleSignal:%@",x);
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"世界的尽头到了");
+         [throttleSignal sendNext:@"throttle b"];
+         [throttleSignal sendNext:@"throttle c"];
+    });
+    //输出：throttleSignal:throttle c
 }
 
 
@@ -280,14 +363,31 @@
         }];
     }];
     
+    //1.1 combineLatest用法 将多个信号合并起来，并且拿到各个信号的最新的值,必须每个合并的signal至少都有过一次sendNext，才会触发合并的信号
+    RACSignal *combineSignal = [aSignal combineLatestWith:bSignal];
     
-    //1：combineLatest用法
+    [combineSignal subscribeNext:^(id x) {
+        
+        NSLog(@"combineSignal为:%@",x);
+    }];
+    //输出
+//    combineSignal为:<RACTuple: 0x600000015c30> (
+//                                               3,
+//                                               7
+//                                               )
+//    combineSignal为:<RACTuple: 0x600000015cb0> (
+//                                                                                                  3,
+//                                                                                                  9
+//                                                                                                  )
+    
+    
+    //1.2：combineLatest用法 reduce聚合:用于信号发出的内容是元组，把信号发出元组的值聚合成一个值
     //产生的最新的值聚合在一起，并生成一个新的信号 aSignal只有最新值  还有数组个数对应参数的个数
-    RACSignal *combineSignal=[RACSignal combineLatest:@[aSignal,bSignal] reduce:^id(NSString *aItem,NSString *bItem){
+    RACSignal *combineReduceSignal=[RACSignal combineLatest:@[aSignal,bSignal] reduce:^id(NSString *aItem,NSString *bItem){
         return [NSString stringWithFormat:@"%@-%@",aItem,bItem];
     }];
     
-    [combineSignal subscribeNext:^(id x) {
+    [combineReduceSignal subscribeNext:^(id x) {
         NSLog(@"合并后combineSignal的值：%@",x);
     }];
     //输出：aSignal清理了   合并后combineSignal的值：3-7    合并后combineSignal的值：3-9   bSignal清理了

@@ -81,6 +81,11 @@ static NSString *MPTNotificationName=@"RacMPTNotification";
         NSLog(@"rac_textSignal当前输入:%@",x);
     }];
     
+    //distinctUntilChanged 相同就不会再响应  takeUntil:(RACSignal *):获取信号直到某个信号执行完成
+    [[[[self.myTextField rac_textSignal] distinctUntilChanged] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id x) {
+        NSLog(@"rac_textSignal-distinctUntilChanged当前输入:%@",x);
+    }];
+    
     //3:rac_valuesAndChangesForKeyPath  KVO监听
     [[self.userModel rac_valuesAndChangesForKeyPath:@"userName" options:NSKeyValueObservingOptionNew observer:nil] subscribeNext:^(id x) {
         NSLog(@"userName的值：%@",x);
