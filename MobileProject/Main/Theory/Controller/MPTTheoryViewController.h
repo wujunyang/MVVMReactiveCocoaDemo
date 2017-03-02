@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "MPTRACSignerViewController.h"
+#import "MPTRACSubjectViewController.h"
+#import "MPTRACSequenceViewController.h"
+#import "MPTRACCommandViewController.h"
+#import "MPTRACMulticastConnectionViewController.h"
+#import "MPTRACUIKitViewController.h"
 @interface MPTTheoryViewController : UIViewController
 
 @end

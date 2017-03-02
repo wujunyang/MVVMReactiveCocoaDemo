@@ -12,6 +12,18 @@
 		34031DC21E66617B00EE46B7 /* MPTRACSignerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DBF1E66617B00EE46B7 /* MPTRACSignerViewController.m */; };
 		34031DC31E66617B00EE46B7 /* MPTTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DC11E66617B00EE46B7 /* MPTTheoryViewController.m */; };
 		34031DC51E66675100EE46B7 /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34031DC41E66675100EE46B7 /* Public.xcassets */; };
+		34089DE01E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DDF1E67E1F600F9A159 /* MPTRACSubjectViewController.m */; };
+		34089DE11E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DDF1E67E1F600F9A159 /* MPTRACSubjectViewController.m */; };
+		34089DE41E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DE31E67E9B900F9A159 /* MPTRACSequenceViewController.m */; };
+		34089DE51E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DE31E67E9B900F9A159 /* MPTRACSequenceViewController.m */; };
+		34089DE81E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DE71E67F84200F9A159 /* MPTRACCommandViewController.m */; };
+		34089DE91E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DE71E67F84200F9A159 /* MPTRACCommandViewController.m */; };
+		34089DEC1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEB1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m */; };
+		34089DED1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEB1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m */; };
+		34089DF01E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */; };
+		34089DF11E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */; };
+		34089DF51E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
+		34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
 		34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; };
@@ -727,6 +739,18 @@
 		34031DC01E66617B00EE46B7 /* MPTTheoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTTheoryViewController.h; sourceTree = "<group>"; };
 		34031DC11E66617B00EE46B7 /* MPTTheoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTTheoryViewController.m; sourceTree = "<group>"; };
 		34031DC41E66675100EE46B7 /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
+		34089DDE1E67E1F600F9A159 /* MPTRACSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSubjectViewController.h; sourceTree = "<group>"; };
+		34089DDF1E67E1F600F9A159 /* MPTRACSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSubjectViewController.m; sourceTree = "<group>"; };
+		34089DE21E67E9B900F9A159 /* MPTRACSequenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSequenceViewController.h; sourceTree = "<group>"; };
+		34089DE31E67E9B900F9A159 /* MPTRACSequenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSequenceViewController.m; sourceTree = "<group>"; };
+		34089DE61E67F84200F9A159 /* MPTRACCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACCommandViewController.h; sourceTree = "<group>"; };
+		34089DE71E67F84200F9A159 /* MPTRACCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACCommandViewController.m; sourceTree = "<group>"; };
+		34089DEA1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACMulticastConnectionViewController.h; sourceTree = "<group>"; };
+		34089DEB1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACMulticastConnectionViewController.m; sourceTree = "<group>"; };
+		34089DEE1E68073000F9A159 /* MPTRACUIKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACUIKitViewController.h; sourceTree = "<group>"; };
+		34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACUIKitViewController.m; sourceTree = "<group>"; };
+		34089DF31E6808EE00F9A159 /* MPTUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTUserModel.h; sourceTree = "<group>"; };
+		34089DF41E6808EE00F9A159 /* MPTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTUserModel.m; sourceTree = "<group>"; };
 		34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
 		34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
 		34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
@@ -1497,6 +1521,7 @@
 		34031DBC1E66615E00EE46B7 /* Theory */ = {
 			isa = PBXGroup;
 			children = (
+				34089DF21E6808D200F9A159 /* Model */,
 				34031DBD1E66616C00EE46B7 /* Controller */,
 			);
 			path = Theory;
@@ -1509,8 +1534,27 @@
 				34031DBF1E66617B00EE46B7 /* MPTRACSignerViewController.m */,
 				34031DC01E66617B00EE46B7 /* MPTTheoryViewController.h */,
 				34031DC11E66617B00EE46B7 /* MPTTheoryViewController.m */,
+				34089DDE1E67E1F600F9A159 /* MPTRACSubjectViewController.h */,
+				34089DDF1E67E1F600F9A159 /* MPTRACSubjectViewController.m */,
+				34089DE21E67E9B900F9A159 /* MPTRACSequenceViewController.h */,
+				34089DE31E67E9B900F9A159 /* MPTRACSequenceViewController.m */,
+				34089DE61E67F84200F9A159 /* MPTRACCommandViewController.h */,
+				34089DE71E67F84200F9A159 /* MPTRACCommandViewController.m */,
+				34089DEA1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.h */,
+				34089DEB1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m */,
+				34089DEE1E68073000F9A159 /* MPTRACUIKitViewController.h */,
+				34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		34089DF21E6808D200F9A159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34089DF31E6808EE00F9A159 /* MPTUserModel.h */,
+				34089DF41E6808EE00F9A159 /* MPTUserModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		34BFB3B51C44857000384B34 /* RacNetwork */ = {
@@ -3586,6 +3630,7 @@
 				34E08A691C3BFB90005C6CA3 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				34E08A6A1C3BFB90005C6CA3 /* UIScrollView+Pages.m in Sources */,
 				34E08A6B1C3BFB90005C6CA3 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
+				34089DED1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m in Sources */,
 				34E08A6C1C3BFB90005C6CA3 /* NSObject+AssociatedObject.m in Sources */,
 				34E08A6D1C3BFB90005C6CA3 /* UIView+ViewController.m in Sources */,
 				34E08A6E1C3BFB90005C6CA3 /* UIViewController+BackButtonItemTitle.m in Sources */,
@@ -3595,6 +3640,7 @@
 				34E08A721C3BFB90005C6CA3 /* UIDevice+PasscodeStatus.m in Sources */,
 				34E08A731C3BFB90005C6CA3 /* UIScrollView+MJExtension.m in Sources */,
 				34E08A741C3BFB90005C6CA3 /* UIApplication+NetworkActivityIndicator.m in Sources */,
+				34089DE91E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */,
 				34E08A751C3BFB90005C6CA3 /* SVIndefiniteAnimatedView.m in Sources */,
 				34E08A761C3BFB90005C6CA3 /* NSTimer+Addition.m in Sources */,
 				34E08A771C3BFB90005C6CA3 /* UIViewController+BackButtonHandler.m in Sources */,
@@ -3634,6 +3680,7 @@
 				34E08A991C3BFB90005C6CA3 /* UIView+RecursiveDescription.m in Sources */,
 				34E08A9A1C3BFB90005C6CA3 /* UIScrollView+EmptyDataSet.m in Sources */,
 				34E08A9B1C3BFB90005C6CA3 /* UIButton+MiddleAligning.m in Sources */,
+				34089DF11E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */,
 				34E08A9C1C3BFB90005C6CA3 /* UIViewController+BackButtonTouched.m in Sources */,
 				34E08A9D1C3BFB90005C6CA3 /* MJPhoto.m in Sources */,
 				34E08A9E1C3BFB90005C6CA3 /* UIImageView+BetterFace.m in Sources */,
@@ -3712,6 +3759,7 @@
 				34E08AE21C3BFB90005C6CA3 /* MJPhotoLoadingView.m in Sources */,
 				34E08AE31C3BFB90005C6CA3 /* NSFetchRequest+Extensions.m in Sources */,
 				34E08AE41C3BFB90005C6CA3 /* NSObject+EasyCopy.m in Sources */,
+				34089DE51E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */,
 				34E08AE51C3BFB90005C6CA3 /* YTKBatchRequest.m in Sources */,
 				34E08AE61C3BFB90005C6CA3 /* UINavigationItem+Lock.m in Sources */,
 				34E08AE71C3BFB90005C6CA3 /* UIWebView+Load.m in Sources */,
@@ -3738,6 +3786,7 @@
 				34E08AFA1C3BFB90005C6CA3 /* NSIndexPath+Offset.m in Sources */,
 				34E08AFB1C3BFB90005C6CA3 /* NSDecimalNumber+CalculatingByString.m in Sources */,
 				34E08AFC1C3BFB90005C6CA3 /* UIImage+Alpha.m in Sources */,
+				34089DE11E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */,
 				34E08AFD1C3BFB90005C6CA3 /* NSManagedObjectContext+ObjectClear.m in Sources */,
 				34E08AFE1C3BFB90005C6CA3 /* UIImage+FX.m in Sources */,
 				34E08AFF1C3BFB90005C6CA3 /* UIImage+Vector.m in Sources */,
@@ -3790,6 +3839,7 @@
 				34E08B2D1C3BFB90005C6CA3 /* QBImagePickerController.m in Sources */,
 				34E08B2E1C3BFB90005C6CA3 /* QBAssetsCollectionVideoIndicatorView.m in Sources */,
 				34EBE3131C46496600887A63 /* OrderModel.m in Sources */,
+				34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */,
 				34E08B2F1C3BFB90005C6CA3 /* CAAnimation+Blocks.m in Sources */,
 				34E08B301C3BFB90005C6CA3 /* UIView+Recursion.m in Sources */,
 				34E08B311C3BFB90005C6CA3 /* ActionSheetCustomPicker.m in Sources */,
@@ -3945,6 +3995,7 @@
 				34E894351C3B9A03001327C8 /* UIViewController+DDPopUpViewController.m in Sources */,
 				34E893761C3B9A03001327C8 /* NSDate+CupertinoYankee.m in Sources */,
 				34E894A11C3B9FC1001327C8 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				34089DF51E6808EE00F9A159 /* MPTUserModel.m in Sources */,
 				34E894301C3B9A03001327C8 /* UIView+Visuals.m in Sources */,
 				34E893B91C3B9A03001327C8 /* NSUserDefaults+iCloudSync.m in Sources */,
 				34E894131C3B9A03001327C8 /* UITableView+FDKeyedHeightCache.m in Sources */,
@@ -3975,6 +4026,7 @@
 				34E893C51C3B9A03001327C8 /* UIApplication+ApplicationSize.m in Sources */,
 				34031DBB1E66615300EE46B7 /* MPTTableViewController.m in Sources */,
 				34E8937E1C3B9A03001327C8 /* NSDateFormatter+Make.m in Sources */,
+				34089DEC1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m in Sources */,
 				34E893F01C3B9A03001327C8 /* UIImage+RoundedCorner.m in Sources */,
 				34E893921C3B9A03001327C8 /* NSObject+AddProperty.m in Sources */,
 				34E8949B1C3B9FC1001327C8 /* QBAssetsCollectionViewController.m in Sources */,
@@ -3983,6 +4035,7 @@
 				34E8943F1C3B9A03001327C8 /* UIWebView+JS.m in Sources */,
 				34E894011C3B9A03001327C8 /* UINavigationController+KeyboardFix.m in Sources */,
 				34E893EB1C3B9A03001327C8 /* UIImage+Merge.m in Sources */,
+				34089DE81E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */,
 				34E8911C1C3B92AA001327C8 /* MJRefreshAutoGifFooter.m in Sources */,
 				34E891281C3B92AA001327C8 /* UIScrollView+MJRefresh.m in Sources */,
 				34E891181C3B92AA001327C8 /* MJRefreshBackFooter.m in Sources */,
@@ -3992,6 +4045,7 @@
 				34E894061C3B9A03001327C8 /* UIPopoverController+iPhone.m in Sources */,
 				34E893F21C3B9A03001327C8 /* UIImageView+Addition.m in Sources */,
 				34E8943C1C3B9A03001327C8 /* UIWebView+Alert.m in Sources */,
+				34089DF01E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */,
 				34E893CD1C3B9A03001327C8 /* UIBezierPath+SVG.m in Sources */,
 				34E894451C3B9A03001327C8 /* WebView+Debug.m in Sources */,
 				34E893E51C3B9A03001327C8 /* UIImage+Blur.m in Sources */,
@@ -4141,6 +4195,7 @@
 				34E893841C3B9A03001327C8 /* NSDictionary+XML.m in Sources */,
 				34E8938F1C3B9A03001327C8 /* NSNumber+CGFloat.m in Sources */,
 				34E8908A1C3B89B2001327C8 /* AppDelegate.m in Sources */,
+				34089DE41E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */,
 				34E891111C3B92AA001327C8 /* ActionSheetDatePicker.m in Sources */,
 				34BFB3E01C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				34E893AB1C3B9A03001327C8 /* NSString+Ruby.m in Sources */,
@@ -4178,6 +4233,7 @@
 				34E8938C1C3B9A03001327C8 /* NSNotificationCenter+MainThread.m in Sources */,
 				34E893EA1C3B9A03001327C8 /* UIImage+GIF.m in Sources */,
 				34E891121C3B92AA001327C8 /* ActionSheetDistancePicker.m in Sources */,
+				34089DE01E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */,
 				34EBE30E1C46467700887A63 /* HomeModel.m in Sources */,
 				34E8936D1C3B9A03001327C8 /* NSArray+SafeAccess.m in Sources */,
 				34E891141C3B92AA001327C8 /* ActionSheetStringPicker.m in Sources */,
