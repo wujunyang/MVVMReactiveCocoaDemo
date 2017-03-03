@@ -1518,12 +1518,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		34031DBC1E66615E00EE46B7 /* Theory */ = {
+		34031DBC1E66615E00EE46B7 /* Theory(基础) */ = {
 			isa = PBXGroup;
 			children = (
 				34089DF21E6808D200F9A159 /* Model */,
 				34031DBD1E66616C00EE46B7 /* Controller */,
 			);
+			name = "Theory(基础)";
 			path = Theory;
 			sourceTree = "<group>";
 		};
@@ -1666,7 +1667,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
-				34031DBC1E66615E00EE46B7 /* Theory */,
+				34031DBC1E66615E00EE46B7 /* Theory(基础) */,
 				34EBE3031C461B6B00887A63 /* Public(公用) */,
 				34EBE2ED1C45F5CE00887A63 /* Home(首页) */,
 				34E890C91C3B8D70001327C8 /* Base(基类) */,
