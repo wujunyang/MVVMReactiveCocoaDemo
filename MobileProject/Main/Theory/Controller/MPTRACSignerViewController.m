@@ -154,11 +154,25 @@
 //    4.开发中，如果信号发出的值是信号，映射一般使用FlatternMap。
     
     
-    //忽略某个值
+    //ignore 忽略某个值
     [[signal ignore:@"3"] subscribeNext:^(id x) {
         NSLog(@"当前的值为：%@",x);
     }];
     //输出：当前的值为：1  当前的值为：15  当前的值为：wujy   执行清理
+    
+    
+    //ignoreValues 这个比较极端，忽略所有值，只关心Signal结束，也就是只取Comletion和Error两个消息，中间所有值都丢弃
+    [[signal ignoreValues] subscribeNext:^(id x) {
+        //它是没机会执行  因为ignoreValues已经忽略所有的next值
+        NSLog(@"ignoreValues当前值：%@",x);
+    } error:^(NSError *error) {
+        NSLog(@"ignoreValues error");
+    } completed:^{
+        NSLog(@"ignoreValues completed");
+    }];
+//    输出
+//    ignoreValues completed
+    
     
     
     //take:从开始一共取N次的信号
@@ -166,6 +180,21 @@
         NSLog(@"take 获取的值：%@",x);
     }];
     //输出：take 获取的值：1
+    
+    
+    //takeUntilBlock 对于每个next值，运行block，当block返回YES时停止取值
+    [[signal takeUntilBlock:^BOOL(NSString *x) {
+        if ([x isEqualToString:@"15"]) {
+            return YES;
+        }
+        return NO;
+    }] subscribeNext:^(id x) {
+        NSLog(@"takeUntilBlock 获取的值：%@",x);
+    }];
+//    输出
+//    takeUntilBlock 获取的值：1
+//    takeUntilBlock 获取的值：3
+    
     
     
     //takeLast 取最后N次的信号,前提条件，订阅者必须调用完成，因为只有完成，就知道总共有多少信号
@@ -179,7 +208,76 @@
     [[signal skip:2] subscribeNext:^(id x) {
         NSLog(@"skip 获取的值：%@",x);
     }];
-    //输出：skip 获取的值：15    skip 获取的值：wujy 
+    //输出：skip 获取的值：15    skip 获取的值：wujy
+    
+    
+    //skipUntilBlock 同理，一直跳，直到block为YES
+    [[signal skipUntilBlock:^BOOL(NSString *x) {
+        if ([x isEqualToString:@"15"]) {
+            return YES;
+        }
+        return NO;
+    }] subscribeNext:^(id x) {
+        NSLog(@"skipUntilBlock 获取的值：%@",x);
+    }];
+//    输出
+//    skipUntilBlock 获取的值：15
+//    skipUntilBlock 获取的值：wujy
+    
+    
+    
+    //skipWhileBlock  一直跳，直到block为NO
+    [[signal skipWhileBlock:^BOOL(NSString *x) {
+        if ([x isEqualToString:@"15"]) {
+            return NO;
+        }
+        return YES;
+    }] subscribeNext:^(id x) {
+        NSLog(@"skipWhileBlock 获取的值：%@",x);
+    }];
+//    输出
+//    skipWhileBlock 获取的值：15
+//    skipWhileBlock 获取的值：wujy
+    
+    
+    //not
+    RACSignal *curSignal=[RACSignal return:@(NO)];
+    
+    [[curSignal not] subscribeNext:^(NSNumber *x) {
+        NSLog(@"not 获取的值：%d",[x intValue]);
+    }];
+//    输出
+//    not 获取的值：1
+    
+    
+    //startWith 起始位置增加相应的元素
+    RACSignal *addStartSignal=[RACSignal return:@"123"];
+    [[addStartSignal startWith:@"345"] subscribeNext:^(id x) {
+        NSLog(@"startWith增加的值操作 %@",x);
+    }];
+//    输出
+//    startWith增加的值操作 345
+//    startWith增加的值操作 123
+    
+    
+    
+    //reduceEach 聚合:用于信号发出的内容是元组，把信号发出元组的值聚合成一个值
+    RACSignal *aSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:RACTuplePack(@1,@4)];
+        [subscriber sendNext:RACTuplePack(@2,@3)];
+        [subscriber sendNext:RACTuplePack(@5,@2)];
+        return nil;
+    }];
+    
+    [[aSignal reduceEach:^id(NSNumber *first,NSNumber *secnod){
+        return @([first integerValue]+[secnod integerValue]);
+    }] subscribeNext:^(NSNumber *x) {
+        NSLog(@"reduceEach当前的值：%ld",[x integerValue]);
+    }];
+//    输出
+//    reduceEach当前的值：5
+//    reduceEach当前的值：5
+//    reduceEach当前的值：7
 }
 
 
@@ -430,6 +528,49 @@
     //输出：第一步   第二步  第三步
     //说明：then的用法要跟上面这样使用，它会在RACSignal里面就执行
     
+    
+    //collect 会把内容合并成一个数组  也就是元组
+    RACSignal *arraySignal=[aSignal collect];
+    [arraySignal subscribeNext:^(id x) {
+        NSLog(@"collect 显示的值%@",x);
+    }];
+//    输出
+//    collect 显示的值(
+//                 1,
+//                 3
+//                 )
+    
+    
+    
+    RACSignal *operateSignal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@2];
+        [subscriber sendNext:@12];
+        [subscriber sendNext:@15];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    
+    //aggregateWithStart 运用 从哪个位置开始 进行顺序两值进行操作 最后只有一个被操作后的值
+    [[operateSignal aggregateWithStart:@0 reduce:^id(NSNumber *running, NSNumber *next) {
+        return @([running integerValue]+[next integerValue]);
+    }] subscribeNext:^(id x) {
+        NSLog(@"aggregateWithStart 当前值：%@",x);
+    }];
+    //输出
+    //aggregateWithStart 当前值：29
+    
+    
+    //scanWithStart  从哪个位置开始  然后每个位置跟前面的值进行操作 它会有根据NEXT的个数来显示对应的值
+    [[operateSignal scanWithStart:@0 reduce:^id(NSNumber *running, NSNumber *next) {
+        return @([running integerValue]+[next integerValue]);
+    }] subscribeNext:^(id x) {
+        NSLog(@"scanWithStart 当前值：%@",x);
+    }];
+    //输出
+    //scanWithStart 当前值：2
+    //scanWithStart 当前值：14
+    //scanWithStart 当前值：29
 }
 
 //信号队列的使用 信号队列顾名思义就是将一组信号排成队列，挨个调用
