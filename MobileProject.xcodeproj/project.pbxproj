@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3401A1891E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */; };
+		3401A18A1E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */; };
 		34031DBA1E66615300EE46B7 /* MPTBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DB71E66615300EE46B7 /* MPTBaseNavigationViewController.m */; };
 		34031DBB1E66615300EE46B7 /* MPTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DB91E66615300EE46B7 /* MPTTableViewController.m */; };
 		34031DC21E66617B00EE46B7 /* MPTRACSignerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DBF1E66617B00EE46B7 /* MPTRACSignerViewController.m */; };
@@ -730,6 +732,8 @@
 		0177EE410065521A1062D390 /* Pods-MobileProjectDefault-MobileProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject/Pods-MobileProjectDefault-MobileProject.release.xcconfig"; sourceTree = "<group>"; };
 		04AB124760DF59A438F5BB66 /* libPods-MobileProjectDefault-MobileProject_Local.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProjectDefault-MobileProject_Local.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4472330CBB918878944E0 /* Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject_Local/Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig"; sourceTree = "<group>"; };
+		3401A1871E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACHightSignalViewController.h; sourceTree = "<group>"; };
+		3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACHightSignalViewController.m; sourceTree = "<group>"; };
 		34031DB61E66615300EE46B7 /* MPTBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTBaseNavigationViewController.h; sourceTree = "<group>"; };
 		34031DB71E66615300EE46B7 /* MPTBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTBaseNavigationViewController.m; sourceTree = "<group>"; };
 		34031DB81E66615300EE46B7 /* MPTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTTableViewController.h; sourceTree = "<group>"; };
@@ -1545,6 +1549,8 @@
 				34089DEB1E6802DC00F9A159 /* MPTRACMulticastConnectionViewController.m */,
 				34089DEE1E68073000F9A159 /* MPTRACUIKitViewController.h */,
 				34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */,
+				3401A1871E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.h */,
+				3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3895,6 +3901,7 @@
 				34E08B5E1C3BFB90005C6CA3 /* ActionSheetDistancePicker.m in Sources */,
 				34EBE30F1C46467700887A63 /* HomeModel.m in Sources */,
 				34E08B5F1C3BFB90005C6CA3 /* NSArray+SafeAccess.m in Sources */,
+				3401A18A1E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */,
 				34E08B601C3BFB90005C6CA3 /* ActionSheetStringPicker.m in Sources */,
 				34E08B611C3BFB90005C6CA3 /* UIResponder+Chain.m in Sources */,
 				34E08B621C3BFB90005C6CA3 /* NSSet+Block.m in Sources */,
@@ -4193,6 +4200,7 @@
 				34E893751C3B9A03001327C8 /* NSData+zlib.m in Sources */,
 				34E891291C3B92AA001327C8 /* UIView+MJExtension.m in Sources */,
 				34E894421C3B9A03001327C8 /* UIWebView+Style.m in Sources */,
+				3401A1891E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */,
 				34E893841C3B9A03001327C8 /* NSDictionary+XML.m in Sources */,
 				34E8938F1C3B9A03001327C8 /* NSNumber+CGFloat.m in Sources */,
 				34E8908A1C3B89B2001327C8 /* AppDelegate.m in Sources */,

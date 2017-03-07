@@ -52,7 +52,7 @@
     self.navigationItem.title=@"基础知识点";
     
     if (!self.dataArray) {
-        self.dataArray=@[@"RACSigner基础知识点",@"RACSubject基础知识点",@"RACSequence基础知识点",@"RACCommand基础知识点",@"RACMulticastConnection基础知识点",@"RAC结合UI一般事件"];
+        self.dataArray=@[@"RACSigner基础知识点",@"RACSubject基础知识点",@"RACSequence基础知识点",@"RACCommand基础知识点",@"RACMulticastConnection基础知识点",@"RAC结合UI一般事件",@"高阶操作知识内容"];
     }
     
     //初始化表格
@@ -130,6 +130,12 @@
         case 5:
         {
             MPTRACUIKitViewController *vc=[[MPTRACUIKitViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            case 6:
+        {
+            MPTRACHightSignalViewController *vc=[[MPTRACHightSignalViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

@@ -14,6 +14,7 @@
 #import "MPTRACCommandViewController.h"
 #import "MPTRACMulticastConnectionViewController.h"
 #import "MPTRACUIKitViewController.h"
+#import "MPTRACHightSignalViewController.h"
 @interface MPTTheoryViewController : UIViewController
 
 @end
