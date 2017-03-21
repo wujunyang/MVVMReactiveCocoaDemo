@@ -28,6 +28,8 @@
 		34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
 		340DF4981E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
 		340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
+		340DF49C1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
+		340DF49D1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
 		34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; };
@@ -759,6 +761,8 @@
 		34089DF41E6808EE00F9A159 /* MPTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTUserModel.m; sourceTree = "<group>"; };
 		340DF4961E80F4EB00681B38 /* MPTRACSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSchedulerViewController.h; sourceTree = "<group>"; };
 		340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSchedulerViewController.m; sourceTree = "<group>"; };
+		340DF49A1E81050100681B38 /* MPTHotAndColdSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTHotAndColdSignalViewController.h; sourceTree = "<group>"; };
+		340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTHotAndColdSignalViewController.m; sourceTree = "<group>"; };
 		34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
 		34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
 		34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
@@ -1557,6 +1561,8 @@
 				3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */,
 				340DF4961E80F4EB00681B38 /* MPTRACSchedulerViewController.h */,
 				340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */,
+				340DF49A1E81050100681B38 /* MPTHotAndColdSignalViewController.h */,
+				340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3787,6 +3793,7 @@
 				34E08AEF1C3BFB90005C6CA3 /* NSObject+Runtime.m in Sources */,
 				34E08AF01C3BFB90005C6CA3 /* UIColor+Modify.m in Sources */,
 				34E08AF11C3BFB90005C6CA3 /* UITextField+Select.m in Sources */,
+				340DF49D1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */,
 				34E08AF21C3BFB90005C6CA3 /* UIImageView+FaceAwareFill.m in Sources */,
 				34E08AF31C3BFB90005C6CA3 /* NSDictionary+URL.m in Sources */,
 				34E08AF41C3BFB90005C6CA3 /* NSManagedObjectContext+Extensions.m in Sources */,
@@ -4211,6 +4218,7 @@
 				34E893841C3B9A03001327C8 /* NSDictionary+XML.m in Sources */,
 				34E8938F1C3B9A03001327C8 /* NSNumber+CGFloat.m in Sources */,
 				34E8908A1C3B89B2001327C8 /* AppDelegate.m in Sources */,
+				340DF49C1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */,
 				34089DE41E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */,
 				34E891111C3B92AA001327C8 /* ActionSheetDatePicker.m in Sources */,
 				34BFB3E01C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */,

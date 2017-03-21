@@ -16,6 +16,8 @@
 #import "MPTRACUIKitViewController.h"
 #import "MPTRACHightSignalViewController.h"
 #import "MPTRACSchedulerViewController.h"
+#import "MPTHotAndColdSignalViewController.h"
+
 @interface MPTTheoryViewController : UIViewController
 
 @end

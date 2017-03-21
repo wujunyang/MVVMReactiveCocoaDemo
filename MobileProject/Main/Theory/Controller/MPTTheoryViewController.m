@@ -52,7 +52,7 @@
     self.navigationItem.title=@"基础知识点";
     
     if (!self.dataArray) {
-        self.dataArray=@[@"RACSigner基础知识点",@"RACSubject基础知识点",@"RACSequence基础知识点",@"RACCommand基础知识点",@"RACMulticastConnection基础知识点",@"RAC结合UI一般事件",@"高阶操作知识内容",@"RAC并发编程知识点"];
+        self.dataArray=@[@"RACSigner基础知识点",@"RACSubject基础知识点",@"RACSequence基础知识点",@"RACCommand基础知识点",@"RACMulticastConnection基础知识点",@"RAC结合UI一般事件",@"高阶操作知识内容",@"RAC并发编程知识点",@"冷信号跟热信号知识点"];
     }
     
     //初始化表格
@@ -142,6 +142,12 @@
             case 7:
         {
             MPTRACSchedulerViewController *vc=[[MPTRACSchedulerViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 8:
+        {
+            MPTHotAndColdSignalViewController *vc=[[MPTHotAndColdSignalViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
