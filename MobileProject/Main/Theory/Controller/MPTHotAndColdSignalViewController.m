@@ -19,15 +19,15 @@
     
     self.view.backgroundColor=[UIColor whiteColor];
     
-    //[self aboutColdSignal];
+    [self aboutColdSignal];
     
-    //[self aboutHotSignal];
+    [self aboutHotSignal];
     
-    //[self aboutSubjectSignal];
+    [self aboutSubjectSignal];
     
-    //[self changeColdToHitSignal];
+    [self changeColdToHitSignal];
     
-    //[self aboutOtherColdToHitSignal];
+    [self aboutOtherColdToHitSignal];
     
     [self aboutReplayLazilySignal];
 }
