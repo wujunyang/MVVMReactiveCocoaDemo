@@ -26,6 +26,8 @@
 		34089DF11E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */; };
 		34089DF51E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
 		34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
+		340DF4981E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
+		340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
 		34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; };
@@ -755,6 +757,8 @@
 		34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACUIKitViewController.m; sourceTree = "<group>"; };
 		34089DF31E6808EE00F9A159 /* MPTUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTUserModel.h; sourceTree = "<group>"; };
 		34089DF41E6808EE00F9A159 /* MPTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTUserModel.m; sourceTree = "<group>"; };
+		340DF4961E80F4EB00681B38 /* MPTRACSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSchedulerViewController.h; sourceTree = "<group>"; };
+		340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSchedulerViewController.m; sourceTree = "<group>"; };
 		34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
 		34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
 		34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
@@ -1551,6 +1555,8 @@
 				34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */,
 				3401A1871E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.h */,
 				3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */,
+				340DF4961E80F4EB00681B38 /* MPTRACSchedulerViewController.h */,
+				340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3752,6 +3758,7 @@
 				34E08AD51C3BFB90005C6CA3 /* UITextField+Blocks.m in Sources */,
 				34E08AD61C3BFB90005C6CA3 /* NSFileHandle+readLine.m in Sources */,
 				34E08AD71C3BFB90005C6CA3 /* MJRefreshGifHeader.m in Sources */,
+				340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */,
 				34E08AD81C3BFB90005C6CA3 /* UIButton+TouchAreaInsets.m in Sources */,
 				34E08AD91C3BFB90005C6CA3 /* UIWindow+Hierarchy.m in Sources */,
 				34EBE2F61C45F67E00887A63 /* HomeViewController.m in Sources */,
@@ -4215,6 +4222,7 @@
 				34E893691C3B9A03001327C8 /* NSPersistentStoreCoordinator+Custom.m in Sources */,
 				34E891451C3B9739001327C8 /* YTKNetworkConfig.m in Sources */,
 				34E893B11C3B9A03001327C8 /* NSString+XML.m in Sources */,
+				340DF4981E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */,
 				34E893951C3B9A03001327C8 /* NSObject+AutoCoding.m in Sources */,
 				34E893E81C3B9A03001327C8 /* UIImage+FileName.m in Sources */,
 				34E8940A1C3B9A03001327C8 /* UIScreen+Frame.m in Sources */,

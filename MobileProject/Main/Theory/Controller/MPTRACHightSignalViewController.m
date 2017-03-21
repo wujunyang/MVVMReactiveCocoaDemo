@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     [self createHeightSignal];
+    [self createflatten];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,9 +53,24 @@
     }];
 }
 
--(void)createSwitchToLatest
+-(void)createflatten
 {
+    RACSignal *signal = @[@1, @2, @3].rac_sequence.signal;
+    RACSignal *mapSignal=[[signal map:^id(NSNumber *value) {
+        return [[[RACSignal return:value] repeat] take:value.integerValue];
+    }] flatten];
     
+    [mapSignal subscribeNext:^(NSNumber *value) {
+        NSLog(@"flatten 当前的值：%d",[value intValue]);
+    }];
+    
+//    输出：
+//    flatten 当前的值：1
+//    flatten 当前的值：2
+//    flatten 当前的值：2
+//    flatten 当前的值：3
+//    flatten 当前的值：3
+//    flatten 当前的值：3
 }
 
 @end
