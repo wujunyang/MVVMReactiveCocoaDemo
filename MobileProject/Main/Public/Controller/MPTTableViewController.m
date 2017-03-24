@@ -7,6 +7,10 @@
 //
 
 #import "MPTTableViewController.h"
+#import "MPNoticeListViewModel.h"
+#import "MPNoticeServiceImp.h"
+#import "MPNoticeService.h"
+
 
 @interface MPTTableViewController ()
 
@@ -52,7 +56,11 @@
     UINavigationController *secondNavigationController = [[MPTBaseNavigationViewController alloc]
                                                           initWithRootViewController:secondViewController];
     
-    HomeViewController *thirdViewController = [[HomeViewController alloc] init];
+    MPNoticeServiceImp *service=[[MPNoticeServiceImp alloc]init];
+    
+    MPNoticeListViewModel *viewModel=[[MPNoticeListViewModel alloc]initWithServices:service];
+    
+    MPMVVMDemoViewController *thirdViewController = [[MPMVVMDemoViewController alloc] initWithViewModel:viewModel];
     UINavigationController *thirdNavigationController = [[MPTBaseNavigationViewController alloc]
                                                          initWithRootViewController:thirdViewController];
     
@@ -82,7 +90,7 @@
                                                   CYLTabBarItemSelectedImage : @"mycity_highlight",
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"服务",
+                                                 CYLTabBarItemTitle : @"MVVM实例",
                                                  CYLTabBarItemImage : @"message_normal",
                                                  CYLTabBarItemSelectedImage : @"message_highlight",
                                                  };

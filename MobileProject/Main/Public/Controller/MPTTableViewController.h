@@ -12,6 +12,7 @@
 
 #import "MPTTheoryViewController.h"
 #import "HomeViewController.h"
+#import "MPMVVMDemoViewController.h"
 
 
 @interface MPTTableViewController : CYLTabBarController<UITabBarControllerDelegate>

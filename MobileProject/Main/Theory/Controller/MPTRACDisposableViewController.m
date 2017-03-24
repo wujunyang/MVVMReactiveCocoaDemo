@@ -31,6 +31,19 @@
 }
 
 
+//知识点：
+
+//RACDisposable用于取消订阅信号，默认信号发送完之后就会主动的取消订阅。订阅信号使用的subscribeNext:方法返回的就是RACDisposable类型的对象
+
+//当订阅者发送信号- (void)sendNext:(id)value之后，会执行：- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock中的nextBlock。当nextBlock执行完毕也就意味着subscribeNext方法返回了RACDisposable对象。
+//
+//1.如果不强引用订阅者对象，默认情况下会自动取消订阅，我们可以拿到RACDisposable 用+ (instancetype)disposableWithBlock:(void (^)(void))block做清空资源的一些操作了。
+//
+//2.如果不希望自动取消订阅，我们应该强引用RACSubscriber * subscriber。在想要取消订阅的时候用- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock返回的RACDisposable对象去调用- (void)dispose方法
+
+
+
+
 -(void)createFirstDisposable
 {
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {

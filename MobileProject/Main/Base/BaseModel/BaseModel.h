@@ -10,6 +10,7 @@
 
 @interface BaseModel : JSONModel
 
-
+@property(nonatomic,strong)NSString<Optional> *status;
+@property(nonatomic,strong)NSString<Optional> *message;
 
 @end

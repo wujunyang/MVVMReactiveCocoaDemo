@@ -32,6 +32,20 @@
 		340DF49D1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
 		34499C111E84ACD8009E25F1 /* MPTRACDisposableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */; };
 		34499C121E84ACD8009E25F1 /* MPTRACDisposableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */; };
+		34499C731E851093009E25F1 /* MPMVVMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C721E851093009E25F1 /* MPMVVMDemoViewController.m */; };
+		34499C741E851093009E25F1 /* MPMVVMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C721E851093009E25F1 /* MPMVVMDemoViewController.m */; };
+		34499C771E85111B009E25F1 /* MPNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C761E85111B009E25F1 /* MPNoticeModel.m */; };
+		34499C781E85111B009E25F1 /* MPNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C761E85111B009E25F1 /* MPNoticeModel.m */; };
+		34499C7B1E8511DA009E25F1 /* MPNoticeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C7A1E8511DA009E25F1 /* MPNoticeService.m */; };
+		34499C7C1E8511DA009E25F1 /* MPNoticeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C7A1E8511DA009E25F1 /* MPNoticeService.m */; };
+		34499C7F1E851222009E25F1 /* MPNoticeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C7E1E851222009E25F1 /* MPNoticeListModel.m */; };
+		34499C801E851222009E25F1 /* MPNoticeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C7E1E851222009E25F1 /* MPNoticeListModel.m */; };
+		34499C831E8512EA009E25F1 /* MPNoticeServiceImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C821E8512EA009E25F1 /* MPNoticeServiceImp.m */; };
+		34499C841E8512EA009E25F1 /* MPNoticeServiceImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C821E8512EA009E25F1 /* MPNoticeServiceImp.m */; };
+		34499C881E851713009E25F1 /* MPNoticeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C871E851713009E25F1 /* MPNoticeListViewModel.m */; };
+		34499C891E851713009E25F1 /* MPNoticeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C871E851713009E25F1 /* MPNoticeListViewModel.m */; };
+		34499C8C1E8517C0009E25F1 /* MPNoticeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C8B1E8517C0009E25F1 /* MPNoticeItemViewModel.m */; };
+		34499C8D1E8517C0009E25F1 /* MPNoticeItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C8B1E8517C0009E25F1 /* MPNoticeItemViewModel.m */; };
 		34BFB3DA1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DB1C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */; };
 		34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BFB3D41C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m */; };
@@ -767,6 +781,21 @@
 		340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTHotAndColdSignalViewController.m; sourceTree = "<group>"; };
 		34499C0F1E84ACD8009E25F1 /* MPTRACDisposableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACDisposableViewController.h; sourceTree = "<group>"; };
 		34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACDisposableViewController.m; sourceTree = "<group>"; };
+		34499C711E851093009E25F1 /* MPMVVMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMVVMDemoViewController.h; sourceTree = "<group>"; };
+		34499C721E851093009E25F1 /* MPMVVMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMVVMDemoViewController.m; sourceTree = "<group>"; };
+		34499C751E85111B009E25F1 /* MPNoticeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeModel.h; sourceTree = "<group>"; };
+		34499C761E85111B009E25F1 /* MPNoticeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeModel.m; sourceTree = "<group>"; };
+		34499C791E8511DA009E25F1 /* MPNoticeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeService.h; sourceTree = "<group>"; };
+		34499C7A1E8511DA009E25F1 /* MPNoticeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeService.m; sourceTree = "<group>"; };
+		34499C7D1E851222009E25F1 /* MPNoticeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeListModel.h; sourceTree = "<group>"; };
+		34499C7E1E851222009E25F1 /* MPNoticeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeListModel.m; sourceTree = "<group>"; };
+		34499C811E8512EA009E25F1 /* MPNoticeServiceImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeServiceImp.h; sourceTree = "<group>"; };
+		34499C821E8512EA009E25F1 /* MPNoticeServiceImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeServiceImp.m; sourceTree = "<group>"; };
+		34499C851E851397009E25F1 /* MPNoticeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeProtocol.h; sourceTree = "<group>"; };
+		34499C861E851713009E25F1 /* MPNoticeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeListViewModel.h; sourceTree = "<group>"; };
+		34499C871E851713009E25F1 /* MPNoticeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeListViewModel.m; sourceTree = "<group>"; };
+		34499C8A1E8517C0009E25F1 /* MPNoticeItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNoticeItemViewModel.h; sourceTree = "<group>"; };
+		34499C8B1E8517C0009E25F1 /* MPNoticeItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNoticeItemViewModel.m; sourceTree = "<group>"; };
 		34BFB3D11C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
 		34BFB3D21C44AE7C00384B34 /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
 		34BFB3D31C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
@@ -1582,6 +1611,69 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		34499C6B1E850F9A009E25F1 /* MVVM(实例) */ = {
+			isa = PBXGroup;
+			children = (
+				34499C701E85100A009E25F1 /* Other */,
+				34499C6F1E850FF6009E25F1 /* Controller */,
+				34499C6E1E850FE4009E25F1 /* View */,
+				34499C6D1E850FD3009E25F1 /* Model */,
+				34499C6C1E850FBD009E25F1 /* ViewModel */,
+			);
+			name = "MVVM(实例)";
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		34499C6C1E850FBD009E25F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34499C861E851713009E25F1 /* MPNoticeListViewModel.h */,
+				34499C871E851713009E25F1 /* MPNoticeListViewModel.m */,
+				34499C8A1E8517C0009E25F1 /* MPNoticeItemViewModel.h */,
+				34499C8B1E8517C0009E25F1 /* MPNoticeItemViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34499C6D1E850FD3009E25F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34499C751E85111B009E25F1 /* MPNoticeModel.h */,
+				34499C761E85111B009E25F1 /* MPNoticeModel.m */,
+				34499C7D1E851222009E25F1 /* MPNoticeListModel.h */,
+				34499C7E1E851222009E25F1 /* MPNoticeListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34499C6E1E850FE4009E25F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34499C6F1E850FF6009E25F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34499C711E851093009E25F1 /* MPMVVMDemoViewController.h */,
+				34499C721E851093009E25F1 /* MPMVVMDemoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34499C701E85100A009E25F1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				34499C791E8511DA009E25F1 /* MPNoticeService.h */,
+				34499C7A1E8511DA009E25F1 /* MPNoticeService.m */,
+				34499C811E8512EA009E25F1 /* MPNoticeServiceImp.h */,
+				34499C821E8512EA009E25F1 /* MPNoticeServiceImp.m */,
+				34499C851E851397009E25F1 /* MPNoticeProtocol.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		34BFB3B51C44857000384B34 /* RacNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -1691,6 +1783,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				34499C6B1E850F9A009E25F1 /* MVVM(实例) */,
 				34031DBC1E66615E00EE46B7 /* Theory(基础) */,
 				34EBE3031C461B6B00887A63 /* Public(公用) */,
 				34EBE2ED1C45F5CE00887A63 /* Home(首页) */,
@@ -3728,6 +3821,7 @@
 				34E08AAF1C3BFB90005C6CA3 /* UINavigationController+BATransitions.m in Sources */,
 				34E08AB01C3BFB90005C6CA3 /* UIColor+Random.m in Sources */,
 				34E08AB11C3BFB90005C6CA3 /* UIView+CustomBorder.m in Sources */,
+				34499C841E8512EA009E25F1 /* MPNoticeServiceImp.m in Sources */,
 				34E08AB21C3BFB90005C6CA3 /* UIPopoverController+iPhone.m in Sources */,
 				34E08AB31C3BFB90005C6CA3 /* UIImageView+Addition.m in Sources */,
 				34E08AB41C3BFB90005C6CA3 /* UIWebView+Alert.m in Sources */,
@@ -3777,6 +3871,7 @@
 				34E08ADA1C3BFB90005C6CA3 /* UIColor+Web.m in Sources */,
 				34E08ADB1C3BFB90005C6CA3 /* JDStatusBarStyle.m in Sources */,
 				34E08ADC1C3BFB90005C6CA3 /* UIFont-TTF.m in Sources */,
+				34499C7C1E8511DA009E25F1 /* MPNoticeService.m in Sources */,
 				34E08ADD1C3BFB90005C6CA3 /* MJRefreshBackGifFooter.m in Sources */,
 				34E08ADE1C3BFB90005C6CA3 /* UITextView+Select.m in Sources */,
 				34E08ADF1C3BFB90005C6CA3 /* MJRefreshStateHeader.m in Sources */,
@@ -3799,6 +3894,7 @@
 				34E08AEF1C3BFB90005C6CA3 /* NSObject+Runtime.m in Sources */,
 				34E08AF01C3BFB90005C6CA3 /* UIColor+Modify.m in Sources */,
 				34E08AF11C3BFB90005C6CA3 /* UITextField+Select.m in Sources */,
+				34499C741E851093009E25F1 /* MPMVVMDemoViewController.m in Sources */,
 				340DF49D1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */,
 				34E08AF21C3BFB90005C6CA3 /* UIImageView+FaceAwareFill.m in Sources */,
 				34E08AF31C3BFB90005C6CA3 /* NSDictionary+URL.m in Sources */,
@@ -3810,6 +3906,7 @@
 				34E08AF81C3BFB90005C6CA3 /* UIButton+Submitting.m in Sources */,
 				34E08AF91C3BFB90005C6CA3 /* YTKNetworkAgent.m in Sources */,
 				34EBE31C1C46583A00887A63 /* HomeTableViewCell.m in Sources */,
+				34499C781E85111B009E25F1 /* MPNoticeModel.m in Sources */,
 				34E08AFA1C3BFB90005C6CA3 /* NSIndexPath+Offset.m in Sources */,
 				34E08AFB1C3BFB90005C6CA3 /* NSDecimalNumber+CalculatingByString.m in Sources */,
 				34E08AFC1C3BFB90005C6CA3 /* UIImage+Alpha.m in Sources */,
@@ -3831,6 +3928,7 @@
 				34E08B0B1C3BFB90005C6CA3 /* NSDate+Extension.m in Sources */,
 				34E08B0C1C3BFB90005C6CA3 /* MyFileLogger.m in Sources */,
 				34E08B0D1C3BFB90005C6CA3 /* QBAssetsCollectionFooterView.m in Sources */,
+				34499C8D1E8517C0009E25F1 /* MPNoticeItemViewModel.m in Sources */,
 				34E08B0E1C3BFB90005C6CA3 /* NSFileManager+Paths.m in Sources */,
 				34E08B0F1C3BFB90005C6CA3 /* RDVTabBarItem.m in Sources */,
 				34E08B101C3BFB90005C6CA3 /* UIButton+CountDown.m in Sources */,
@@ -3881,6 +3979,7 @@
 				34E08B391C3BFB90005C6CA3 /* UIView+MJExtension.m in Sources */,
 				34E08B3A1C3BFB90005C6CA3 /* UIWebView+Style.m in Sources */,
 				34E08B3B1C3BFB90005C6CA3 /* NSDictionary+XML.m in Sources */,
+				34499C801E851222009E25F1 /* MPNoticeListModel.m in Sources */,
 				34E08B3C1C3BFB90005C6CA3 /* NSNumber+CGFloat.m in Sources */,
 				34E08B3D1C3BFB90005C6CA3 /* AppDelegate.m in Sources */,
 				34E08B3E1C3BFB90005C6CA3 /* ActionSheetDatePicker.m in Sources */,
@@ -3941,6 +4040,7 @@
 				34E08B6D1C3BFB90005C6CA3 /* NSManagedObject+DictionaryExport.m in Sources */,
 				34E08B6E1C3BFB90005C6CA3 /* UIBezierPath+Length.m in Sources */,
 				34E08B6F1C3BFB90005C6CA3 /* MJRefreshHeader.m in Sources */,
+				34499C891E851713009E25F1 /* MPNoticeListViewModel.m in Sources */,
 				34E08B701C3BFB90005C6CA3 /* UIApplication+Permissions.m in Sources */,
 				34E08B711C3BFB90005C6CA3 /* MJPhotoView.m in Sources */,
 				34E08B721C3BFB90005C6CA3 /* UIViewController+BlockSegue.m in Sources */,
@@ -4036,6 +4136,7 @@
 				34E893E71C3B9A03001327C8 /* UIImage+Color.m in Sources */,
 				34E894031C3B9A03001327C8 /* UINavigationItem+Loading.m in Sources */,
 				34E894A71C3BA26E001327C8 /* BaseViewController.m in Sources */,
+				34499C881E851713009E25F1 /* MPNoticeListViewModel.m in Sources */,
 				34E893D21C3B9A03001327C8 /* UIButton+Indicator.m in Sources */,
 				34E894CD1C3BBF79001327C8 /* LogInApi.m in Sources */,
 				34E893881C3B9A03001327C8 /* NSHTTPCookieStorage+FreezeDry.m in Sources */,
@@ -4076,6 +4177,7 @@
 				34E8943C1C3B9A03001327C8 /* UIWebView+Alert.m in Sources */,
 				34089DF01E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */,
 				34E893CD1C3B9A03001327C8 /* UIBezierPath+SVG.m in Sources */,
+				34499C8C1E8517C0009E25F1 /* MPNoticeItemViewModel.m in Sources */,
 				34E894451C3B9A03001327C8 /* WebView+Debug.m in Sources */,
 				34E893E51C3B9A03001327C8 /* UIImage+Blur.m in Sources */,
 				34E8949F1C3B9FC1001327C8 /* QBImagePickerGroupCell.m in Sources */,
@@ -4169,6 +4271,7 @@
 				34E891191C3B92AA001327C8 /* MJRefreshComponent.m in Sources */,
 				34E894261C3B9A03001327C8 /* UIView+Find.m in Sources */,
 				34E893661C3B9A03001327C8 /* NSManagedObjectContext+Fetching.m in Sources */,
+				34499C771E85111B009E25F1 /* MPNoticeModel.m in Sources */,
 				34E894A41C3B9FC1001327C8 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				34E893771C3B9A03001327C8 /* NSDate+Extension.m in Sources */,
 				34E08A5D1C3BEEF2005C6CA3 /* MyFileLogger.m in Sources */,
@@ -4229,6 +4332,7 @@
 				34089DE41E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */,
 				34499C111E84ACD8009E25F1 /* MPTRACDisposableViewController.m in Sources */,
 				34E891111C3B92AA001327C8 /* ActionSheetDatePicker.m in Sources */,
+				34499C831E8512EA009E25F1 /* MPNoticeServiceImp.m in Sources */,
 				34BFB3E01C44AE7C00384B34 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				34E893AB1C3B9A03001327C8 /* NSString+Ruby.m in Sources */,
 				34E894101C3B9A03001327C8 /* UISplitViewController+QuickAccess.m in Sources */,
@@ -4240,11 +4344,13 @@
 				34E893B11C3B9A03001327C8 /* NSString+XML.m in Sources */,
 				340DF4981E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */,
 				34E893951C3B9A03001327C8 /* NSObject+AutoCoding.m in Sources */,
+				34499C7B1E8511DA009E25F1 /* MPNoticeService.m in Sources */,
 				34E893E81C3B9A03001327C8 /* UIImage+FileName.m in Sources */,
 				34E8940A1C3B9A03001327C8 /* UIScreen+Frame.m in Sources */,
 				34E894241C3B9A03001327C8 /* UIView+draggable.m in Sources */,
 				34E893D61C3B9A03001327C8 /* UIColor+Gradient.m in Sources */,
 				34E8941B1C3B9A03001327C8 /* UITextField+Shake.m in Sources */,
+				34499C731E851093009E25F1 /* MPMVVMDemoViewController.m in Sources */,
 				34E894581C3B9D05001327C8 /* RDVTabBar.m in Sources */,
 				34E8938A1C3B9A03001327C8 /* NSInvocation+Bb.m in Sources */,
 				34E8941F1C3B9A03001327C8 /* UIView+Animation.m in Sources */,
@@ -4290,6 +4396,7 @@
 				34E893C81C3B9A03001327C8 /* UIApplication+Permissions.m in Sources */,
 				34E894941C3B9FC1001327C8 /* MJPhotoView.m in Sources */,
 				34E894341C3B9A03001327C8 /* UIViewController+BlockSegue.m in Sources */,
+				34499C7F1E851222009E25F1 /* MPNoticeListModel.m in Sources */,
 				34E891201C3B92AA001327C8 /* MJRefreshBackNormalFooter.m in Sources */,
 				34E894211C3B9A03001327C8 /* UIView+Constraints.m in Sources */,
 				34E891461C3B9739001327C8 /* YTKNetworkPrivate.m in Sources */,
