@@ -290,7 +290,7 @@
 //- (RACSignal *)replayLast就是用Capacity为1的RACReplaySubject来替换- (RACSignal *)replay的`subject。其作用是使后来订阅者只收到最后的历史值。
 //- (RACSignal *)replayLazily和- (RACSignal *)replay的区别就是replayLazily会在第一次订阅的时候才订阅sourceSignal。
 
-//replay、replayLast、replayLazily的区别 ReactiveCocoa提供了这三个简便的方法允许多个订阅者订阅一个信号，却不会重复执行订阅代码，并且能给新加的订阅者提供订阅前的值。replay和replayLast使信号变成热信号，且会提供所有值(-replay) 或者最新的值(-replayLast) 给订阅者。 replayLazily 会提供所有的值给订阅者 replayLazily还是冷信号 避免了冷信号的副作用
+//replay、replayLast、replayLazily的区别 ReactiveCocoa提供了这三个简便的方法允许多个订阅者订阅一个信号，却不会重复执行订阅代码，并且能给新加的订阅者提供订阅前的值。replay和replayLast使信号变成热信号，且会提供所有值(-replay) 或者最新的值(-replayLast) 给订阅者。 replayLazily 会提供所有的值给订阅者 避免了冷信号的副作用
 
 
 -(void)aboutOtherColdToHitSignal
