@@ -47,4 +47,9 @@
     _noticeConnectionErrors=_requestDataCommand.errors;
 }
 
+- (MPNoticeItemViewModel *)itemViewModelForIndex:(NSInteger)index
+{
+    return [[MPNoticeItemViewModel alloc] initWithModel:self.noticeListData[index]];
+}
+
 @end

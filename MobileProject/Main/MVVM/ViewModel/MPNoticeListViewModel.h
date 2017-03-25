@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MPNoticeProtocol.h"
 
+@class MPNoticeItemViewModel;
+
 @interface MPNoticeListViewModel : NSObject
 
 /**
@@ -30,5 +32,8 @@
 
 
 - (instancetype)initWithServices:(id<MPNoticeProtocol>)services;
+
+
+- (MPNoticeItemViewModel *)itemViewModelForIndex:(NSInteger)index;
 
 @end

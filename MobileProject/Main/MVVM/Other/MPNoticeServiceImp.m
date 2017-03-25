@@ -21,7 +21,7 @@
             
             if ([listModel.status isEqualToString:@"0"]) {
                 NSLog(@"出错了");
-                [subscriber sendError:nil];
+                [subscriber sendError:[NSError errorWithDomain:@"ERROR" code:10000 userInfo:@{@"Success":@NO, @"Message":listModel.message}]];
             }
             else
             {
@@ -31,7 +31,7 @@
             
         } failure:^(__kindof YTKBaseRequest *request) {
             NSLog(@"出错了");
-            [subscriber sendError:nil];
+            [subscriber sendError:[NSError errorWithDomain:@"ERROR" code:10001 userInfo:@{@"Success":@NO, @"Message":@"Bad Network!"}]];
         }];
         
         return [RACDisposable disposableWithBlock:^{

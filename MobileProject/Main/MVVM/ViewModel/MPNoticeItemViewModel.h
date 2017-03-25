@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class MPNoticeModel;
+
 @interface MPNoticeItemViewModel : NSObject
+
+@property (nonatomic,copy,readonly) NSString *notice_title;
+
+@property (nonatomic,copy,readonly) NSString *create_date;
+
+@property (nonatomic,copy,readonly) NSString *notice_type;
+
+- (instancetype)initWithModel:(MPNoticeModel *)model;
 
 @end
