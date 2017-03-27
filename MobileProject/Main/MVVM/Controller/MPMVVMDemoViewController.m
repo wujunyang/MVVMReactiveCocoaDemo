@@ -51,15 +51,13 @@
 {
     [self.view addSubview:self.myShowButton];
     [self.myShowButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(40);
+        make.top.mas_equalTo(100);
         make.left.mas_equalTo(20);
     }];
 }
 
 -(void)bindViewModel
 {
-    [self.viewModel.requestDataCommand execute:@"1"];
-    
     @weakify(self);
     [[[self.viewModel.requestDataCommand.executing skip:1] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSNumber * _Nullable executing) {
         @strongify(self);
@@ -71,6 +69,10 @@
     [RACObserve(self.viewModel, noticeListData) subscribeNext:^(id x) {
         NSLog(@"请求到数据列表了");
     }];
+    
+    self.myShowButton.rac_command=self.viewModel.requestDataCommand;
+    
+    // [self.viewModel.requestDataCommand execute:@"1"];
 }
 
 
