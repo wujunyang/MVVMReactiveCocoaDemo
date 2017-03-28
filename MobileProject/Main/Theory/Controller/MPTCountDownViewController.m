@@ -8,7 +8,7 @@
 
 #import "MPTCountDownViewController.h"
 
-@interface MPTCountDownViewController ()
+@interface MPTCountDownViewController ()<UITextFieldDelegate>
 @property(strong,nonatomic)UITextField *myTextField;
 @property(strong,nonatomic)UIButton *myButton;
 @end
@@ -92,6 +92,19 @@
     self.myButton.rac_command=command;
     
     
+    //编写关于委托的编写方式 是在self上面进行rac_signalForSelector
+    [[self
+      rac_signalForSelector:@selector(textFieldShouldReturn:)
+      fromProtocol:@protocol(UITextFieldDelegate)]
+    	subscribeNext:^(RACTuple *tuple) {
+            @strongify(self)
+            if (tuple.first == self.myTextField)
+            {
+                NSLog(@"触发");
+            };
+        }];
+    
+    self.myTextField.delegate = self;
 }
 
 #pragma mark 自定义代码

@@ -92,7 +92,7 @@ static NSString *MPTNotificationName=@"RacMPTNotification";
     }];
     
     //4:监听通知
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:MPTNotificationName object:nil] subscribeNext:^(id x) {
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:MPTNotificationName object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id x) {
         NSLog(@"收到通知了");
     }];
     
@@ -142,7 +142,7 @@ static NSString *MPTNotificationName=@"RacMPTNotification";
 
 -(void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPTNotificationName object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPTNotificationName object:nil];
 }
 
 
