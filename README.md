@@ -30,4 +30,6 @@
 
 里面还有包含两个关于MVVM模式的运用跟相应的代码；
 
+<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/1.png" width=200px height=300px></img>
 
+<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/2.png" width=200px height=300px></img>
