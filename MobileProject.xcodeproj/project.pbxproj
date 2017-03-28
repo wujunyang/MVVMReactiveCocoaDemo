@@ -701,6 +701,20 @@
 		34E894CD1C3BBF79001327C8 /* LogInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894CC1C3BBF79001327C8 /* LogInApi.m */; };
 		34E894D31C3BC153001327C8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D21C3BC153001327C8 /* LogInViewController.m */; };
 		34E894D61C3BCD2F001327C8 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E894D51C3BCD2F001327C8 /* LoginModel.m */; };
+		34EB9AEF1E8A544E009AFE14 /* MPBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AEE1E8A544E009AFE14 /* MPBaseViewModel.m */; };
+		34EB9AF01E8A544E009AFE14 /* MPBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AEE1E8A544E009AFE14 /* MPBaseViewModel.m */; };
+		34EB9AF81E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AF71E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m */; };
+		34EB9AF91E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AF71E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m */; };
+		34EB9AFC1E8A58D4009AFE14 /* MPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AFB1E8A58D4009AFE14 /* MPBaseModel.m */; };
+		34EB9AFD1E8A58D4009AFE14 /* MPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AFB1E8A58D4009AFE14 /* MPBaseModel.m */; };
+		34EB9B001E8A58EB009AFE14 /* MPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AFF1E8A58EB009AFE14 /* MPBaseViewController.m */; };
+		34EB9B011E8A58EB009AFE14 /* MPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9AFF1E8A58EB009AFE14 /* MPBaseViewController.m */; };
+		34EB9B041E8A5A51009AFE14 /* MPRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B031E8A5A51009AFE14 /* MPRouter.m */; };
+		34EB9B051E8A5A51009AFE14 /* MPRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B031E8A5A51009AFE14 /* MPRouter.m */; };
+		34EB9B081E8A5B86009AFE14 /* MPNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B071E8A5B86009AFE14 /* MPNavigationControllerStack.m */; };
+		34EB9B091E8A5B86009AFE14 /* MPNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B071E8A5B86009AFE14 /* MPNavigationControllerStack.m */; };
+		34EB9B0C1E8A5CFE009AFE14 /* MPBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B0B1E8A5CFE009AFE14 /* MPBaseView.m */; };
+		34EB9B0D1E8A5CFE009AFE14 /* MPBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EB9B0B1E8A5CFE009AFE14 /* MPBaseView.m */; };
 		34EBE2F51C45F67E00887A63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F41C45F67E00887A63 /* HomeViewController.m */; };
 		34EBE2F61C45F67E00887A63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F41C45F67E00887A63 /* HomeViewController.m */; };
 		34EBE2F91C45F6BA00887A63 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EBE2F81C45F6BA00887A63 /* HomeViewModel.m */; };
@@ -1454,6 +1468,22 @@
 		34E894D21C3BC153001327C8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		34E894D41C3BCD2F001327C8 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		34E894D51C3BCD2F001327C8 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		34EB9AED1E8A544E009AFE14 /* MPBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseViewModel.h; sourceTree = "<group>"; };
+		34EB9AEE1E8A544E009AFE14 /* MPBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseViewModel.m; sourceTree = "<group>"; };
+		34EB9AF11E8A54F9009AFE14 /* MPBaseViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseViewModelServices.h; sourceTree = "<group>"; };
+		34EB9AF51E8A557B009AFE14 /* MPBaseNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseNavigationProtocol.h; sourceTree = "<group>"; };
+		34EB9AF61E8A5801009AFE14 /* MPBaseViewModelServicesImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseViewModelServicesImpl.h; sourceTree = "<group>"; };
+		34EB9AF71E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseViewModelServicesImpl.m; sourceTree = "<group>"; };
+		34EB9AFA1E8A58D4009AFE14 /* MPBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseModel.h; sourceTree = "<group>"; };
+		34EB9AFB1E8A58D4009AFE14 /* MPBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseModel.m; sourceTree = "<group>"; };
+		34EB9AFE1E8A58EB009AFE14 /* MPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseViewController.h; sourceTree = "<group>"; };
+		34EB9AFF1E8A58EB009AFE14 /* MPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseViewController.m; sourceTree = "<group>"; };
+		34EB9B021E8A5A51009AFE14 /* MPRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPRouter.h; sourceTree = "<group>"; };
+		34EB9B031E8A5A51009AFE14 /* MPRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPRouter.m; sourceTree = "<group>"; };
+		34EB9B061E8A5B86009AFE14 /* MPNavigationControllerStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNavigationControllerStack.h; sourceTree = "<group>"; };
+		34EB9B071E8A5B86009AFE14 /* MPNavigationControllerStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNavigationControllerStack.m; sourceTree = "<group>"; };
+		34EB9B0A1E8A5CFE009AFE14 /* MPBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBaseView.h; sourceTree = "<group>"; };
+		34EB9B0B1E8A5CFE009AFE14 /* MPBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBaseView.m; sourceTree = "<group>"; };
 		34EBE2F31C45F67E00887A63 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		34EBE2F41C45F67E00887A63 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		34EBE2F71C45F6BA00887A63 /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
@@ -1793,6 +1823,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				34EB9AE71E8A5366009AFE14 /* MVVM(基类) */,
 				34499C6B1E850F9A009E25F1 /* MVVM(实例) */,
 				34031DBC1E66615E00EE46B7 /* Theory(基础) */,
 				34EBE3031C461B6B00887A63 /* Public(公用) */,
@@ -3341,6 +3372,70 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		34EB9AE71E8A5366009AFE14 /* MVVM(基类) */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9AEC1E8A53ED009AFE14 /* Other */,
+				34EB9AEB1E8A53DC009AFE14 /* View */,
+				34EB9AEA1E8A53C8009AFE14 /* ViewModel */,
+				34EB9AE91E8A53B6009AFE14 /* Model */,
+				34EB9AE81E8A539D009AFE14 /* Controller */,
+			);
+			name = "MVVM(基类)";
+			path = MVVMBase;
+			sourceTree = "<group>";
+		};
+		34EB9AE81E8A539D009AFE14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9AFE1E8A58EB009AFE14 /* MPBaseViewController.h */,
+				34EB9AFF1E8A58EB009AFE14 /* MPBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		34EB9AE91E8A53B6009AFE14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9AFA1E8A58D4009AFE14 /* MPBaseModel.h */,
+				34EB9AFB1E8A58D4009AFE14 /* MPBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34EB9AEA1E8A53C8009AFE14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9AED1E8A544E009AFE14 /* MPBaseViewModel.h */,
+				34EB9AEE1E8A544E009AFE14 /* MPBaseViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34EB9AEB1E8A53DC009AFE14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9B0A1E8A5CFE009AFE14 /* MPBaseView.h */,
+				34EB9B0B1E8A5CFE009AFE14 /* MPBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34EB9AEC1E8A53ED009AFE14 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				34EB9AF11E8A54F9009AFE14 /* MPBaseViewModelServices.h */,
+				34EB9AF51E8A557B009AFE14 /* MPBaseNavigationProtocol.h */,
+				34EB9AF61E8A5801009AFE14 /* MPBaseViewModelServicesImpl.h */,
+				34EB9AF71E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m */,
+				34EB9B021E8A5A51009AFE14 /* MPRouter.h */,
+				34EB9B031E8A5A51009AFE14 /* MPRouter.m */,
+				34EB9B061E8A5B86009AFE14 /* MPNavigationControllerStack.h */,
+				34EB9B071E8A5B86009AFE14 /* MPNavigationControllerStack.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		34EBE2ED1C45F5CE00887A63 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -3758,10 +3853,12 @@
 				34E08A6C1C3BFB90005C6CA3 /* NSObject+AssociatedObject.m in Sources */,
 				34E08A6D1C3BFB90005C6CA3 /* UIView+ViewController.m in Sources */,
 				34E08A6E1C3BFB90005C6CA3 /* UIViewController+BackButtonItemTitle.m in Sources */,
+				34EB9AF01E8A544E009AFE14 /* MPBaseViewModel.m in Sources */,
 				34E08A6F1C3BFB90005C6CA3 /* UIViewController+Visible.m in Sources */,
 				34E08A701C3BFB90005C6CA3 /* MKMapView+ZoomLevel.m in Sources */,
 				34E08A711C3BFB90005C6CA3 /* YTKChainRequestAgent.m in Sources */,
 				34E08A721C3BFB90005C6CA3 /* UIDevice+PasscodeStatus.m in Sources */,
+				34EB9AFD1E8A58D4009AFE14 /* MPBaseModel.m in Sources */,
 				34E08A731C3BFB90005C6CA3 /* UIScrollView+MJExtension.m in Sources */,
 				34E08A741C3BFB90005C6CA3 /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				34089DE91E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */,
@@ -3870,6 +3967,7 @@
 				34E08AD51C3BFB90005C6CA3 /* UITextField+Blocks.m in Sources */,
 				34E08AD61C3BFB90005C6CA3 /* NSFileHandle+readLine.m in Sources */,
 				34E08AD71C3BFB90005C6CA3 /* MJRefreshGifHeader.m in Sources */,
+				34EB9B011E8A58EB009AFE14 /* MPBaseViewController.m in Sources */,
 				340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */,
 				34E08AD81C3BFB90005C6CA3 /* UIButton+TouchAreaInsets.m in Sources */,
 				34E08AD91C3BFB90005C6CA3 /* UIWindow+Hierarchy.m in Sources */,
@@ -3886,6 +3984,7 @@
 				34E08AE21C3BFB90005C6CA3 /* MJPhotoLoadingView.m in Sources */,
 				34E08AE31C3BFB90005C6CA3 /* NSFetchRequest+Extensions.m in Sources */,
 				34E08AE41C3BFB90005C6CA3 /* NSObject+EasyCopy.m in Sources */,
+				34EB9B051E8A5A51009AFE14 /* MPRouter.m in Sources */,
 				34089DE51E67E9B900F9A159 /* MPTRACSequenceViewController.m in Sources */,
 				34E08AE51C3BFB90005C6CA3 /* YTKBatchRequest.m in Sources */,
 				34E08AE61C3BFB90005C6CA3 /* UINavigationItem+Lock.m in Sources */,
@@ -3918,6 +4017,7 @@
 				34E08AFC1C3BFB90005C6CA3 /* UIImage+Alpha.m in Sources */,
 				34089DE11E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */,
 				34E08AFD1C3BFB90005C6CA3 /* NSManagedObjectContext+ObjectClear.m in Sources */,
+				34EB9B091E8A5B86009AFE14 /* MPNavigationControllerStack.m in Sources */,
 				34E08AFE1C3BFB90005C6CA3 /* UIImage+FX.m in Sources */,
 				34E08AFF1C3BFB90005C6CA3 /* UIImage+Vector.m in Sources */,
 				34E08B001C3BFB90005C6CA3 /* NSString+Encrypt.m in Sources */,
@@ -3943,6 +4043,7 @@
 				34E08B131C3BFB90005C6CA3 /* CLLocationManager+Blocks.m in Sources */,
 				34E08B141C3BFB90005C6CA3 /* NSString+Contains.m in Sources */,
 				34E08B151C3BFB90005C6CA3 /* NSDate+TimeAgo.m in Sources */,
+				34EB9AF91E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m in Sources */,
 				34E08B161C3BFB90005C6CA3 /* UIWebVIew+SwipeGesture.m in Sources */,
 				34E08B171C3BFB90005C6CA3 /* UIImageView+Reflect.m in Sources */,
 				34BFB3DF1C44AE7C00384B34 /* AFURLConnectionOperation+RACSupport.m in Sources */,
@@ -4014,6 +4115,7 @@
 				34EEDB501C5C87BC004728AC /* TestRacViewController.m in Sources */,
 				34E08B531C3BFB90005C6CA3 /* UIApplication+KeyboardFrame.m in Sources */,
 				34F146891C61E29A003A01C9 /* RACChannelViewController.m in Sources */,
+				34EB9B0D1E8A5CFE009AFE14 /* MPBaseView.m in Sources */,
 				34E08B541C3BFB90005C6CA3 /* UIViewController+MJPopupViewController.m in Sources */,
 				34E08B551C3BFB90005C6CA3 /* MJPhotoBrowser.m in Sources */,
 				34E08B561C3BFB90005C6CA3 /* NetworkUnit.m in Sources */,
@@ -4127,6 +4229,7 @@
 				34E8936E1C3B9A03001327C8 /* NSBundle+AppIcon.m in Sources */,
 				34E893AD1C3B9A03001327C8 /* NSString+Size.m in Sources */,
 				34E893A31C3B9A03001327C8 /* NSString+Emoji.m in Sources */,
+				34EB9B041E8A5A51009AFE14 /* MPRouter.m in Sources */,
 				34E8941C1C3B9A03001327C8 /* UITextView+PinchZoom.m in Sources */,
 				34E894351C3B9A03001327C8 /* UIViewController+DDPopUpViewController.m in Sources */,
 				34E893761C3B9A03001327C8 /* NSDate+CupertinoYankee.m in Sources */,
@@ -4154,6 +4257,7 @@
 				34E8942B1C3B9A03001327C8 /* UIView+RecursiveDescription.m in Sources */,
 				34E8940D1C3B9A03001327C8 /* UIScrollView+EmptyDataSet.m in Sources */,
 				34E893D31C3B9A03001327C8 /* UIButton+MiddleAligning.m in Sources */,
+				34EB9B081E8A5B86009AFE14 /* MPNavigationControllerStack.m in Sources */,
 				34E894331C3B9A03001327C8 /* UIViewController+BackButtonTouched.m in Sources */,
 				34E8948E1C3B9FC1001327C8 /* MJPhoto.m in Sources */,
 				34E893F31C3B9A03001327C8 /* UIImageView+BetterFace.m in Sources */,
@@ -4195,6 +4299,7 @@
 				34E8940C1C3B9A03001327C8 /* UIScrollView+APParallaxHeader.m in Sources */,
 				34E893A81C3B9A03001327C8 /* NSString+Pinyin.m in Sources */,
 				34BFB3DC1C44AE7C00384B34 /* AFHTTPSessionManager+RACSupport.m in Sources */,
+				34EB9AFC1E8A58D4009AFE14 /* MPBaseModel.m in Sources */,
 				34E894381C3B9A03001327C8 /* UIViewController+ScrollingStatusBar.m in Sources */,
 				34E893BC1C3B9A03001327C8 /* MKMapView+MoveLogo.m in Sources */,
 				34E893AF1C3B9A03001327C8 /* NSString+UrlEncode.m in Sources */,
@@ -4220,6 +4325,7 @@
 				34E893961C3B9A03001327C8 /* NSObject+Blocks.m in Sources */,
 				34E8940F1C3B9A03001327C8 /* UISearchBar+Blocks.m in Sources */,
 				34EBE3081C461BF000887A63 /* pageModel.m in Sources */,
+				34EB9B001E8A58EB009AFE14 /* MPBaseViewController.m in Sources */,
 				34E894181C3B9A03001327C8 /* UITextField+Blocks.m in Sources */,
 				34E893861C3B9A03001327C8 /* NSFileHandle+readLine.m in Sources */,
 				34E891221C3B92AA001327C8 /* MJRefreshGifHeader.m in Sources */,
@@ -4298,6 +4404,7 @@
 				34E894281C3B9A03001327C8 /* UIView+GestureCallback.m in Sources */,
 				34E893B41C3B9A03001327C8 /* NSURL+Param.m in Sources */,
 				34E893F51C3B9A03001327C8 /* UIImageView+GeometryConversion.m in Sources */,
+				34EB9B0C1E8A5CFE009AFE14 /* MPBaseView.m in Sources */,
 				34E894231C3B9A03001327C8 /* UIView+Debug.m in Sources */,
 				34E8936C1C3B9A03001327C8 /* NSArray+Block.m in Sources */,
 				34E894A31C3B9FC1001327C8 /* TPKeyboardAvoidingTableView.m in Sources */,
@@ -4310,6 +4417,7 @@
 				34E893731C3B9A03001327C8 /* NSData+Hash.m in Sources */,
 				34E8913F1C3B9739001327C8 /* YTKBaseRequest.m in Sources */,
 				34E893E61C3B9A03001327C8 /* UIImage+Capture.m in Sources */,
+				34EB9AF81E8A5801009AFE14 /* MPBaseViewModelServicesImpl.m in Sources */,
 				34E893DC1C3B9A03001327C8 /* UIControl+Block.m in Sources */,
 				34E891131C3B92AA001327C8 /* ActionSheetLocalePicker.m in Sources */,
 				34E894051C3B9A03001327C8 /* UINavigationItem+Margin.m in Sources */,
@@ -4324,6 +4432,7 @@
 				34E891101C3B92AA001327C8 /* ActionSheetCustomPicker.m in Sources */,
 				34E894C31C3BAEB9001327C8 /* NetWorkBaseUrlConfig.m in Sources */,
 				34E893B81C3B9A03001327C8 /* NSURLRequest+ParamsFromDictionary.m in Sources */,
+				34EB9AEF1E8A544E009AFE14 /* MPBaseViewModel.m in Sources */,
 				34E893781C3B9A03001327C8 /* NSDate+Formatter.m in Sources */,
 				34E8939B1C3B9A03001327C8 /* NSObject+Reflection.m in Sources */,
 				34E893B31C3B9A03001327C8 /* NSTimer+Blocks.m in Sources */,
