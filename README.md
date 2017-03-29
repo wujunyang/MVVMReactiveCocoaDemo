@@ -1,6 +1,8 @@
-# MobileProject
+# MVVMReactiveCocoaDemo
 
 一个使用ReactiveCocoa的MVVM实例；
+
+#一：关于ReactiveCocoa的知识点
 
 首先对RAC常用的知识点进行整理并都带有小实例：
 
@@ -28,8 +30,11 @@
 
 12：RAC倒计时小实例"
 
-里面还有包含两个关于MVVM模式的运用跟相应的代码；
 
-<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/1.png" width=200px height=300px></img>
+#二：关于使用ReactiveCocoa结合MVVM模式的实例；
 
-<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/2.png" width=200px height=300px></img>
+包括关于公共内容的提取，在ViewModel中实现页面的跳转，列表的点击实事等；在源代码中还有关于简单的数据请求并绑定列表的功能；
+
+
+<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif” width=200px height=300px></img>
+
