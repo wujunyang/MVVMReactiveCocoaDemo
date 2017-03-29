@@ -36,5 +36,5 @@
 包括关于公共内容的提取，在ViewModel中实现页面的跳转，列表的点击实事等；在源代码中还有关于简单的数据请求并绑定列表的功能；
 
 
-<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif” width=200px height=300px></img>
+<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif" width=200px height=300px></img>
 
