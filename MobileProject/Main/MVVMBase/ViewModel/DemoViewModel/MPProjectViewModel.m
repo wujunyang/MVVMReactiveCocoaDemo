@@ -31,6 +31,7 @@
         
         viewModel.callback = ^(NSString *code) {
             @strongify(self)
+            NSLog(@"%@",code);
             [self.services popViewModelAnimated:YES];
         };
         
