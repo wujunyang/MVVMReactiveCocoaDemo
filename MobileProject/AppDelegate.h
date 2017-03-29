@@ -11,12 +11,13 @@
 #import "HomeViewController.h"
 #import "MyFileLogger.h"
 
+#import "MPNavigationControllerStack.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
--(void)setupLoginViewController;
+@property (nonatomic, strong, readonly) MPNavigationControllerStack *navigationControllerStack;
 
--(void)setupHomeViewController;
 @end
 

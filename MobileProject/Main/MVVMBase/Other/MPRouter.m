@@ -28,7 +28,7 @@
 - (MPBaseViewController *)viewControllerForViewModel:(MPBaseViewModel *)viewModel {
     NSString *viewController = self.viewModelViewMappings[NSStringFromClass(viewModel.class)];
     
-    NSParameterAssert([NSClassFromString(viewController) isSubclassOfClass:[MPBaseViewController class]]);
+//    NSParameterAssert([NSClassFromString(viewController) isSubclassOfClass:[MPBaseViewController class]]);
     NSParameterAssert([NSClassFromString(viewController) instancesRespondToSelector:@selector(initWithViewModel:)]);
     
     return [[NSClassFromString(viewController) alloc] initWithViewModel:viewModel];
@@ -36,7 +36,11 @@
 
 - (NSDictionary *)viewModelViewMappings {
     return @{
-             @"MRCLoginViewModel": @"MPLoginViewController"
+             @"MPProjectViewModel": @"MPProjectViewController",
+             @"MPProjectDetailViewModel":@"MPProjectDetailViewController",
+             @"MPSystemViewModel":@"MPSystemViewController",
+             @"MPHomePageViewModel":@"MPTTableViewController",
+             @"MPTTheoryViewModel":@"MPTTheoryViewController"
              };
 }
 

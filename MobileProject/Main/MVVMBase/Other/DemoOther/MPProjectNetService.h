@@ -1,5 +1,5 @@
 //
-//  MPBaseView.h
+//  MPProjectNetService.h
 //  MobileProject
 //
 //  Created by wujunyang on 2017/3/28.
@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YTKBaseRequest.h"
 
-@interface MPBaseView : UIView
+@interface MPProjectNetService : YTKBaseRequest
 
 @end

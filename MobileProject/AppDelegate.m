@@ -13,7 +13,14 @@
 #import "MulticastConnectionViewController.h"
 #import "MPTTableViewController.h"
 
+#import "MPBaseViewModelServicesImpl.h"
+#import "MPHomePageViewModel.h"
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) MPBaseViewModelServicesImpl *services;
+@property (nonatomic, strong) MPBaseViewModel *viewModel;
+@property (nonatomic, strong, readwrite) MPNavigationControllerStack *navigationControllerStack;
 
 @end
 
@@ -25,37 +32,31 @@
     //日志初始化
     [MyFileLogger sharedManager];
     
+    
+    //初始化
+    self.services = [[MPBaseViewModelServicesImpl alloc] init];
+    self.navigationControllerStack = [[MPNavigationControllerStack alloc] initWithServices:self.services];
+    
+    
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self setupHomeViewController];
+
+    [self.services resetRootViewModel:[self createInitialViewModel]];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
 
-//登录页面
--(void)setupLoginViewController
-{
-    LogInViewController *logInVc = [[LogInViewController alloc]init];
-    UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
-    [navcLogin setNavigationBarHidden:YES];
-    self.window.rootViewController = navcLogin;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+- (MPBaseViewModel *)createInitialViewModel {
+    // The user has logged-in.
+//    if (YES) {
+        return [[MPHomePageViewModel alloc] initWithServices:self.services params:nil];
+//    } else {
+//        return [[MPLoginViewModel alloc] initWithServices:self.services params:nil];
+//    }
 }
-
-//首页
--(void)setupHomeViewController
-{
-    MPTTableViewController *logInVc = [[MPTTableViewController alloc]init];
-    UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
-    [navcLogin setNavigationBarHidden:YES];
-    self.window.rootViewController = navcLogin;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-}
-
 
 //登录页面
 -(void)setuptestViewController

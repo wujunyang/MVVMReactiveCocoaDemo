@@ -13,8 +13,14 @@
 #import "MPTTheoryViewController.h"
 #import "HomeViewController.h"
 #import "MPMVVMDemoViewController.h"
+#import "MPProjectViewController.h"
+#import "MPSystemViewController.h"
 
+#import "MPBaseViewModel.h"
+#import "MPHomePageViewModel.h"
 
 @interface MPTTableViewController : CYLTabBarController<UITabBarControllerDelegate>
+
+- (instancetype)initWithViewModel:(MPHomePageViewModel *)viewModel;
 
 @end

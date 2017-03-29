@@ -1,5 +1,5 @@
 //
-//  MPBaseView.h
+//  MPProjectModel.h
 //  MobileProject
 //
 //  Created by wujunyang on 2017/3/28.
@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MPBaseModel.h"
 
-@interface MPBaseView : UIView
+@interface MPProjectModel : MPBaseModel
 
 @end

@@ -1,13 +1,13 @@
 //
-//  MPBaseView.h
+//  MPProjectNetService.m
 //  MobileProject
 //
 //  Created by wujunyang on 2017/3/28.
 //  Copyright © 2017年 wujunyang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MPProjectNetService.h"
 
-@interface MPBaseView : UIView
+@implementation MPProjectNetService
 
 @end

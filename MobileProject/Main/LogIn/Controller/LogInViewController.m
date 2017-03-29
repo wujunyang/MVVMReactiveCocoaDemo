@@ -63,7 +63,7 @@
     [[self.loginButton.rac_command.executionSignals switchToLatest] subscribeNext:^(id x) {
         //成功登录
         NSLog(@"成功登录");
-        [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
+       // [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
     }];
     
     //处理错误

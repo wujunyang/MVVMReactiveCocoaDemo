@@ -10,9 +10,12 @@
 #import "MPNoticeListViewModel.h"
 #import "MPNoticeServiceImp.h"
 #import "MPNoticeService.h"
+#import "AppDelegate.h"
 
 
 @interface MPTTableViewController ()
+
+@property(nonatomic,strong)MPHomePageViewModel *viewModel;
 
 @end
 
@@ -33,6 +36,17 @@
     return self;
 }
 
+- (instancetype)initWithViewModel:(MPHomePageViewModel *)viewModel
+{
+    self=[super init];
+    if (self) {
+        _viewModel=viewModel;
+        
+        [self setupTabBarController];
+    }
+    return self;
+}
+
 
 - (void)setupTabBarController {
     /// 设置TabBar属性数组
@@ -43,36 +57,42 @@
     
     self.delegate = self;
     self.moreNavigationController.navigationBarHidden = YES;
+    
+    
+    [((AppDelegate*)AppDelegateInstance).navigationControllerStack pushNavigationController:(UINavigationController *)self.viewControllers[0]];
+    
+    [[self
+      rac_signalForSelector:@selector(tabBarController:shouldSelectViewController:)
+      fromProtocol:@protocol(UITabBarControllerDelegate)]
+     subscribeNext:^(RACTuple *tuple) {
+         [((AppDelegate*)AppDelegateInstance).navigationControllerStack popNavigationController];
+         [((AppDelegate*)AppDelegateInstance).navigationControllerStack pushNavigationController:tuple.second];
+     }];
 }
 
 
 //控制器设置
 - (NSArray *)mpViewControllers {
-    HomeViewController *firstViewController = [[HomeViewController alloc] init];
+    //HomeViewController *firstViewController = [[HomeViewController alloc] init];
+    
+    MPProjectViewController *firstViewController=[[MPProjectViewController alloc]initWithViewModel:self.viewModel.projectViewModel];
+    
     UINavigationController *firstNavigationController = [[MPTBaseNavigationViewController alloc]
                                                          initWithRootViewController:firstViewController];
     
-    MPTTheoryViewController *secondViewController = [[MPTTheoryViewController alloc] init];
+    MPTTheoryViewController *secondViewController = [[MPTTheoryViewController alloc] initWithViewModel:self.viewModel.theoryViewModel];
     UINavigationController *secondNavigationController = [[MPTBaseNavigationViewController alloc]
                                                           initWithRootViewController:secondViewController];
     
-    MPNoticeServiceImp *service=[[MPNoticeServiceImp alloc]init];
-    
-    MPNoticeListViewModel *viewModel=[[MPNoticeListViewModel alloc]initWithServices:service];
-    
-    MPMVVMDemoViewController *thirdViewController = [[MPMVVMDemoViewController alloc] initWithViewModel:viewModel];
+    MPSystemViewController *thirdViewController = [[MPSystemViewController alloc] initWithViewModel:self.viewModel.systemViewModel];
     UINavigationController *thirdNavigationController = [[MPTBaseNavigationViewController alloc]
                                                          initWithRootViewController:thirdViewController];
     
-    HomeViewController *fourthViewController = [[HomeViewController alloc] init];
-    UINavigationController *fourthNavigationController = [[MPTBaseNavigationViewController alloc]
-                                                          initWithRootViewController:fourthViewController];
     
     NSArray *viewControllers = @[
                                  firstNavigationController,
                                  secondNavigationController,
-                                 thirdNavigationController,
-                                 fourthNavigationController
+                                 thirdNavigationController
                                  ];
     return viewControllers;
 }
@@ -94,16 +114,10 @@
                                                  CYLTabBarItemImage : @"message_normal",
                                                  CYLTabBarItemSelectedImage : @"message_highlight",
                                                  };
-    NSDictionary *fourthTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"更多",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight"
-                                                  };
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,
                                        secondTabBarItemsAttributes,
-                                       thirdTabBarItemsAttributes,
-                                       fourthTabBarItemsAttributes
+                                       thirdTabBarItemsAttributes
                                        ];
     return tabBarItemsAttributes;
 }

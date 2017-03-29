@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MPBaseViewController.h"
 #import "MPTRACSignerViewController.h"
 #import "MPTRACSubjectViewController.h"
 #import "MPTRACSequenceViewController.h"
@@ -21,6 +21,6 @@
 #import "RACChannelViewController.h"
 #import "MPTCountDownViewController.h"
 
-@interface MPTTheoryViewController : UIViewController
+@interface MPTTheoryViewController : MPBaseViewController
 
 @end
