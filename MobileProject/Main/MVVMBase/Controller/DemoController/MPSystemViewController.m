@@ -36,6 +36,36 @@
         }
         
     }];
+    
+
+//    列表请求：
+//
+//    @weakify(self);
+//    // 下拉刷新
+//    self.findTableView.mj_header = [HTRefreshGifHeader headerWithRefreshingBlock:^{
+//        @strongify(self);
+//        [self.viewModel.requestDataCommand execute:@1];
+//    }];
+//    [[self.viewModel.requestDataCommand.executing skip:1] subscribeNext:^(NSNumber * _Nullable executing) {
+//        @strongify(self);
+//        if (!executing.boolValue) {
+//            [self.findTableView.mj_header endRefreshing];
+//        }
+//    }];
+//    
+//    // 加载更多
+//    self.findTableView.mj_footer = [HTRefreshGifFooter footerWithRefreshingBlock:^{
+//        @strongify(self);
+//        [self.viewModel.feedMoreDataCommand execute:@1];
+//    }];
+//    [[self.viewModel.feedMoreDataCommand.executing skip:1] subscribeNext:^(NSNumber * _Nullable executing) {
+//        @strongify(self);
+//        if (!executing.boolValue) {
+//            [self.findTableView.mj_footer endRefreshing];
+//        }
+//    }];
+//    
+//    [self.viewModel.requestDataCommand execute:@1];
 }
 
 @end
