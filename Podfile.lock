@@ -45,6 +45,11 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - RealReachability (1.1.8):
+    - RealReachability/Connection (= 1.1.8)
+    - RealReachability/Ping (= 1.1.8)
+  - RealReachability/Connection (1.1.8)
+  - RealReachability/Ping (1.1.8)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -64,6 +69,7 @@ DEPENDENCIES:
   - Masonry (~> 0.6.1)
   - MLeaksFinder
   - ReactiveCocoa (= 2.5)
+  - RealReachability
   - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
@@ -76,9 +82,10 @@ SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RealReachability: e6c8a2bbffa316006e8c282efc1ee2567d61a920
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
 
-PODFILE CHECKSUM: 205c8dea201f13e84274c913f8db7ad007baa9e4
+PODFILE CHECKSUM: 9cfd16438379e8410f3818310313d57e0cede8b4
 
 COCOAPODS: 1.2.0.beta.1

@@ -19,5 +19,10 @@
 
 @property (nonatomic, strong, readonly) MPNavigationControllerStack *navigationControllerStack;
 
+/**
+ *  网络状态
+ */
+@property (assign , nonatomic , readonly) ReachabilityStatus  NetWorkStatus;
+
 @end
 

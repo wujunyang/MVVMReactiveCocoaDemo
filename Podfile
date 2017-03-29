@@ -11,6 +11,7 @@ abstract_target 'MobileProjectDefault' do
     pod 'ReactiveCocoa', '2.5'
     pod 'CYLTabBarController'
     pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
+    pod 'RealReachability'
     
     target 'MobileProject_Local' do
         

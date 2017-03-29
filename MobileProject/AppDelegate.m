@@ -22,6 +22,8 @@
 @property (nonatomic, strong) MPBaseViewModel *viewModel;
 @property (nonatomic, strong, readwrite) MPNavigationControllerStack *navigationControllerStack;
 
+@property (assign , nonatomic , readwrite) ReachabilityStatus  NetWorkStatus;
+
 @end
 
 @implementation AppDelegate
@@ -31,7 +33,7 @@
     
     //日志初始化
     [MyFileLogger sharedManager];
-    
+    [self configurationNetWorkStatus];
     
     //初始化
     self.services = [[MPBaseViewModelServicesImpl alloc] init];
@@ -58,17 +60,22 @@
 //    }
 }
 
-//登录页面
--(void)setuptestViewController
+- (void)configurationNetWorkStatus
 {
-    //TestRacViewController *logInVc = [[TestRacViewController alloc]init];
-    MulticastConnectionViewController *logInVc=[[MulticastConnectionViewController alloc]init];
-    UINavigationController *navcLogin = [[UINavigationController alloc]initWithRootViewController:logInVc];
-    [navcLogin setNavigationBarHidden:YES];
-    self.window.rootViewController = navcLogin;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    [GLobalRealReachability startNotifier];
+    
+    RAC(self, NetWorkStatus) = [[[[[NSNotificationCenter defaultCenter]
+                                   rac_addObserverForName:kRealReachabilityChangedNotification object:nil]
+                                  map:^(NSNotification *notification) {
+                                      return @([notification.object currentReachabilityStatus]);
+                                  }]
+                                 startWith:@([GLobalRealReachability currentReachabilityStatus])]
+                                distinctUntilChanged];
+    
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
