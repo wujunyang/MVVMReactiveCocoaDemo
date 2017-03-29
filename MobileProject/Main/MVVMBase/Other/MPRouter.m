@@ -40,7 +40,9 @@
              @"MPProjectDetailViewModel":@"MPProjectDetailViewController",
              @"MPSystemViewModel":@"MPSystemViewController",
              @"MPHomePageViewModel":@"MPTTableViewController",
-             @"MPTTheoryViewModel":@"MPTTheoryViewController"
+             @"MPTTheoryViewModel":@"MPTTheoryViewController",
+             @"MPProjectOrderViewModel":@"MPProjectOrderViewController",
+             @"MPSettingViewModel":@"MPSettingViewController"
              };
 }
 

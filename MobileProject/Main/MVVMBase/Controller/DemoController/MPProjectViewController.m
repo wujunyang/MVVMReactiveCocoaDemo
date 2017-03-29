@@ -15,6 +15,8 @@
 
 @property(nonatomic,strong)UIButton *myButton;
 
+@property(nonatomic,strong)UIButton *myOrderButton;
+
 @end
 
 
@@ -33,7 +35,14 @@
         make.left.mas_equalTo(20);
     }];
     
+    [self.view addSubview:self.myOrderButton];
+    [self.myOrderButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(200);
+        make.left.mas_equalTo(20);
+    }];
+    
     self.myButton.rac_command=self.viewModel.goToProjectDetailCommand;
+    self.myOrderButton.rac_command=self.viewModel.goToProjectOrderCommand;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,10 +54,20 @@
 {
     if (!_myButton) {
         _myButton=[[UIButton alloc]init];
-        _myButton.backgroundColor=[UIColor yellowColor];
+        _myButton.backgroundColor=[UIColor blackColor];
         [_myButton setTitle:@"跳转" forState:UIControlStateNormal];
     }
     return _myButton;
+}
+
+-(UIButton *)myOrderButton
+{
+    if (!_myOrderButton) {
+        _myOrderButton=[[UIButton alloc]init];
+        _myOrderButton.backgroundColor=[UIColor blackColor];
+        [_myOrderButton setTitle:@"带参数跳转" forState:UIControlStateNormal];
+    }
+    return _myOrderButton;
 }
 
 @end

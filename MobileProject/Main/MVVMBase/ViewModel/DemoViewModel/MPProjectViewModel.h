@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic,readonly) RACCommand *goToProjectDetailCommand;
 
+@property (strong, nonatomic,readonly) RACCommand *goToProjectOrderCommand;
+
 @end

@@ -14,6 +14,14 @@
 		34031DC21E66617B00EE46B7 /* MPTRACSignerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DBF1E66617B00EE46B7 /* MPTRACSignerViewController.m */; };
 		34031DC31E66617B00EE46B7 /* MPTTheoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DC11E66617B00EE46B7 /* MPTTheoryViewController.m */; };
 		34031DC51E66675100EE46B7 /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34031DC41E66675100EE46B7 /* Public.xcassets */; };
+		340586111E8BAE1600E395D3 /* MPProjectOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586101E8BAE1600E395D3 /* MPProjectOrderViewController.m */; };
+		340586121E8BAE1600E395D3 /* MPProjectOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586101E8BAE1600E395D3 /* MPProjectOrderViewController.m */; };
+		340586151E8BAE7A00E395D3 /* MPProjectOrderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586141E8BAE7A00E395D3 /* MPProjectOrderViewModel.m */; };
+		340586161E8BAE7A00E395D3 /* MPProjectOrderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586141E8BAE7A00E395D3 /* MPProjectOrderViewModel.m */; };
+		340586191E8BB2E800E395D3 /* MPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586181E8BB2E800E395D3 /* MPSettingViewController.m */; };
+		3405861A1E8BB2E800E395D3 /* MPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340586181E8BB2E800E395D3 /* MPSettingViewController.m */; };
+		3405861D1E8BB31700E395D3 /* MPSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3405861C1E8BB31700E395D3 /* MPSettingViewModel.m */; };
+		3405861E1E8BB31700E395D3 /* MPSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3405861C1E8BB31700E395D3 /* MPSettingViewModel.m */; };
 		340610FD1E88A08C00D05978 /* MPTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340610FC1E88A08C00D05978 /* MPTCountDownViewController.m */; };
 		340610FE1E88A08C00D05978 /* MPTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340610FC1E88A08C00D05978 /* MPTCountDownViewController.m */; };
 		34089DE01E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DDF1E67E1F600F9A159 /* MPTRACSubjectViewController.m */; };
@@ -805,6 +813,14 @@
 		34031DC01E66617B00EE46B7 /* MPTTheoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTTheoryViewController.h; sourceTree = "<group>"; };
 		34031DC11E66617B00EE46B7 /* MPTTheoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTTheoryViewController.m; sourceTree = "<group>"; };
 		34031DC41E66675100EE46B7 /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
+		3405860F1E8BAE1600E395D3 /* MPProjectOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPProjectOrderViewController.h; sourceTree = "<group>"; };
+		340586101E8BAE1600E395D3 /* MPProjectOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPProjectOrderViewController.m; sourceTree = "<group>"; };
+		340586131E8BAE7A00E395D3 /* MPProjectOrderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPProjectOrderViewModel.h; sourceTree = "<group>"; };
+		340586141E8BAE7A00E395D3 /* MPProjectOrderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPProjectOrderViewModel.m; sourceTree = "<group>"; };
+		340586171E8BB2E800E395D3 /* MPSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSettingViewController.h; sourceTree = "<group>"; };
+		340586181E8BB2E800E395D3 /* MPSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSettingViewController.m; sourceTree = "<group>"; };
+		3405861B1E8BB31700E395D3 /* MPSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSettingViewModel.h; sourceTree = "<group>"; };
+		3405861C1E8BB31700E395D3 /* MPSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSettingViewModel.m; sourceTree = "<group>"; };
 		340610FB1E88A08C00D05978 /* MPTCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTCountDownViewController.h; sourceTree = "<group>"; };
 		340610FC1E88A08C00D05978 /* MPTCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTCountDownViewController.m; sourceTree = "<group>"; };
 		34089DDE1E67E1F600F9A159 /* MPTRACSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSubjectViewController.h; sourceTree = "<group>"; };
@@ -3536,6 +3552,10 @@
 				346138451E8B8506005F20C6 /* MPSystemViewModel.m */,
 				346138511E8B867F005F20C6 /* MPHomePageViewModel.h */,
 				346138521E8B867F005F20C6 /* MPHomePageViewModel.m */,
+				340586131E8BAE7A00E395D3 /* MPProjectOrderViewModel.h */,
+				340586141E8BAE7A00E395D3 /* MPProjectOrderViewModel.m */,
+				3405861B1E8BB31700E395D3 /* MPSettingViewModel.h */,
+				3405861C1E8BB31700E395D3 /* MPSettingViewModel.m */,
 			);
 			path = DemoViewModel;
 			sourceTree = "<group>";
@@ -3558,6 +3578,10 @@
 				34EB9B281E8A68B8009AFE14 /* MPProjectDetailViewController.m */,
 				346138401E8B84A2005F20C6 /* MPSystemViewController.h */,
 				346138411E8B84A2005F20C6 /* MPSystemViewController.m */,
+				3405860F1E8BAE1600E395D3 /* MPProjectOrderViewController.h */,
+				340586101E8BAE1600E395D3 /* MPProjectOrderViewController.m */,
+				340586171E8BB2E800E395D3 /* MPSettingViewController.h */,
+				340586181E8BB2E800E395D3 /* MPSettingViewController.m */,
 			);
 			path = DemoController;
 			sourceTree = "<group>";
@@ -4091,10 +4115,12 @@
 				34E08AD01C3BFB90005C6CA3 /* UINavigationBar+Awesome.m in Sources */,
 				34E08AD11C3BFB90005C6CA3 /* NSManagedObject+Extensions.m in Sources */,
 				34E08AD21C3BFB90005C6CA3 /* UIViewController+TopBarMessage.m in Sources */,
+				340586121E8BAE1600E395D3 /* MPProjectOrderViewController.m in Sources */,
 				34E08AD31C3BFB90005C6CA3 /* NSObject+Blocks.m in Sources */,
 				34E08AD41C3BFB90005C6CA3 /* UISearchBar+Blocks.m in Sources */,
 				34EBE3091C461BF000887A63 /* pageModel.m in Sources */,
 				34E08AD51C3BFB90005C6CA3 /* UITextField+Blocks.m in Sources */,
+				3405861E1E8BB31700E395D3 /* MPSettingViewModel.m in Sources */,
 				34E08AD61C3BFB90005C6CA3 /* NSFileHandle+readLine.m in Sources */,
 				34E08AD71C3BFB90005C6CA3 /* MJRefreshGifHeader.m in Sources */,
 				34EB9B011E8A58EB009AFE14 /* MPBaseViewController.m in Sources */,
@@ -4150,6 +4176,7 @@
 				34089DE11E67E1F600F9A159 /* MPTRACSubjectViewController.m in Sources */,
 				34E08AFD1C3BFB90005C6CA3 /* NSManagedObjectContext+ObjectClear.m in Sources */,
 				34EB9B091E8A5B86009AFE14 /* MPNavigationControllerStack.m in Sources */,
+				3405861A1E8BB2E800E395D3 /* MPSettingViewController.m in Sources */,
 				34E08AFE1C3BFB90005C6CA3 /* UIImage+FX.m in Sources */,
 				34E08AFF1C3BFB90005C6CA3 /* UIImage+Vector.m in Sources */,
 				34E08B001C3BFB90005C6CA3 /* NSString+Encrypt.m in Sources */,
@@ -4166,6 +4193,7 @@
 				34E08B0B1C3BFB90005C6CA3 /* NSDate+Extension.m in Sources */,
 				34E08B0C1C3BFB90005C6CA3 /* MyFileLogger.m in Sources */,
 				34E08B0D1C3BFB90005C6CA3 /* QBAssetsCollectionFooterView.m in Sources */,
+				340586161E8BAE7A00E395D3 /* MPProjectOrderViewModel.m in Sources */,
 				34499C8D1E8517C0009E25F1 /* MPNoticeItemViewModel.m in Sources */,
 				34E08B0E1C3BFB90005C6CA3 /* NSFileManager+Paths.m in Sources */,
 				34E08B0F1C3BFB90005C6CA3 /* RDVTabBarItem.m in Sources */,
@@ -4390,6 +4418,7 @@
 				34499C881E851713009E25F1 /* MPNoticeListViewModel.m in Sources */,
 				34E893D21C3B9A03001327C8 /* UIButton+Indicator.m in Sources */,
 				34E894CD1C3BBF79001327C8 /* LogInApi.m in Sources */,
+				340586151E8BAE7A00E395D3 /* MPProjectOrderViewModel.m in Sources */,
 				34E893881C3B9A03001327C8 /* NSHTTPCookieStorage+FreezeDry.m in Sources */,
 				34E893C11C3B9A03001327C8 /* CAMediaTimingFunction+AdditionalEquations.m in Sources */,
 				34E894CA1C3BAFBC001327C8 /* Reachability.m in Sources */,
@@ -4406,6 +4435,7 @@
 				34E891411C3B9739001327C8 /* YTKBatchRequestAgent.m in Sources */,
 				34E893931C3B9A03001327C8 /* NSObject+AppInfo.m in Sources */,
 				34E893CC1C3B9A03001327C8 /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
+				340586191E8BB2E800E395D3 /* MPSettingViewController.m in Sources */,
 				34E893C51C3B9A03001327C8 /* UIApplication+ApplicationSize.m in Sources */,
 				34031DBB1E66615300EE46B7 /* MPTTableViewController.m in Sources */,
 				34E8937E1C3B9A03001327C8 /* NSDateFormatter+Make.m in Sources */,
@@ -4514,6 +4544,7 @@
 				34E891151C3B92AA001327C8 /* DistancePickerView.m in Sources */,
 				34E893D41C3B9A03001327C8 /* UIButton+Submitting.m in Sources */,
 				34E891441C3B9739001327C8 /* YTKNetworkAgent.m in Sources */,
+				3405861D1E8BB31700E395D3 /* MPSettingViewModel.m in Sources */,
 				34EBE31B1C46583900887A63 /* HomeTableViewCell.m in Sources */,
 				34E893891C3B9A03001327C8 /* NSIndexPath+Offset.m in Sources */,
 				34E8938D1C3B9A03001327C8 /* NSDecimalNumber+CalculatingByString.m in Sources */,
@@ -4613,6 +4644,7 @@
 				34499C7B1E8511DA009E25F1 /* MPNoticeService.m in Sources */,
 				34E893E81C3B9A03001327C8 /* UIImage+FileName.m in Sources */,
 				34E8940A1C3B9A03001327C8 /* UIScreen+Frame.m in Sources */,
+				340586111E8BAE1600E395D3 /* MPProjectOrderViewController.m in Sources */,
 				34E894241C3B9A03001327C8 /* UIView+draggable.m in Sources */,
 				34E893D61C3B9A03001327C8 /* UIColor+Gradient.m in Sources */,
 				34E8941B1C3B9A03001327C8 /* UITextField+Shake.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MPSystemViewModel.h
+//  MPSettingViewModel.h
 //  MobileProject
 //
 //  Created by wujunyang on 2017/3/29.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MPTableViewModel.h"
+#import "MPBaseViewModel.h"
 
-@interface MPSystemViewModel : MPTableViewModel
+@interface MPSettingViewModel : MPBaseViewModel
 
 @end
