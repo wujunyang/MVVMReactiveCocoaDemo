@@ -28,6 +28,15 @@
 //    NSLog(@"%@",x);
 //}];
 
+
+//当RACObserve放在block里面使用时一定要加上weakify，不管里面有没有使用到self；否则会内存泄漏，因为RACObserve宏里面就有一个self
+//@weakify(self);
+//RACSignal *signal3 = [anotherSignal flattenMap:^(NSArrayController *arrayController) {
+    // Avoids a retain cycle because of RACObserve implicitly referencing self
+//    @strongify(self);
+//    return RACObserve(arrayController, items);
+//}];
+
 //3:
 //@weakify(Obj)和@strongify(Obj),一般两个都是配套使用,在主头文件(ReactiveCocoa.h)中并没有导入，需要自己手动导入，RACEXTScope.h才可以使用。但是每次导入都非常麻烦，只需要在主头文件自己导入就好了
 

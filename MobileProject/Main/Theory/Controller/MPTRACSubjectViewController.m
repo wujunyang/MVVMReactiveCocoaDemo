@@ -38,6 +38,8 @@
 // 1.调用subscribeNext订阅信号，只是把订阅者保存起来，并且订阅者的nextBlock已经赋值了。
 // 2.调用sendNext发送信号，遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
 
+//RACSubject实例进行map操作之后, 发送完毕一定要调用-sendCompleted, 否则会出现内存泄漏; 而RACSignal实例不管是否进行map操作, 不管是否调用-sendCompleted, 都不会出现内存泄漏.
+//原因 : 因为RACSubject是热信号, 为了保证未来有事件发生的时候, 订阅者可以收到信息, 所以需要对持有订阅者!
 
 -(void)createSubject
 {
