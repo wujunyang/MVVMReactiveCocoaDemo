@@ -36,6 +36,9 @@
 		34089DF11E68073000F9A159 /* MPTRACUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */; };
 		34089DF51E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
 		34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34089DF41E6808EE00F9A159 /* MPTUserModel.m */; };
+		3408C6F21E8D041300951DA3 /* MPXCOperationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3408C6F11E8D041300951DA3 /* MPXCOperationHelper.m */; };
+		3408C6F31E8D041300951DA3 /* MPXCOperationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3408C6F11E8D041300951DA3 /* MPXCOperationHelper.m */; };
+		3408C6F61E8D046000951DA3 /* MPXCOperationHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3408C6F51E8D046000951DA3 /* MPXCOperationHelperTest.m */; };
 		340DF4981E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
 		340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
 		340DF49C1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
@@ -835,6 +838,9 @@
 		34089DEF1E68073000F9A159 /* MPTRACUIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACUIKitViewController.m; sourceTree = "<group>"; };
 		34089DF31E6808EE00F9A159 /* MPTUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTUserModel.h; sourceTree = "<group>"; };
 		34089DF41E6808EE00F9A159 /* MPTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTUserModel.m; sourceTree = "<group>"; };
+		3408C6F01E8D041300951DA3 /* MPXCOperationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPXCOperationHelper.h; sourceTree = "<group>"; };
+		3408C6F11E8D041300951DA3 /* MPXCOperationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPXCOperationHelper.m; sourceTree = "<group>"; };
+		3408C6F51E8D046000951DA3 /* MPXCOperationHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPXCOperationHelperTest.m; sourceTree = "<group>"; };
 		340DF4961E80F4EB00681B38 /* MPTRACSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACSchedulerViewController.h; sourceTree = "<group>"; };
 		340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSchedulerViewController.m; sourceTree = "<group>"; };
 		340DF49A1E81050100681B38 /* MPTHotAndColdSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTHotAndColdSignalViewController.h; sourceTree = "<group>"; };
@@ -1720,6 +1726,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3408C6EE1E8D03A300951DA3 /* UnitTest(单元测试) */ = {
+			isa = PBXGroup;
+			children = (
+				3408C6EF1E8D03D800951DA3 /* XCUnitTest */,
+			);
+			name = "UnitTest(单元测试)";
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		3408C6EF1E8D03D800951DA3 /* XCUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				3408C6F01E8D041300951DA3 /* MPXCOperationHelper.h */,
+				3408C6F11E8D041300951DA3 /* MPXCOperationHelper.m */,
+			);
+			path = XCUnitTest;
+			sourceTree = "<group>";
+		};
+		3408C6F41E8D042200951DA3 /* XCUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				3408C6F51E8D046000951DA3 /* MPXCOperationHelperTest.m */,
+			);
+			path = XCUnitTest;
+			sourceTree = "<group>";
+		};
 		34499C6B1E850F9A009E25F1 /* MVVM(实例) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1883,6 +1915,7 @@
 		34E8909E1C3B89B3001327C8 /* MobileProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				3408C6F41E8D042200951DA3 /* XCUnitTest */,
 				34E8909F1C3B89B3001327C8 /* MobileProjectTests.m */,
 				34E890A11C3B89B3001327C8 /* Info.plist */,
 			);
@@ -1901,6 +1934,7 @@
 		34E890B81C3B89D0001327C8 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				3408C6EE1E8D03A300951DA3 /* UnitTest(单元测试) */,
 				34EB9AE71E8A5366009AFE14 /* MVVM(项目) */,
 				34499C6B1E850F9A009E25F1 /* MVVM(实例) */,
 				34031DBC1E66615E00EE46B7 /* Theory(基础) */,
@@ -4012,6 +4046,7 @@
 				34E08A731C3BFB90005C6CA3 /* UIScrollView+MJExtension.m in Sources */,
 				34E08A741C3BFB90005C6CA3 /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				34089DE91E67F84200F9A159 /* MPTRACCommandViewController.m in Sources */,
+				3408C6F31E8D041300951DA3 /* MPXCOperationHelper.m in Sources */,
 				34E08A751C3BFB90005C6CA3 /* SVIndefiniteAnimatedView.m in Sources */,
 				34E08A761C3BFB90005C6CA3 /* NSTimer+Addition.m in Sources */,
 				34E08A771C3BFB90005C6CA3 /* UIViewController+BackButtonHandler.m in Sources */,
@@ -4574,6 +4609,7 @@
 				34E893D11C3B9A03001327C8 /* UIButton+CountDown.m in Sources */,
 				34E894D61C3BCD2F001327C8 /* LoginModel.m in Sources */,
 				34E894951C3B9FC1001327C8 /* SDWebImageManager+MJ.m in Sources */,
+				3408C6F21E8D041300951DA3 /* MPXCOperationHelper.m in Sources */,
 				34031DBA1E66615300EE46B7 /* MPTBaseNavigationViewController.m in Sources */,
 				34E8936B1C3B9A03001327C8 /* CLLocationManager+Blocks.m in Sources */,
 				34E893A11C3B9A03001327C8 /* NSString+Contains.m in Sources */,
@@ -4740,6 +4776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E890A01C3B89B3001327C8 /* MobileProjectTests.m in Sources */,
+				3408C6F61E8D046000951DA3 /* MPXCOperationHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

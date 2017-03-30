@@ -11,4 +11,6 @@
 
 @interface MPSettingViewModel : MPBaseViewModel
 
+@property (nonatomic, copy, readonly) NSString *userName;
+
 @end
