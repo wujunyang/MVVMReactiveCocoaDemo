@@ -416,10 +416,16 @@ RACTupleUnpack(NSString *name,NSNumber *age) = tuple;
 
 #### 二：关于使用ReactiveCocoa结合MVVM模式的实例；
 
-包括关于公共内容的提取，在ViewModel中实现页面的跳转，列表的点击实事等；在源代码中还有关于简单的数据请求并绑定列表的功能；
+MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（Model），有几大优点
 
+1. 低耦合。视图（View）可以独立于Model变化和修改，一个ViewModel可以绑定到不同的"View"上，当View变化的时候Model可以不变，当Model变化的时候View也可以不变。
 
-<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif" width=200px height=300px></img>
+2. 可重用性。你可以把一些视图逻辑放在一个ViewModel里面，让很多view重用这段视图逻辑。
+
+3. 独立开发。开发人员可以专注于业务逻辑和数据的开发（ViewModel），设计人员可以专注于页面设计。
+
+4. 可测试。界面素来是比较难于测试的，而现在测试可以针对ViewModel来写。
+
 
 
 #### 三：单元测试知识
@@ -474,3 +480,42 @@ XCTAssertNoThrowSpecific(expression, specificException, format...)
 XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, format...)
 
 ```
+
+#### 四：项目效果：
+
+<img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif" width=200px height=300px></img>
+
+
+#### 五：ReactiveCocoa知识分享地址
+
+ReactiveCocoa 和 MVVM 入门 http://yulingtianxia.com/blog/2015/05/21/ReactiveCocoa-and-MVVM-an-Introduction/
+
+MVVM Tutorial with ReactiveCocoa  http://southpeak.github.io/blog/2014/08/08/mvvmzhi-nan-yi-:flickrsou-suo-shi-li/
+
+ReactiveCocoa 1-官方readme文档翻译  http://cindyfn.com/reactivecocoa/2014/12/01/ios-frame-use-ReactiveCocoa.html
+
+这样好用的ReactiveCocoa，根本停不下来  http://www.cocoachina.com/ios/20150817/13071.html
+
+ReactiveCocoa基本组件：深入浅出RACCommand  http://www.tuicool.com/articles/nYJRvu
+
+ReactiveCocoa自述：工作原理和应用  http://www.cocoachina.com/ios/20150702/12302.html
+
+RACSignal的巧克力工厂 http://www.cnblogs.com/sunnyxx/p/3547763.html
+
+ReactiveCocoa一些概念讲解  http://www.thinksaas.cn/group/topic/347067/
+
+细说ReactiveCocoa的冷信号与热信号（二）：为什么要区分冷热信号  http://www.tuicool.com/articles/e2uMzyq
+
+细说ReactiveCocoa的冷信号与热信号（三）：怎么处理冷信号与热信号  http://www.tuicool.com/articles/emIVZjY
+
+最快让你上手ReactiveCocoa之基础篇   http://www.jianshu.com/p/87ef6720a096
+
+最快让你上手ReactiveCocoa之进阶篇  http://www.jianshu.com/p/e10e5ca413b7
+
+ReactiveCocoa基础：理解并使用RACCommand http://www.yiqivr.com/2015/10/19/%E8%AF%91-ReactiveCocoa%E5%9F%BA%E7%A1%80%EF%BC%9A%E7%90%86%E8%A7%A3%E5%B9%B6%E4%BD%BF%E7%94%A8RACCommand/  
+
+RAC一些代码总结：https://github.com/shuaiwang007/RAC 
+
+ReactiveCocoa小总结   http://www.jianshu.com/p/8fd6c8349774
+
+如何在ReactiveCocoa中写单元测试   http://www.jianshu.com/p/412875512bd1
