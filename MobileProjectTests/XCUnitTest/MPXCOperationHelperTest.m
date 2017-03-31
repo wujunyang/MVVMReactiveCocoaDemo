@@ -130,6 +130,28 @@
     }];
 }
 
+//例如下面这样：
+//-(void)testRequest{
+//    
+//    XCTestExpectation *expectation =[self expectationWithDescription:@"没有满足期望"];
+//    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+//    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    [sessionManager GET:@"http://www.weather.com.cn/adat/sk/101110101.html" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        NSLog(@"responseObject:%@", [NSJSONSerialization JSONObjectWithData:responseObject options:1 error:nil]);
+//        XCTAssertNotNil(responseObject, @"返回出错");
+//        [expectation fulfill];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        XCTAssertNil(error, @"请求出错");
+//    }];
+//    // 设置5秒的超时时间
+//    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+//        if (error) {
+//            NSLog(@"Timeout Error: %@", error);
+//        }
+//    }];
+//}
+
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
