@@ -185,6 +185,59 @@ rac_liftSelector:withSignalsFromArray:Signals:当传入的Signals(信号数组)�
 8：RAC并发编程知识点
 
 
+```obj-c
+
+1: subscribeOn运用
+
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"%@ 111",[NSThread currentThread]);
+        
+        //可以放更新UI操作
+        
+        [subscriber sendNext:@0.1];
+        RACDisposable *disposable = [[RACScheduler scheduler] schedule:^{
+            NSLog(@"%@ 5555",[NSThread currentThread]);
+            [subscriber sendNext:@1.1];
+            [subscriber sendCompleted];
+        }];
+        return disposable;
+    }];
+    [[RACScheduler scheduler] schedule:^{
+        NSLog(@"%@ 222",[NSThread currentThread]);
+        [[signal subscribeOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+            NSLog(@"%@ %@",[NSThread currentThread], x);
+        }]; }];
+    NSLog(@"%@ 4444",[NSThread currentThread]);
+
+//使用subscribeOn 可以让signal内的代码在主线程中运行，sendNext在哪个线程 则对应的订阅输出就在对应线程上，所以0.1输出是在主线程中； 所以当在signal里面可能要放一些更新UI的操作，而这些是要在主线程才能处理，而订阅者却无法确认，所以要使用subscribeOn让它在主线程中；
+//能够保证didSubscribe block在指定的scheduler
+//不能保证sendNext、 error、 complete在哪个scheduler
+
+
+2：deliverOn运用
+
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"%@ 111",[NSThread currentThread]);
+        [subscriber sendNext:@0.1];
+        RACDisposable *disposable = [[RACScheduler scheduler] schedule:^{
+            NSLog(@"%@ 555",[NSThread currentThread]);
+            [subscriber sendNext:@1.1];
+            [subscriber sendCompleted];
+        }];
+        return disposable;
+    }];
+    [[RACScheduler scheduler] schedule:^{
+        NSLog(@"%@ 222",[NSThread currentThread]);
+        [[signal deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+            NSLog(@"%@ %@",[NSThread currentThread], x);
+            
+            //可以放UI更新操作
+            
+        }]; }];
+
+//当我们让订阅的处理代码在指定的线程中执行，而不必去关心发送信号的当前线程，就可以deliverOn
+```
+
 
 9：冷信号跟热信号知识点
 
@@ -218,9 +271,109 @@ RACDisposable用于取消订阅信号，默认信号发送完之后就会主动�
 
 11：RACChannel知识点
 
-
 12：RAC倒计时小实例
 
+```
+    //倒计时的效果
+    RACSignal *(^counterSigner)(NSNumber *count)=^RACSignal *(NSNumber *count)
+    {
+        RACSignal *timerSignal=[RACSignal interval:1 onScheduler:RACScheduler.mainThreadScheduler];
+        RACSignal *counterSignal=[[timerSignal scanWithStart:count reduce:^id(NSNumber *running, id next) {
+            return @(running.integerValue -1);
+        }] takeUntilBlock:^BOOL(NSNumber *x) {
+            return x.integerValue<0;
+        }];
+        
+        return [counterSignal startWith:count];
+    };
+    
+    
+    RACSignal *enableSignal=[self.myTextField.rac_textSignal map:^id(NSString *value) {
+        return @(value.length==11);
+    }];
+    
+    RACCommand *command=[[RACCommand alloc]initWithEnabled:enableSignal signalBlock:^RACSignal *(id input) {
+        return counterSigner(@10);
+    }];
+    
+    RACSignal *counterStringSignal=[[command.executionSignals switchToLatest] map:^id(NSNumber *value) {
+        return [value stringValue];
+    }];
+    
+    RACSignal *resetStringSignal=[[command.executing filter:^BOOL(NSNumber *value) {
+        return !value.boolValue;
+    }] mapReplace:@"点击获得验证码"];
+    
+    //[self.myButton rac_liftSelector:@selector(setTitle:forState:) withSignals:[RACSignal merge:@[counterStringSignal,resetStringSignal]],[RACSignal return:@(UIControlStateNormal)],nil];
+    
+    //上面也可以写成下面这样
+    @weakify(self);
+    [[RACSignal merge:@[counterStringSignal,resetStringSignal]] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.myButton setTitle:x forState:UIControlStateNormal];
+    }];
+    
+    self.myButton.rac_command=command;
+    
+    
+    //编写关于委托的编写方式 是在self上面进行rac_signalForSelector
+    [[self
+      rac_signalForSelector:@selector(textFieldShouldReturn:)
+      fromProtocol:@protocol(UITextFieldDelegate)]
+    	subscribeNext:^(RACTuple *tuple) {
+            @strongify(self)
+            if (tuple.first == self.myTextField)
+            {
+                NSLog(@"触发");
+            };
+        }];
+    
+    self.myTextField.delegate = self;
+
+```
+
+13：常见的宏定义运用
+
+```obj-c
+
+1：
+RAC(TARGET, [KEYPATH, [NIL_VALUE]]):用于给某个对象的某个属性绑定
+只要文本框文字改变，就会修改label的文字
+RAC(self.labelView,text) = _textField.rac_textSignal;
+
+2:
+RACObserve(self, name):监听某个对象的某个属性,返回的是信号。
+[RACObserve(self.view, center) subscribeNext:^(id x) {
+    NSLog(@"%@",x);
+}];
+
+
+当RACObserve放在block里面使用时一定要加上weakify，不管里面有没有使用到self；否则会内存泄漏，因为RACObserve宏里面就有一个self
+@weakify(self);
+RACSignal *signal3 = [anotherSignal flattenMap:^(NSArrayController *arrayController) {
+     //Avoids a retain cycle because of RACObserve implicitly referencing self
+    @strongify(self);
+    return RACObserve(arrayController, items);
+}];
+
+3:
+@weakify(Obj)和@strongify(Obj),一般两个都是配套使用,在主头文件(ReactiveCocoa.h)中并没有导入，需要自己手动导入，RACEXTScope.h才可以使用。但是每次导入都非常麻烦，只需要在主头文件自己导入就好了
+
+4:
+RACTuplePack：把数据包装成RACTuple（元组类）
+把参数中的数据包装成元组
+RACTuple *tuple = RACTuplePack(@10,@20);
+
+5:
+RACTupleUnpack：把RACTuple（元组类）解包成对应的数据
+把参数中的数据包装成元组
+RACTuple *tuple = RACTuplePack(@"xmg",@20);
+
+解包元组，会把元组的值，按顺序给参数里面的变量赋值
+name = @"xmg" age = @20
+RACTupleUnpack(NSString *name,NSNumber *age) = tuple;
+
+```
 
 
 #### 二：关于使用ReactiveCocoa结合MVVM模式的实例；
