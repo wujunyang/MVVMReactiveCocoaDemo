@@ -271,9 +271,47 @@ RACDisposable用于取消订阅信号，默认信号发送完之后就会主动�
 
 11：RACChannel知识点
 
-12：RAC倒计时小实例
+```obj-c
+    RACChannelTerminal *channelA = RACChannelTo(self, valueA);
+    RACChannelTerminal *channelB = RACChannelTo(self, valueB);
+    [[channelA map:^id(NSString *value) {
+        if ([value isEqualToString:@"西"]) {
+            return @"东";
+        }
+        return value;
+    }] subscribe:channelB];
+    [[channelB map:^id(NSString *value) {
+        if ([value isEqualToString:@"左"]) {
+            return @"右";
+        }
+        return value;
+    }] subscribe:channelA];
+    [[RACObserve(self, valueA) filter:^BOOL(id value) {
+        return value ? YES : NO;
+    }] subscribeNext:^(NSString* x) {
+        NSLog(@"你向%@", x);
+    }];
+    [[RACObserve(self, valueB) filter:^BOOL(id value) {
+        return value ? YES : NO;
+    }] subscribeNext:^(NSString* x) {
+        NSLog(@"他向%@", x);
+    }];
+    self.valueA = @"西";
+    self.valueB = @"左";
+    
+    
+    RACChannelTerminal *characterRemainingTerminal = RACChannelTo(_loginButton, titleLabel.text);
+    
+    [[self.userNameText.rac_textSignal map:^id(NSString *text) {
+        return [@(100 - (NSInteger)text.length) stringValue];
+    }] subscribe:characterRemainingTerminal];
 
 ```
+
+
+12：RAC倒计时小实例
+
+```obj-c
     //倒计时的效果
     RACSignal *(^counterSigner)(NSNumber *count)=^RACSignal *(NSNumber *count)
     {
