@@ -83,7 +83,7 @@ describe(@"MpDataOperationHelper", ^{
             //类MpMockDataHelper是MpDataOperationHelper中的一个属性，被调用
             id mockDataHelper=[MpMockDataHelper mock];
             
-            
+            //替换sunOneNum返回的值
             [[mockDataHelper should] receive:@selector(sunOneNum:) andReturn:theValue(10) withArguments:theValue(numValue)];
     
             //mockHelper是MpDataOperationHelper中关于MpMockDataHelper的属性名，用脏Stub取代掉成mockDataHelper

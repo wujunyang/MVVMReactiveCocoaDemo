@@ -538,6 +538,8 @@ SPEC_END
 
 ```
 
+关于kiwi中的操作类型可以直接查看：https://github.com/allending/Kiwi/wiki/Expectations
+
 
 注意：发现在进行单元测试时，针对RAC就会报[RACStream(Operations) reduceEach:]_block_invoke，后来发现是Pod引入写法有问题，导致的【it usually means RAC is being linked twice. Make sure it's only in your app target.】 所以测试的MobileProjectTests特别要注意；
 
