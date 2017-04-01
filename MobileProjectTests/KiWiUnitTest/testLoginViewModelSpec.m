@@ -113,6 +113,31 @@ describe(@"testLoginViewModel", ^{
 //        });
 //    });
     
+    
+//    Block场景和Thread场景  shouldEventually默认是1秒  如果要设置时间可以用shouldEventuallyBeforeTimingOutAfter
+//    it(@"can hook thread", ^{
+//        [vc changeNameByThread];
+//        [[expectFutureValue(vc.name) shouldEventually] equal:@"kiki"];
+//    });
+    
+//    it(@"can hook blocks",^{
+//        __weak NimoViewController *wVC = vc;
+//        [vc changeNameWithBlock:^(NSString *name) {
+//            wVC.name = name;
+//        }];
+//        [[expectFutureValue(vc.name) shouldEventually] equal:@"nimo for Block Function"];
+//    });
+    
+    
+//    测试是否真的执行到了Notification的方式来执行
+//    it(@"can hook notification", ^{
+//        [[@"Notify" should] bePosted];
+        
+//        NSNotification *myNotification = [NSNotification notificationWithName:@"Notify" object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotification:myNotification];
+//    });
+    
+    
 });
 
 SPEC_END

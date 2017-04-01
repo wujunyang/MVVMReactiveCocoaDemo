@@ -1,5 +1,5 @@
 //
-//  DataValidation.h
+//  MpMockDataHelper.h
 //  MobileProject
 //
 //  Created by wujunyang on 2017/4/1.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DataValidation : NSObject
+@interface MpMockDataHelper : NSObject
 
-+ (BOOL)isValidEmail:(NSString *)data;
-
-+ (BOOL)isValidPassword:(NSString *)password;
+-(NSInteger)sunOneNum:(NSInteger)leftNum;
 
 @end
