@@ -12,4 +12,8 @@
 
 @interface LogInViewController : UIViewController
 
+@property(nonatomic,strong,readonly)UITextField *userNameText,*passWordTest;
+
+@property(nonatomic,strong,readonly)LoginViewModel *myLoginViewModel;
+
 @end

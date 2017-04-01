@@ -9,10 +9,10 @@
 #import "LogInViewController.h"
 
 @interface LogInViewController ()
-@property(nonatomic,strong)UITextField *userNameText,*passWordTest;
+@property(nonatomic,strong,readwrite)UITextField *userNameText,*passWordTest;
 @property(nonatomic,strong)UILabel *myTokenLabel;
 @property(nonatomic,strong)UIButton *loginButton;
-@property(nonatomic,strong)LoginViewModel *myLoginViewModel;
+@property(nonatomic,strong,readwrite)LoginViewModel *myLoginViewModel;
 @end
 
 @implementation LogInViewController

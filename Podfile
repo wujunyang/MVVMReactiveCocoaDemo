@@ -19,5 +19,9 @@ abstract_target 'MobileProjectDefault' do
     
     target 'MobileProject' do
         
+        target 'MobileProjectTests' do
+            inherit! :search_paths
+            pod 'Kiwi', '~> 2.3.1'
+        end
     end
 end

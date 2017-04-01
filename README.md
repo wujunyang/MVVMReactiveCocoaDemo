@@ -430,6 +430,8 @@ MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（
 
 #### 三：单元测试知识
 
+单元测试这边主要采用两种方式，一种是XCode自动的XCTestCase进行，如下面这些就是它所对应的断言等，另外一种是才有KIWI的插件进行测试；项目中有针对viewController、viewModel、帮助类等的测试实例；运用快捷键（command+U）可以运行单元测试实例；
+
 ```obj-c
 
 //知识点一：
@@ -480,6 +482,91 @@ XCTAssertNoThrowSpecific(expression, specificException, format...)
 XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, format...)
 
 ```
+
+
+采用KiWi的单元测试效果：
+
+```obj-c
+
+#import <Kiwi/Kiwi.h>
+//把原本在项目pch中那些第三方插件的头文件也要引入
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+//测试LogInViewController
+#import "RACTestLoginViewController.h"
+
+
+SPEC_BEGIN(LoginViewControllerSpec)
+
+describe(@"RACTestLoginViewController", ^{
+    __block RACTestLoginViewController *controller = nil;
+    
+    beforeEach(^{
+        controller = [RACTestLoginViewController new];
+        [controller view];
+    });
+    
+    afterEach(^{
+        controller = nil;
+    });
+    
+    describe(@"Root View", ^{
+        
+        context(@"when view did load", ^{
+            it(@"should bind data", ^{
+                controller.userNameText.text=@"wujunyang";
+                controller.passWordTest.text=@"123456";
+                //
+                //一定要调用sendActionsForControlEvents方法来通知UI已经更新 因为RAC是监听这个输入框的变化
+                [controller.userNameText sendActionsForControlEvents:UIControlEventEditingChanged];
+                [controller.passWordTest sendActionsForControlEvents:UIControlEventEditingChanged];
+                
+                [[controller.myLoginViewModel.username should] equal:controller.userNameText.text];
+                [[controller.myLoginViewModel.password should] equal:controller.passWordTest.text];
+            });
+        });
+        
+    });
+});
+
+SPEC_END
+
+```
+
+注意：发现在进行单元测试时，针对RAC就会报[RACStream(Operations) reduceEach:]_block_invoke，后来发现是Pod引入写法有问题，导致的【it usually means RAC is being linked twice. Make sure it's only in your app target.】 所以测试的MobileProjectTests特别要注意；
+
+```obj-c
+
+platform :ios, '7.0'
+
+abstract_target 'MobileProjectDefault' do
+    pod 'AFNetworking', '~>2.6.0'
+    pod 'SDWebImage', '~>3.7'
+    pod 'JSONModel', '~> 1.0.1'
+    pod 'Masonry','~>0.6.1'
+    pod 'FMDB/common' , '~>2.5'
+    pod 'FMDB/SQLCipher', '~>2.5'
+    pod 'CocoaLumberjack', '~> 2.0.0-rc'
+    pod 'ReactiveCocoa', '2.5'
+    pod 'CYLTabBarController'
+    pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
+    pod 'RealReachability'
+    
+    target 'MobileProject_Local' do
+        
+    end
+    
+    target 'MobileProject' do
+        
+        target 'MobileProjectTests' do
+            inherit! :search_paths
+            pod 'Kiwi', '~> 2.3.1'
+        end
+    end
+end
+
+```
+
 
 #### 四：项目效果：
 

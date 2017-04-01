@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1743F796D4221106419D1196 /* libPods-MobileProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8426608FD85CE0F39FF5A0E2 /* libPods-MobileProjectTests.a */; };
 		3401A1891E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */; };
 		3401A18A1E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401A1881E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.m */; };
 		34031DBA1E66615300EE46B7 /* MPTBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34031DB71E66615300EE46B7 /* MPTBaseNavigationViewController.m */; };
@@ -43,6 +44,12 @@
 		340DF4991E80F4EB00681B38 /* MPTRACSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */; };
 		340DF49C1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
 		340DF49D1E81050100681B38 /* MPTHotAndColdSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */; };
+		3441E3BB1E8E2F1F00D8DAF3 /* MPLogInViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3BA1E8E2F1F00D8DAF3 /* MPLogInViewControllerTest.m */; };
+		3441E3C21E8E482200D8DAF3 /* RACTestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3C11E8E482200D8DAF3 /* RACTestLoginViewController.m */; };
+		3441E3C31E8E482200D8DAF3 /* RACTestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3C11E8E482200D8DAF3 /* RACTestLoginViewController.m */; };
+		3441E3C91E8E51A700D8DAF3 /* testLoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3C81E8E51A700D8DAF3 /* testLoginViewModelSpec.m */; };
+		3441E3CC1E8E543300D8DAF3 /* testLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3CB1E8E543300D8DAF3 /* testLoginViewModel.m */; };
+		3441E3CD1E8E543300D8DAF3 /* testLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E3CB1E8E543300D8DAF3 /* testLoginViewModel.m */; };
 		34499C111E84ACD8009E25F1 /* MPTRACDisposableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */; };
 		34499C121E84ACD8009E25F1 /* MPTRACDisposableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */; };
 		34499C731E851093009E25F1 /* MPMVVMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34499C721E851093009E25F1 /* MPMVVMDemoViewController.m */; };
@@ -778,6 +785,10 @@
 		34F1468D1C61F656003A01C9 /* MulticastConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */; };
 		34F16B041C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; };
 		34F16B051C5F72910079019B /* RACSignalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F16B031C5F72910079019B /* RACSignalTestViewController.m */; };
+		34FB36CD1E8E8AB300EFE9AC /* LoginViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FB36CC1E8E8AB300EFE9AC /* LoginViewControllerSpec.m */; };
+		34FB83D01E8F3CD4008255E4 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FB83CF1E8F3CD4008255E4 /* DataValidation.m */; };
+		34FB83D11E8F3CD4008255E4 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FB83CF1E8F3CD4008255E4 /* DataValidation.m */; };
+		34FB83D31E8F3D57008255E4 /* DataValidationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FB83D21E8F3D57008255E4 /* DataValidationSpec.m */; };
 		34FD92D61C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; };
 		34FD92D71C43B430009B0C0E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD92D51C43B430009B0C0E /* LoginViewModel.m */; };
 		72062C51B5B0E5E1B18684F1 /* libPods-MobileProjectDefault-MobileProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7CEC686026348A6E7E19B7 /* libPods-MobileProjectDefault-MobileProject.a */; };
@@ -803,6 +814,7 @@
 
 /* Begin PBXFileReference section */
 		0177EE410065521A1062D390 /* Pods-MobileProjectDefault-MobileProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject/Pods-MobileProjectDefault-MobileProject.release.xcconfig"; sourceTree = "<group>"; };
+		039AA74405314C3C4837EA57 /* Pods-MobileProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectTests/Pods-MobileProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		04AB124760DF59A438F5BB66 /* libPods-MobileProjectDefault-MobileProject_Local.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProjectDefault-MobileProject_Local.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4472330CBB918878944E0 /* Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject_Local/Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig"; sourceTree = "<group>"; };
 		3401A1871E6EAB8E009BC6B1 /* MPTRACHightSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACHightSignalViewController.h; sourceTree = "<group>"; };
@@ -845,6 +857,12 @@
 		340DF4971E80F4EB00681B38 /* MPTRACSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACSchedulerViewController.m; sourceTree = "<group>"; };
 		340DF49A1E81050100681B38 /* MPTHotAndColdSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTHotAndColdSignalViewController.h; sourceTree = "<group>"; };
 		340DF49B1E81050100681B38 /* MPTHotAndColdSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTHotAndColdSignalViewController.m; sourceTree = "<group>"; };
+		3441E3BA1E8E2F1F00D8DAF3 /* MPLogInViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLogInViewControllerTest.m; sourceTree = "<group>"; };
+		3441E3C01E8E482200D8DAF3 /* RACTestLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestLoginViewController.h; sourceTree = "<group>"; };
+		3441E3C11E8E482200D8DAF3 /* RACTestLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestLoginViewController.m; sourceTree = "<group>"; };
+		3441E3C81E8E51A700D8DAF3 /* testLoginViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testLoginViewModelSpec.m; sourceTree = "<group>"; };
+		3441E3CA1E8E543300D8DAF3 /* testLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testLoginViewModel.h; sourceTree = "<group>"; };
+		3441E3CB1E8E543300D8DAF3 /* testLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testLoginViewModel.m; sourceTree = "<group>"; };
 		34499C0F1E84ACD8009E25F1 /* MPTRACDisposableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTRACDisposableViewController.h; sourceTree = "<group>"; };
 		34499C101E84ACD8009E25F1 /* MPTRACDisposableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTRACDisposableViewController.m; sourceTree = "<group>"; };
 		34499C711E851093009E25F1 /* MPMVVMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMVVMDemoViewController.h; sourceTree = "<group>"; };
@@ -1584,11 +1602,18 @@
 		34F1468B1C61F656003A01C9 /* MulticastConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MulticastConnectionViewController.m; path = ../../LogIn/Controller/MulticastConnectionViewController.m; sourceTree = "<group>"; };
 		34F16B021C5F72910079019B /* RACSignalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACSignalTestViewController.h; sourceTree = "<group>"; };
 		34F16B031C5F72910079019B /* RACSignalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACSignalTestViewController.m; sourceTree = "<group>"; };
+		34FB36CC1E8E8AB300EFE9AC /* LoginViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewControllerSpec.m; sourceTree = "<group>"; };
+		34FB83CE1E8F3CD4008255E4 /* DataValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataValidation.h; sourceTree = "<group>"; };
+		34FB83CF1E8F3CD4008255E4 /* DataValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidation.m; sourceTree = "<group>"; };
+		34FB83D21E8F3D57008255E4 /* DataValidationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidationSpec.m; sourceTree = "<group>"; };
 		34FD92D41C43B430009B0C0E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		34FD92D51C43B430009B0C0E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		606274C5426282E68BF15A09 /* Pods-MobileProjectDefault-MobileProject_Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject_Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject_Local/Pods-MobileProjectDefault-MobileProject_Local.release.xcconfig"; sourceTree = "<group>"; };
+		8426608FD85CE0F39FF5A0E2 /* libPods-MobileProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B22ED1AB1A0DEDBF10FB1E2 /* Pods-MobileProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectTests/Pods-MobileProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		B5FB6E162028B84E57CC21C7 /* Pods-MobileProjectDefault-MobileProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProjectDefault-MobileProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject/Pods-MobileProjectDefault-MobileProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CA7CEC686026348A6E7E19B7 /* libPods-MobileProjectDefault-MobileProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProjectDefault-MobileProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41EFAFEA8A077F631551F3B /* libPods-MobileProjectDefault-MobileProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProjectDefault-MobileProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1622,6 +1647,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1743F796D4221106419D1196 /* libPods-MobileProjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1642,6 +1668,8 @@
 				0177EE410065521A1062D390 /* Pods-MobileProjectDefault-MobileProject.release.xcconfig */,
 				2EF4472330CBB918878944E0 /* Pods-MobileProjectDefault-MobileProject_Local.debug.xcconfig */,
 				606274C5426282E68BF15A09 /* Pods-MobileProjectDefault-MobileProject_Local.release.xcconfig */,
+				039AA74405314C3C4837EA57 /* Pods-MobileProjectTests.debug.xcconfig */,
+				9B22ED1AB1A0DEDBF10FB1E2 /* Pods-MobileProjectTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1656,6 +1684,8 @@
 				34E894471C3B9A85001327C8 /* QuartzCore.framework */,
 				CA7CEC686026348A6E7E19B7 /* libPods-MobileProjectDefault-MobileProject.a */,
 				04AB124760DF59A438F5BB66 /* libPods-MobileProjectDefault-MobileProject_Local.a */,
+				F41EFAFEA8A077F631551F3B /* libPods-MobileProjectDefault-MobileProjectTests.a */,
+				8426608FD85CE0F39FF5A0E2 /* libPods-MobileProjectTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1729,6 +1759,7 @@
 		3408C6EE1E8D03A300951DA3 /* UnitTest(单元测试) */ = {
 			isa = PBXGroup;
 			children = (
+				3441E3BF1E8E470F00D8DAF3 /* RACUnitTest */,
 				3408C6EF1E8D03D800951DA3 /* XCUnitTest */,
 			);
 			name = "UnitTest(单元测试)";
@@ -1748,8 +1779,32 @@
 			isa = PBXGroup;
 			children = (
 				3408C6F51E8D046000951DA3 /* MPXCOperationHelperTest.m */,
+				3441E3BA1E8E2F1F00D8DAF3 /* MPLogInViewControllerTest.m */,
 			);
 			path = XCUnitTest;
+			sourceTree = "<group>";
+		};
+		3441E3BC1E8E3F2000D8DAF3 /* KiWiUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				34FB36CC1E8E8AB300EFE9AC /* LoginViewControllerSpec.m */,
+				3441E3C81E8E51A700D8DAF3 /* testLoginViewModelSpec.m */,
+				34FB83D21E8F3D57008255E4 /* DataValidationSpec.m */,
+			);
+			path = KiWiUnitTest;
+			sourceTree = "<group>";
+		};
+		3441E3BF1E8E470F00D8DAF3 /* RACUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				3441E3CA1E8E543300D8DAF3 /* testLoginViewModel.h */,
+				3441E3CB1E8E543300D8DAF3 /* testLoginViewModel.m */,
+				3441E3C01E8E482200D8DAF3 /* RACTestLoginViewController.h */,
+				3441E3C11E8E482200D8DAF3 /* RACTestLoginViewController.m */,
+				34FB83CE1E8F3CD4008255E4 /* DataValidation.h */,
+				34FB83CF1E8F3CD4008255E4 /* DataValidation.m */,
+			);
+			path = RACUnitTest;
 			sourceTree = "<group>";
 		};
 		34499C6B1E850F9A009E25F1 /* MVVM(实例) */ = {
@@ -1915,6 +1970,7 @@
 		34E8909E1C3B89B3001327C8 /* MobileProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				3441E3BC1E8E3F2000D8DAF3 /* KiWiUnitTest */,
 				3408C6F41E8D042200951DA3 /* XCUnitTest */,
 				34E8909F1C3B89B3001327C8 /* MobileProjectTests.m */,
 				34E890A11C3B89B3001327C8 /* Info.plist */,
@@ -3796,9 +3852,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34E890B21C3B89B3001327C8 /* Build configuration list for PBXNativeTarget "MobileProjectTests" */;
 			buildPhases = (
+				5350DB553D934C0E88E0A2B1 /* [CP] Check Pods Manifest.lock */,
 				34E890971C3B89B3001327C8 /* Sources */,
 				34E890981C3B89B3001327C8 /* Frameworks */,
 				34E890991C3B89B3001327C8 /* Resources */,
+				C344C99DC5971B2AE1427272 /* [CP] Embed Pods Frameworks */,
+				A2ADD487F88759BF09AF3559 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3939,6 +3998,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject/Pods-MobileProjectDefault-MobileProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5350DB553D934C0E88E0A2B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		647C5111B6DDB1D0CD257445 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3952,6 +4026,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileProjectDefault-MobileProject/Pods-MobileProjectDefault-MobileProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2ADD487F88759BF09AF3559 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileProjectTests/Pods-MobileProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C344C99DC5971B2AE1427272 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileProjectTests/Pods-MobileProjectTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D441965EA4F23E9D04FDF1F0 /* [CP] Copy Pods Resources */ = {
@@ -3981,7 +4085,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E9219DBF22A42E2B68B999AC /* [CP] Embed Pods Frameworks */ = {
@@ -4011,7 +4115,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4218,6 +4322,7 @@
 				34E08B011C3BFB90005C6CA3 /* NSString+Matcher.m in Sources */,
 				34E08B021C3BFB90005C6CA3 /* SWActionSheet.m in Sources */,
 				34E08B031C3BFB90005C6CA3 /* UITableView+iOS7Style.m in Sources */,
+				3441E3C31E8E482200D8DAF3 /* RACTestLoginViewController.m in Sources */,
 				34E08B041C3BFB90005C6CA3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				34E08B051C3BFB90005C6CA3 /* AFDownloadRequestOperation.m in Sources */,
 				34E08B061C3BFB90005C6CA3 /* UIScrollView+Addition.m in Sources */,
@@ -4270,6 +4375,7 @@
 				34EBE3131C46496600887A63 /* OrderModel.m in Sources */,
 				34089DF61E6808EE00F9A159 /* MPTUserModel.m in Sources */,
 				34E08B2F1C3BFB90005C6CA3 /* CAAnimation+Blocks.m in Sources */,
+				3441E3CD1E8E543300D8DAF3 /* testLoginViewModel.m in Sources */,
 				34E08B301C3BFB90005C6CA3 /* UIView+Recursion.m in Sources */,
 				34E08B311C3BFB90005C6CA3 /* ActionSheetCustomPicker.m in Sources */,
 				34E08B321C3BFB90005C6CA3 /* NetWorkBaseUrlConfig.m in Sources */,
@@ -4301,6 +4407,7 @@
 				34E08B481C3BFB90005C6CA3 /* UIImage+FileName.m in Sources */,
 				34E08B491C3BFB90005C6CA3 /* UIScreen+Frame.m in Sources */,
 				34EB9B161E8A61D1009AFE14 /* MPProjectViewModel.m in Sources */,
+				34FB83D11E8F3CD4008255E4 /* DataValidation.m in Sources */,
 				34E08B4A1C3BFB90005C6CA3 /* UIView+draggable.m in Sources */,
 				34E08B4B1C3BFB90005C6CA3 /* UIColor+Gradient.m in Sources */,
 				34E08B4C1C3BFB90005C6CA3 /* UITextField+Shake.m in Sources */,
@@ -4540,6 +4647,7 @@
 				34E893861C3B9A03001327C8 /* NSFileHandle+readLine.m in Sources */,
 				34E891221C3B92AA001327C8 /* MJRefreshGifHeader.m in Sources */,
 				34EB9B2D1E8A6955009AFE14 /* MPProjectDetailViewModel.m in Sources */,
+				34FB83D01E8F3CD4008255E4 /* DataValidation.m in Sources */,
 				34E893D51C3B9A03001327C8 /* UIButton+TouchAreaInsets.m in Sources */,
 				34E894461C3B9A03001327C8 /* UIWindow+Hierarchy.m in Sources */,
 				34EBE2F51C45F67E00887A63 /* HomeViewController.m in Sources */,
@@ -4749,6 +4857,7 @@
 				34E8939A1C3B9A03001327C8 /* NSObject+MKBlockTimer.m in Sources */,
 				34E891171C3B92AA001327C8 /* MJRefreshAutoFooter.m in Sources */,
 				34E893BA1C3B9A03001327C8 /* NSUserDefaults+SafeAccess.m in Sources */,
+				3441E3C21E8E482200D8DAF3 /* RACTestLoginViewController.m in Sources */,
 				34E8942C1C3B9A03001327C8 /* UIView+Screenshot.m in Sources */,
 				34E8943D1C3B9A03001327C8 /* UIWebView+Blocks.m in Sources */,
 				34E8910F1C3B92AA001327C8 /* AbstractActionSheetPicker.m in Sources */,
@@ -4765,6 +4874,7 @@
 				34E893C31C3B9A03001327C8 /* CATransaction+AnimateWithDuration.m in Sources */,
 				34E893901C3B9A03001327C8 /* NSNumber+RomanNumerals.m in Sources */,
 				34E893CF1C3B9A03001327C8 /* UIButton+BackgroundColor.m in Sources */,
+				3441E3CC1E8E543300D8DAF3 /* testLoginViewModel.m in Sources */,
 				34E893A01C3B9A03001327C8 /* NSString+Base64.m in Sources */,
 				34E894921C3B9FC1001327C8 /* MJPhotoProgressView.m in Sources */,
 				34E893C01C3B9A03001327C8 /* CALayer+UIColor.m in Sources */,
@@ -4776,6 +4886,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E890A01C3B89B3001327C8 /* MobileProjectTests.m in Sources */,
+				34FB83D31E8F3D57008255E4 /* DataValidationSpec.m in Sources */,
+				3441E3BB1E8E2F1F00D8DAF3 /* MPLogInViewControllerTest.m in Sources */,
+				34FB36CD1E8E8AB300EFE9AC /* LoginViewControllerSpec.m in Sources */,
+				3441E3C91E8E51A700D8DAF3 /* testLoginViewModelSpec.m in Sources */,
 				3408C6F61E8D046000951DA3 /* MPXCOperationHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4985,6 +5099,7 @@
 		};
 		34E890B31C3B89B3001327C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039AA74405314C3C4837EA57 /* Pods-MobileProjectTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MobileProjectTests/Info.plist;
@@ -4997,6 +5112,7 @@
 		};
 		34E890B41C3B89B3001327C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B22ED1AB1A0DEDBF10FB1E2 /* Pods-MobileProjectTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MobileProjectTests/Info.plist;

@@ -35,6 +35,7 @@ PODS:
     - FMDB/common
     - SQLCipher
   - JSONModel (1.0.2)
+  - Kiwi (2.3.1)
   - Masonry (0.6.4)
   - MLeaksFinder (0.2.1):
     - FBRetainCycleDetector
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - FMDB/common (~> 2.5)
   - FMDB/SQLCipher (~> 2.5)
   - JSONModel (~> 1.0.1)
+  - Kiwi (~> 2.3.1)
   - Masonry (~> 0.6.1)
   - MLeaksFinder
   - ReactiveCocoa (= 2.5)
@@ -79,6 +81,7 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
@@ -86,6 +89,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
 
-PODFILE CHECKSUM: 9cfd16438379e8410f3818310313d57e0cede8b4
+PODFILE CHECKSUM: ffc5fdc778c10ce94586045664de3e0c6e4fab8a
 
 COCOAPODS: 1.2.0.beta.1
