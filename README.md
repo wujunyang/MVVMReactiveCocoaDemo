@@ -1,9 +1,10 @@
 
-## MVVMReactiveCocoaDemo介绍
+# MVVMReactiveCocoaDemo介绍
 
 MVVMReactiveCocoaDemo是一个以学习ReactiveCocoa为主的项目，里面包含关于ReactiveCocoa基础知识点及如何结合MVVM进行开发，还有部分关于单元测试的知识，可以快速了解关于ReactiveCocoa如何运用在项目中，项目中的实例都有相应的介绍跟输出说明；项目中还有几个关于MVVM的实例，包含关于如何进行ViewModel进行跳转问题，还有网络请求及网络状态判断的功能点；
 
-#### 一：关于ReactiveCocoa的知识点
+
+## 一：关于ReactiveCocoa的知识点
 
 1：RACSigner基础知识点
 
@@ -414,7 +415,8 @@ RACTupleUnpack(NSString *name,NSNumber *age) = tuple;
 ```
 
 
-#### 二：关于使用ReactiveCocoa结合MVVM模式的实例；
+
+## 二：关于使用ReactiveCocoa结合MVVM模式的实例；
 
 MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（Model），有几大优点
 
@@ -428,9 +430,11 @@ MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（
 
 
 
-#### 三：单元测试知识
 
-单元测试这边主要采用两种方式，一种是XCode自动的XCTestCase进行，如下面这些就是它所对应的断言等，另外一种是才有KIWI的插件进行测试；项目中有针对viewController、viewModel、帮助类等的测试实例；运用快捷键（command+U）可以运行单元测试实例；
+## 三：单元测试知识
+
+单元测试这边主要采用两种方式，一种是XCode自动的XCTestCase进行，如下面这些就是它所对应的断言等，另外一种是采有KIWI的插件进行测试；项目中有针对viewController、viewModel、帮助类等的测试实例；运用快捷键（command+U）可以运行单元测试实例；
+
 
 ```obj-c
 
@@ -484,6 +488,7 @@ XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, for
 ```
 
 
+
 采用KiWi的单元测试效果：
 
 ```obj-c
@@ -533,6 +538,7 @@ SPEC_END
 
 ```
 
+
 注意：发现在进行单元测试时，针对RAC就会报[RACStream(Operations) reduceEach:]_block_invoke，后来发现是Pod引入写法有问题，导致的【it usually means RAC is being linked twice. Make sure it's only in your app target.】 所以测试的MobileProjectTests特别要注意；
 
 ```obj-c
@@ -568,12 +574,17 @@ end
 ```
 
 
-#### 四：项目效果：
+## 四：项目效果：
+
 
 <img src="https://github.com/wujunyang/MVVMReactiveCocoaDemo/blob/master/MobileProject/3.gif" width=200px height=300px></img>
 
 
-#### 五：ReactiveCocoa知识分享地址
+
+## 五：ReactiveCocoa知识分享地址
+
+
+```obj-c
 
 ReactiveCocoa 和 MVVM 入门 http://yulingtianxia.com/blog/2015/05/21/ReactiveCocoa-and-MVVM-an-Introduction/
 
@@ -606,3 +617,7 @@ RAC一些代码总结：https://github.com/shuaiwang007/RAC
 ReactiveCocoa小总结   http://www.jianshu.com/p/8fd6c8349774
 
 如何在ReactiveCocoa中写单元测试   http://www.jianshu.com/p/412875512bd1
+
+TDD的iOS开发初步以及Kiwi使用入门 https://onevcat.com/2014/02/ios-test-with-kiwi/
+
+```
