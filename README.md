@@ -623,3 +623,10 @@ ReactiveCocoa小总结   http://www.jianshu.com/p/8fd6c8349774
 TDD的iOS开发初步以及Kiwi使用入门 https://onevcat.com/2014/02/ios-test-with-kiwi/
 
 ```
+
+# 订阅号
+
+最近有个妹子弄的一个关于扩大眼界跟内含的订阅号，每天都会更新一些深度内容，在这里如果你感兴趣也可以关注一下，当然可以关注后输入：github  会有我的微信号，如果有问题你也可以在那找到我；当然不感兴趣无视此信息；
+
+
+<img src="https://github.com/wujunyang/jiaModuleDemo/blob/master/jiaModuleDemo/ProjectImage/dy.jpg" width=200px height=200px></img>
